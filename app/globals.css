@@ -2,10 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "esamanruM";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/esamanruM.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "esamanruB";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/esamanruB.ttf") format("truetype");
+}
+
 html,
 body,
 :root {
   height: 100%;
+}
+
+body {
+  font-family: "esamanruM";
 }
 
 html,
@@ -95,6 +113,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "esamanruM";
 }
 
 a {

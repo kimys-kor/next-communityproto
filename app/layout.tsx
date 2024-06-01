@@ -1,5 +1,3 @@
-import { Nunito } from "next/font/google";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -14,13 +12,9 @@ import Footer from "./components/layouts/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "라스고",
+  title: "먹튀타파",
   description: "라이브스코어 라이브스포츠 라이브중계",
 };
-
-const font = Nunito({
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
@@ -28,14 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={font.className}>
+    <html lang="ko">
+      <body>
         <ClientOnly>
           <ToasterProvider />
           <LoginModal />
           <RegisterModal />
           <Headers></Headers>
-          <Navbar />
+          {/* <Navbar /> */}
           <Footer></Footer>
         </ClientOnly>
         {children}
