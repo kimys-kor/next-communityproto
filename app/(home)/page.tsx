@@ -3,7 +3,7 @@ import Login from "../components/login/Login";
 
 export default function Home() {
   return (
-    <div className="text-red-500 ">
+    <div className="">
       home
       <Login></Login>
     </div>
