@@ -1,13 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "./components/layouts/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProvider from "./components/providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal";
 import Headers from "./components/layouts/Headers";
 import Footer from "./components/layouts/Footer";
+import Container from "./components/Container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,10 +29,11 @@ export default function RootLayout({
           <LoginModal />
           <RegisterModal />
           <Headers></Headers>
-          {/* <Navbar /> */}
           <Footer></Footer>
         </ClientOnly>
-        <div className="pt-20">{children}</div>
+        <div className="pt-20">
+          <Container>{children}</Container>
+        </div>
       </body>
     </html>
   );

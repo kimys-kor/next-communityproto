@@ -1,8 +1,9 @@
 import React from "react";
 
 import Container from "../Container";
-import Logo from "./navbar/Logo";
+import Logo from "../Logo";
 import Link from "next/link";
+import SearchBox from "../search/SearchBox";
 
 function Headers() {
   return (
@@ -64,7 +65,9 @@ function Headers() {
                 고객센터
               </Link>
             </div>
-            <div></div>
+            <div>
+              <SearchBox></SearchBox>
+            </div>
           </nav>
         </Container>
       </div>
