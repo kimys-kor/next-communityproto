@@ -11,10 +11,10 @@ const SearchBox: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center border-b border-gray-300 py-2">
+    <div className="flex items-center border border-gray-300 py-2 shadow-inner rounded-md">
       <input
         type="text"
-        className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+        className="border appearance-none bg-transparent border-none w-full text-gray-700 mr-3  px-2 leading-tight focus:outline-none"
         placeholder="검색어를 입력하세요..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
@@ -25,7 +25,7 @@ const SearchBox: React.FC = () => {
         onClick={handleSearch}
       >
         <svg
-          className="fill-current w-4 h-4"
+          className="fill-current w-4 h-3"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

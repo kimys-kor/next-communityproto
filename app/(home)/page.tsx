@@ -4,8 +4,9 @@ import Login from "../components/login/Login";
 export default function Home() {
   return (
     <div className="">
-      home
-      <Login></Login>
+      <aside className="w-2/5 h-full ">
+        <Login></Login>
+      </aside>
     </div>
   );
 }

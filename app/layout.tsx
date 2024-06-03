@@ -8,6 +8,7 @@ import LoginModal from "./components/modals/LoginModal";
 import Headers from "./components/layouts/Headers";
 import Footer from "./components/layouts/Footer";
 import Container from "./components/Container";
+import Navbar from "./components/layouts/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Footer></Footer>
         </ClientOnly>
         <div className="pt-20">
+          <Navbar></Navbar>
           <Container>{children}</Container>
         </div>
       </body>
