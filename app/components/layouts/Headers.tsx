@@ -14,7 +14,7 @@ function Headers() {
             <Link prefetch href="/">
               <Logo></Logo>
             </Link>
-            <div>
+            <div className="w-1/3">
               <SearchBox></SearchBox>
             </div>
           </nav>

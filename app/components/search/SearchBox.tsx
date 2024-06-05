@@ -11,10 +11,10 @@ const SearchBox: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center border border-gray-300 py-2 shadow-inner rounded-md">
+    <div className=" flex items-center py-2 shadow-inner rounded-md">
       <input
         type="text"
-        className="border appearance-none bg-transparent border-none w-full text-gray-700 mr-3  px-2 leading-tight focus:outline-none"
+        className="border-none appearance-none bg-transparent w-full text-gray-700 mr-3  px-10 leading-tight focus:outline-none"
         placeholder="검색어를 입력하세요..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}

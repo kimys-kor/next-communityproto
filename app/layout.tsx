@@ -32,7 +32,7 @@ export default function RootLayout({
           <Headers></Headers>
           <Footer></Footer>
         </ClientOnly>
-        <div className="pt-20">
+        <div className="pt-24">
           <Navbar></Navbar>
           <Container>{children}</Container>
         </div>

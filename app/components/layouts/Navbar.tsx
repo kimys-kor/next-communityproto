@@ -5,7 +5,7 @@ import Container from "../Container";
 function Navbar() {
   return (
     <Container>
-      <div className="w-full  h-14 flex items-center gap-10 truncate p-6 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200  dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+      <div className="w-full  h-14 flex items-center gap-10 truncate p-6  bg-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
         <Link
           prefetch
           href="/warranty"

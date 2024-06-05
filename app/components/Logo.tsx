@@ -10,8 +10,8 @@ const Logo = () => {
     <Image
       alt="logo"
       className="hidden md:block cursor-pointer"
-      height="100"
-      width="100"
+      height="130"
+      width="130"
       src="/images/logo.png"
     ></Image>
   );
