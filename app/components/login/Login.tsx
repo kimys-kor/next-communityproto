@@ -13,7 +13,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className="bg-sky-100 p-8 rounded-lg w-full max-w-md">
       <form
         onSubmit={(e) => {
           e.preventDefault();
