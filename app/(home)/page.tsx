@@ -1,11 +1,14 @@
+import Card from "../components/Card";
 import Container from "../components/Container";
 import Login from "../components/login/Login";
 
 export default function Home() {
   return (
     <div className="">
-      <aside className="w-2/5 h-full ">
+      <aside className="max-w-md w-2/5 h-full flex flex-col gap-4">
         <Login></Login>
+        <Card title={"주간베스트"}></Card>
+        <Card title={"실시간베스트"}></Card>
       </aside>
     </div>
   );
