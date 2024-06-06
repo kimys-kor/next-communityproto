@@ -15,18 +15,18 @@ const SearchBox: React.FC = () => {
       <input
         type="text"
         id="searchKeyword"
-        className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mr-3 px-10 leading-tight "
+        className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mr-3 px-10 leading-tight "
         placeholder="검색어를 입력하세요..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button
-        className="absolute right-8 flex-shrink-0 bg-sky-300 hover:bg-sky-700 border-sky-300 hover:border-sky-700 text-sm border-4 text-white py-1 px-2 rounded"
+        className="hover:text-md absolute right-4 flex-shrink-0 \py-1 px-2 rounded"
         type="button"
         onClick={handleSearch}
       >
         <svg
-          className="fill-current w-4 h-3"
+          className="fill-gray w-8 h-5"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
