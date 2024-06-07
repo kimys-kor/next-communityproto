@@ -1,5 +1,4 @@
 import Card from "../components/Card";
-import ImageSlider from "../components/ImageSlider";
 import NewPost from "../components/NewPost";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import Login from "../components/login/Login";
@@ -16,7 +15,7 @@ export default function Home() {
         <ProgressSliderPage></ProgressSliderPage>
         <section className="grid grid-cols-2">
           <NewPost></NewPost>
-          <NewPost></NewPost>
+          {/* <NewPost></NewPost> */}
         </section>
       </article>
     </div>

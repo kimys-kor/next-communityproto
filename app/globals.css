@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "esamanruM";
+  font-family: "esamanruL";
   font-weight: 200;
+  font-style: normal;
+  src: url("/fonts/esamanruL.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "esamanruM";
+  font-weight: 400;
   font-style: normal;
   src: url("/fonts/esamanruM.ttf") format("truetype");
 }
@@ -23,7 +30,7 @@ body,
 }
 
 body {
-  font-family: "esamanruM";
+  font-family: "esamanruL";
   background-color: #f2f4f7;
 }
 

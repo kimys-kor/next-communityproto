@@ -38,7 +38,7 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
         {tabs[activeTab].content.map((title, index) => (
           <div
             key={index}
-            className={` flex gap-2 items-center p-2 ${
+            className={` flex gap-2 items-center p-2 rounded-md shadow-md ${
               index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"
             }`}
           >
