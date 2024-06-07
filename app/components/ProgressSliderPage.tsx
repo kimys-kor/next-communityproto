@@ -1,5 +1,3 @@
-import test from "../../public/images/test.png";
-import logo from "../../public/images/logo.png";
 import pc_main_top_new02 from "../../public/images/pc_main_top_new02.gif";
 import ProgressSlider from "./ProgressSlider";
 

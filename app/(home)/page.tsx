@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import Carousel from "../components/ProgressSlider";
+import NewPost from "../components/NewPost";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import Login from "../components/login/Login";
 
@@ -13,6 +13,7 @@ export default function Home() {
       </aside>
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
+        <NewPost></NewPost>
       </article>
     </div>
   );

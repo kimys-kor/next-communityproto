@@ -11,7 +11,7 @@ const SearchBox: React.FC = () => {
   };
 
   return (
-    <div className="relative w-92 flex items-center py-2 rounded-md">
+    <div className="w-full relative w-92 flex items-center py-2 rounded-md">
       <input
         type="text"
         id="searchKeyword"
