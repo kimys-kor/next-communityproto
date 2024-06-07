@@ -14,7 +14,10 @@ export default function Home() {
       </aside>
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
-        <NewPost></NewPost>
+        <section className="grid grid-cols-2">
+          <NewPost></NewPost>
+          <NewPost></NewPost>
+        </section>
       </article>
     </div>
   );

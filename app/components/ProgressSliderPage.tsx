@@ -22,7 +22,7 @@ export default function ProgressSliderPage() {
   ];
 
   return (
-    <main className="relative flex flex-col justify-center bg-slate-50 overflow-hidden">
+    <main className="relative h-56 flex flex-col justify-center bg-slate-50 overflow-hidden">
       <div className=" max-w-6xl mx-auto p-3">
         <div className="flex justify-center">
           <ProgressSlider items={items} />
