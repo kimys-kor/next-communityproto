@@ -7,7 +7,6 @@ import { Transition } from "@headlessui/react";
 interface Item {
   img: StaticImageData;
   desc: string;
-  buttonIcon: StaticImageData;
 }
 
 export default function ProgressSlider({ items }: { items: Item[] }) {

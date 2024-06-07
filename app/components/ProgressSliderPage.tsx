@@ -7,23 +7,19 @@ export default function ProgressSliderPage() {
   const items = [
     {
       img: pc_main_top_new02,
-      desc: "1",
-      buttonIcon: test,
+      desc: "main_banner",
     },
     {
       img: pc_main_top_new02,
-      desc: "2",
-      buttonIcon: test,
+      desc: "main_banner",
     },
     {
       img: pc_main_top_new02,
-      desc: "2",
-      buttonIcon: test,
+      desc: "main_banner",
     },
     {
       img: pc_main_top_new02,
-      desc: "2",
-      buttonIcon: test,
+      desc: "main_banner",
     },
   ];
 
