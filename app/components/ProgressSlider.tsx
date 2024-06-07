@@ -38,80 +38,90 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
     }
   };
 
-  const heightFix = () => {
-    if (itemsRef.current && itemsRef.current.parentElement)
-      itemsRef.current.parentElement.style.height = `${itemsRef.current.clientHeight}px`;
+  const handleNext = () => {
+    setActive((active + 1) % items.length);
+    setProgress(0);
   };
 
-  useEffect(() => {
-    heightFix();
-  }, []);
+  const handlePrev = () => {
+    setActive(active === 0 ? items.length - 1 : active - 1);
+    setProgress(0);
+  };
 
   return (
-    <div className="w-full max-w-5xl mx-auto text-center">
+    <div className="w-full max-w-5xl mx-auto text-center relative">
       {/* Item image */}
-      <div className="transition-all duration-150 delay-300 ease-in-out">
-        <div className="relative flex flex-col" ref={itemsRef}>
-          {items.map((item, index) => (
-            <Transition
-              key={index}
-              show={active === index}
-              enter="transition ease-in-out duration-500 delay-200 order-first"
-              enterFrom="opacity-0 scale-105"
-              enterTo="opacity-100 scale-100"
-              leave="transition ease-in-out duration-300 absolute"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-              beforeEnter={() => heightFix()}
-            >
-              <Image
-                className="rounded-xl"
-                src={item.img}
-                width={1024}
-                height={576}
-                alt={item.desc}
-              />
-            </Transition>
-          ))}
-        </div>
-      </div>
-      {/* Buttons */}
-      <div className="max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      <div className="relative flex flex-col" ref={itemsRef}>
         {items.map((item, index) => (
-          <button
+          <Transition
             key={index}
-            className="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group"
-            onClick={() => {
-              setActive(index);
-              setProgress(0);
-            }}
+            show={active === index}
+            enter="transition ease-in-out duration-500 delay-200 order-first"
+            enterFrom="opacity-0 scale-105"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in-out duration-300 absolute"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
           >
-            <span
-              className={`text-center flex flex-col items-center ${
-                active === index
-                  ? ""
-                  : "opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity"
-              }`}
-            >
-              <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-2">
-                <Image src={item.buttonIcon} alt={item.desc} />
-              </span>
-              <span className="block text-sm font-medium text-slate-900 mb-2">
-                {item.desc}
-              </span>
-              <span
-                className="block relative w-full bg-slate-200 h-1 rounded-full"
-                role="progressbar"
-                aria-valuenow={active === index ? progress : 0}
-              >
-                <span
-                  className="absolute inset-0 bg-indigo-500 rounded-[inherit]"
-                  style={{ width: active === index ? `${progress}%` : "0%" }}
-                ></span>
-              </span>
-            </span>
-          </button>
+            <Image
+              className="rounded-xl"
+              src={item.img}
+              width={1024}
+              height={576}
+              alt={item.desc}
+            />
+          </Transition>
         ))}
+        {/* Progress bar */}
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300">
+          <div
+            className="h-1 bg-indigo-500"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+        {/* Buttons */}
+        <button
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
+          onClick={handlePrev}
+        >
+          {/* Left arrow icon */}
+          {/* You can replace the placeholder below with your actual left arrow icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
+          onClick={handleNext}
+        >
+          {/* Right arrow icon */}
+          {/* You can replace the placeholder below with your actual right arrow icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
