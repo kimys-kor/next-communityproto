@@ -47,81 +47,86 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
     setProgress(0);
   };
 
+  const heightFix = () => {
+    if (itemsRef.current && itemsRef.current.parentElement)
+      itemsRef.current.parentElement.style.height = `${itemsRef.current.clientHeight}px`;
+  };
+
+  useEffect(() => {
+    heightFix();
+  }, []);
+
   return (
-    <div className="w-full max-w-5xl mx-auto text-center relative">
+    <div className="w-full max-w-5xl mx-auto text-center">
       {/* Item image */}
-      <div className="relative flex flex-col" ref={itemsRef}>
-        {items.map((item, index) => (
-          <Transition
-            key={index}
-            show={active === index}
-            enter="transition ease-in-out duration-500 delay-200 order-first"
-            enterFrom="opacity-0 scale-105"
-            enterTo="opacity-100 scale-100"
-            leave="transition ease-in-out duration-300 absolute"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <Image
-              className="rounded-xl"
-              src={item.img}
-              width={1024}
-              height={576}
-              alt={item.desc}
-            />
-          </Transition>
-        ))}
-        {/* Progress bar */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300">
-          <div
-            className="h-1 bg-indigo-500"
-            style={{ width: `${progress}%` }}
-          ></div>
+      <div className="transition-all duration-150 delay-300 ease-in-out">
+        <div className="relative flex flex-col" ref={itemsRef}>
+          {items.map((item, index) => (
+            <Transition
+              key={index}
+              show={active === index}
+              enter="transition ease-in-out duration-500 delay-200 order-first"
+              enterFrom="opacity-0 scale-105"
+              enterTo="opacity-100 scale-100"
+              leave="transition ease-in-out duration-300 absolute"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+              beforeEnter={() => heightFix()}
+            >
+              <Image
+                className="rounded-xl"
+                src={item.img}
+                width={1024}
+                height={177}
+                alt={item.desc}
+              />
+            </Transition>
+          ))}
         </div>
-        {/* Buttons */}
-        <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
-          onClick={handlePrev}
-        >
-          {/* Left arrow icon */}
-          {/* You can replace the placeholder below with your actual left arrow icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
-          onClick={handleNext}
-        >
-          {/* Right arrow icon */}
-          {/* You can replace the placeholder below with your actual right arrow icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
       </div>
+      {/* Buttons */}
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
+        onClick={handlePrev}
+      >
+        {/* Left arrow icon */}
+        {/* You can replace the placeholder below with your actual left arrow icon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-gray-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
+        onClick={handleNext}
+      >
+        {/* Right arrow icon */}
+        {/* You can replace the placeholder below with your actual right arrow icon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-gray-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
     </div>
   );
 }
