@@ -4,7 +4,7 @@ import Login from "../components/login/Login";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <aside className="max-w-sm w-1/3 h-full flex flex-col gap-4">
         <Login></Login>
         <Card title={"주간베스트"}></Card>
