@@ -11,6 +11,12 @@ import {
   FaFootballBall,
 } from "react-icons/fa";
 import SoccerTab from "./SoccerTab";
+import BaseballTab from "./BaseballTab";
+import BasketballTab from "./BasketBallTab";
+import VolleyballTab from "./VolleyballTab";
+import HockeyTab from "./HockeyTab";
+import TennisTab from "./TennisTab";
+import FootballTab from "./FootballTab";
 import LeagueStandings from "./LeagueStandings";
 
 const sports = [
@@ -36,14 +42,55 @@ const IconTabs: React.FC = () => {
             setSelectedLeague={setSelectedLeague}
           />
         );
-      // Add other cases for different sports
+      case "baseball":
+        return (
+          <BaseballTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
+      case "basketball":
+        return (
+          <BasketballTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
+      case "volleyball":
+        return (
+          <VolleyballTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
+      case "hockey":
+        return (
+          <HockeyTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
+      case "tennis":
+        return (
+          <TennisTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
+      case "football":
+        return (
+          <FootballTab
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+          />
+        );
       default:
         return null;
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg">
+    <div className="w-full mx-auto p-4 bg-white shadow-lg rounded-lg">
       <div className="flex justify-around mb-4">
         {sports.map((sport) => (
           <button
@@ -52,6 +99,18 @@ const IconTabs: React.FC = () => {
               setSelectedSport(sport.id);
               if (sport.id === "soccer") {
                 setSelectedLeague("EPL");
+              } else if (sport.id === "baseball") {
+                setSelectedLeague("MLB");
+              } else if (sport.id === "basketball") {
+                setSelectedLeague("NBA");
+              } else if (sport.id === "volleyball") {
+                setSelectedLeague("FIVB World League");
+              } else if (sport.id === "hockey") {
+                setSelectedLeague("NHL");
+              } else if (sport.id === "tennis") {
+                setSelectedLeague("ATP");
+              } else if (sport.id === "football") {
+                setSelectedLeague("NFL");
               } else {
                 setSelectedLeague(null);
               }
@@ -64,19 +123,21 @@ const IconTabs: React.FC = () => {
           </button>
         ))}
       </div>
-      {selectedSport && (
-        <div>
-          {renderSportTab()}
-          {selectedLeague && (
-            <div>
-              <h2 className="text-2xl mb-4 text-center">
-                {selectedLeague} Standings
-              </h2>
-              <LeagueStandings league={selectedLeague} />
-            </div>
-          )}
-        </div>
-      )}
+      <div className="flex flex-col items-center">
+        {selectedSport && (
+          <div className="w-full">
+            {renderSportTab()}
+            {selectedLeague && (
+              <div>
+                <h2 className="text-2xl mb-4 text-center">
+                  {selectedLeague} Standings
+                </h2>
+                <LeagueStandings league={selectedLeague} />
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
