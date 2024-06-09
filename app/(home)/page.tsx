@@ -11,9 +11,7 @@ export default function Home() {
         <Login></Login>
         <Card title={"주간베스트"}></Card>
         <Card title={"실시간베스트"}></Card>
-        <Card title={"ddd"}></Card>
-        <Card title={"ggg"}></Card>
-        {/* <IconTabs></IconTabs> */}
+        <IconTabs></IconTabs>
       </aside>
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
