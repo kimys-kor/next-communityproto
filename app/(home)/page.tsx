@@ -11,15 +11,17 @@ export default function Home() {
         <Login></Login>
         <Card title={"주간베스트"}></Card>
         <Card title={"실시간베스트"}></Card>
+        <Card title={"ddd"}></Card>
+        <Card title={"ggg"}></Card>
+        {/* <IconTabs></IconTabs> */}
       </aside>
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
+
         <section className="grid grid-cols-2 gap-3">
           <NewPost></NewPost>
           {/* <NewPost></NewPost> */}
-          <div className="bg-gray-100 flex items-center justify-center">
-            <IconTabs></IconTabs>
-          </div>
+          <div className="bg-gray-100 flex items-center justify-center"></div>
         </section>
       </article>
     </div>

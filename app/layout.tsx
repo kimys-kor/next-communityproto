@@ -25,16 +25,18 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <ClientOnly>
-          <ToasterProvider />
-          <LoginModal />
-          <RegisterModal />
-          <Headers></Headers>
+        <div>
+          <ClientOnly>
+            <ToasterProvider />
+            <LoginModal />
+            <RegisterModal />
+            <Headers></Headers>
+          </ClientOnly>
+          <div className="pt-24">
+            <Navbar></Navbar>
+            <Container>{children}</Container>
+          </div>
           <Footer></Footer>
-        </ClientOnly>
-        <div className="pt-24">
-          <Navbar></Navbar>
-          <Container>{children}</Container>
         </div>
       </body>
     </html>

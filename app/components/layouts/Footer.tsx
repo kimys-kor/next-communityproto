@@ -2,8 +2,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="absolute bottom-0 bg-footer w-full h-[6rem] flex items-center justify-center">
-      Footer
+    <footer className="relative w-full h-24 mt-5">
+      <div className="w-full h-full absolute bg-footer bottom-0 flex items-center justify-center">
+        Footer
+      </div>
     </footer>
   );
 }

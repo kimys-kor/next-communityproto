@@ -14,6 +14,9 @@ const config: Config = {
       xl: "1440px",
     },
     extend: {
+      height: {
+        "calc-100": "calc(100vh - 4rem)",
+      },
       spacing: {
         "128": "32rem",
         "144": "36rem",
