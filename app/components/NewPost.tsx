@@ -21,7 +21,7 @@ const NewPost = () => {
   ];
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-[#f7f8fa]/35 rounded-2xl shadow-md">
       <Tabs tabs={tabs}></Tabs>
     </div>
   );

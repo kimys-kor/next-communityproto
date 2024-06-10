@@ -34,6 +34,21 @@ const config: Config = {
         // gray: "#8492a6",
         // "gray-light": "#d3dce6",
         footer: "#F7F9FA",
+        "gradient-start": "#00daef",
+        "gradient-end": "#bc67ff",
+      },
+      animation: {
+        moveGrad: "MoveGrad 5s ease infinite",
+      },
+      keyframes: {
+        MoveGrad: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      backgroundSize: {
+        "200%": "200% 200%",
       },
     },
   },

@@ -85,28 +85,28 @@ const LeagueStandings: React.FC<LeagueStandingsProps> = ({ league }) => {
   const standings = (fakeData[league] as TeamStanding[]) || [];
 
   return (
-    <table className="min-w-full bg-white">
+    <table className="min-w-full text-center">
       <thead>
         <tr>
-          <th className="py-2">Rank</th>
-          <th className="py-2">Team</th>
-          <th className="py-2">Games</th>
-          <th className="py-2">Win</th>
-          <th className="py-2">Draw</th>
-          <th className="py-2">Loss</th>
-          <th className="py-2">Points</th>
+          <th className="py-2 text-sm">순위</th>
+          <th className="py-2 text-sm">팀</th>
+          <th className="py-2 text-sm">경기</th>
+          <th className="py-2 text-sm">승</th>
+          <th className="py-2 text-sm">무</th>
+          <th className="py-2 text-sm">패</th>
+          <th className="py-2 text-sm">승점</th>
         </tr>
       </thead>
       <tbody>
         {standings.map((team, index) => (
           <tr key={index}>
-            <td className="py-2">{team.ranking}</td>
-            <td className="py-2">{team.team}</td>
-            <td className="py-2">{team.games}</td>
-            <td className="py-2">{team.win}</td>
-            <td className="py-2">{team.draw}</td>
-            <td className="py-2">{team.loss}</td>
-            <td className="py-2">{team.points}</td>
+            <td className="py-2 text-sm">{team.ranking}</td>
+            <td className="py-2 text-sm">{team.team}</td>
+            <td className="py-2 text-sm">{team.games}</td>
+            <td className="py-2 text-sm">{team.win}</td>
+            <td className="py-2 text-sm">{team.draw}</td>
+            <td className="py-2 text-sm">{team.loss}</td>
+            <td className="py-2 text-sm">{team.points}</td>
           </tr>
         ))}
       </tbody>

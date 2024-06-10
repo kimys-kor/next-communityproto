@@ -6,7 +6,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title }) => {
   return (
-    <div className="w-full shadow-md p-3 rounded-md bg-[#f7f8fa]">
+    <div className="w-full shadow-md p-3 rounded-md bg-[#f7f8fa]/35">
       <div className="h-10 leading-8 flex border-solid border-b border-gray-light">
         <h1 className="text-lg">{title}</h1>
       </div>

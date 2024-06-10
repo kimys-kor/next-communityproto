@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import SoccerTab from "./SoccerTab";
 import BaseballTab from "./BaseballTab";
-import BasketballTab from "./BasketBallTab";
+import BasketballTab from "./BasketballTab";
 import VolleyballTab from "./VolleyballTab";
 import HockeyTab from "./HockeyTab";
 import TennisTab from "./TennisTab";
@@ -90,7 +90,7 @@ const IconTabs: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-4 bg-white shadow-lg rounded-lg">
+    <div className="w-full mx-auto p-4 bg-[#f7f8fa]/35 shadow-lg rounded-lg">
       <div className="flex justify-around mb-4">
         {sports.map((sport) => (
           <button
@@ -129,9 +129,6 @@ const IconTabs: React.FC = () => {
             {renderSportTab()}
             {selectedLeague && (
               <div>
-                <h2 className="text-2xl mb-4 text-center">
-                  {selectedLeague} Standings
-                </h2>
                 <LeagueStandings league={selectedLeague} />
               </div>
             )}

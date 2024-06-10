@@ -7,13 +7,13 @@ interface SoccerTabProps {
 
 const soccerLeagues = [
   "EPL",
-  "Bundesliga",
-  "La Liga",
-  "Serie A",
-  "French Ligue 1",
-  "Eredivisie",
-  "K League 1",
-  "K League 2",
+  "분데스리가",
+  "라리가",
+  "세리에A",
+  "프랑스리그1",
+  "에레디비지",
+  "k리그1",
+  "K리그2",
 ];
 
 const SoccerTab: React.FC<SoccerTabProps> = ({
@@ -27,8 +27,8 @@ const SoccerTab: React.FC<SoccerTabProps> = ({
           <button
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`px-4 py-2 ${
-              selectedLeague === league ? "bg-blue-700" : "bg-blue-500"
+            className={`p-2 text-sm hover:bg-indigo-500 ${
+              selectedLeague === league ? "bg-indigo-500" : "bg-indigo-200"
             } text-white rounded-lg m-2`}
           >
             {league}

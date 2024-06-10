@@ -21,7 +21,7 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
             className={`outline outline-slate-300 outline-1 cursor-pointer text-base py-2 px-4 font-medium transition-all duration-300
               ${
                 activeTab === index
-                  ? "text-white bg-purple-600 border-b-4 border-purple-800 transform scale-105"
+                  ? "text-white bg-indigo-300 border-b-4 border-indigo-500 transform scale-105"
                   : "text-gray-700 "
               }
               ${index === 0 ? "rounded-l-md" : ""}

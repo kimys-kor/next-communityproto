@@ -5,7 +5,7 @@ interface BasketballTabProps {
   setSelectedLeague: (league: string) => void;
 }
 
-const basketballLeagues = ["NBA", "EuroLeague", "CBA"];
+const basketballLeagues = ["NBA", "KBL", "CBA"];
 
 const BasketballTab: React.FC<BasketballTabProps> = ({
   selectedLeague,
@@ -18,8 +18,8 @@ const BasketballTab: React.FC<BasketballTabProps> = ({
           <button
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`px-4 py-2 ${
-              selectedLeague === league ? "bg-blue-700" : "bg-blue-500"
+            className={`p-2 text-sm hover:bg-indigo-500 ${
+              selectedLeague === league ? "bg-indigo-500" : "bg-indigo-200"
             } text-white rounded-lg m-2`}
           >
             {league}
