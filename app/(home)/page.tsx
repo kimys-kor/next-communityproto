@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import NewPost from "../components/NewPost";
 import ProgressSliderPage from "../components/ProgressSliderPage";
+import ReactiveSlider from "../components/ReactiveSlider";
 import Login from "../components/login/Login";
 import IconTabs from "../components/sportRank/IconTabs";
 
@@ -77,6 +78,10 @@ export default function Home() {
               </section>
             </div>
           </main>
+        </section>
+
+        <section>
+          <ReactiveSlider></ReactiveSlider>
         </section>
       </article>
     </div>
