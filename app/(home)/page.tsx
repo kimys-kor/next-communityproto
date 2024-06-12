@@ -7,13 +7,7 @@ import IconTabs from "../components/sportRank/IconTabs";
 
 export default function Home() {
   return (
-    <div className="flex gap-5">
-      <aside className="max-w-sm w-1/3 h-full flex flex-col gap-4">
-        <Login></Login>
-        <Card title={"주간베스트"}></Card>
-        <Card title={"실시간베스트"}></Card>
-        <IconTabs></IconTabs>
-      </aside>
+    <div className="flex max-w-[1200px]">
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
 
@@ -80,9 +74,7 @@ export default function Home() {
           </main>
         </section>
 
-        <section>
-          <ReactiveSlider></ReactiveSlider>
-        </section>
+        {/* <ReactiveSlider></ReactiveSlider> */}
       </article>
     </div>
   );

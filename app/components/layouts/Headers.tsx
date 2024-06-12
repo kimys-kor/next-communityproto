@@ -9,13 +9,13 @@ function Headers() {
   return (
     <header className="fixed w-full h-20 bg-white z-10 ">
       <div className="py-4">
-        <Container>
-          <nav className="flex flex-row items-center justify-between gap-3 md:gap-0 ">
+        <div className="max-w-[1500px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
+          <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0 ">
             <Link prefetch href="/">
               <Logo></Logo>
             </Link>
 
-            <div className="w-1/3 flex gap-2 justify-between">
+            <div className="flex gap-2 justify-between">
               <SearchBox></SearchBox>
               <div className="flex gap-2 justify-center items-center">
                 <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
@@ -35,7 +35,7 @@ function Headers() {
               </div>
             </div>
           </nav>
-        </Container>
+        </div>
       </div>
     </header>
   );
