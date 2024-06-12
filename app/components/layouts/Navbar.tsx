@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <Container>
-      <div className="w-full h-14 flex items-center gap-10 truncate p-6 bg-gradient-to-r from-gradient-start to-gradient-end bg-[length:200%_200%] animate-moveGrad font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+      <div className="w-full h-14 flex items-center gap-10 truncate p-6 bg-indigo-500/75 bg-[length:200%_200%] font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
         {links.map((link) => (
           <Link
             key={link.href}
