@@ -14,6 +14,9 @@ const config: Config = {
       xl: "1440px",
     },
     extend: {
+      gridTemplateColumns: {
+        "auto-fit-minmax": "repeat(auto-fit, minmax(240px, 1fr))",
+      },
       height: {
         "calc-100": "calc(100vh - 4rem)",
       },
