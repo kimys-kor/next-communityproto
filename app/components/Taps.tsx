@@ -13,21 +13,18 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="w-full container flex flex-col gap-4">
+    <div className="w-full container flex flex-col gap-6">
       {/* button */}
       <div className="flex justify-start">
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`cursor-pointer text-sm px-4 transition-all duration-300 hover:text-pink-500
+            className={`cursor-pointer text-sm px-4 transition-all border-b-2 border-solid  hover:text-pink-500
               ${
                 activeTab === index
-                  ? "text-pink-500  border-b-4 "
-                  : "text-gray-700 "
+                  ? "text-pink-500 border-b-2 border-rose-500 border-solid"
+                  : "text-gray-700 border-transparent"
               }
-              ${index === 0 ? "rounded-l-md" : ""}
-              ${index === tabs.length - 1 ? "rounded-r-md" : ""}
-              ${index !== tabs.length - 1 ? "border-r border-white" : ""}
             `}
             onClick={() => setActiveTab(index)}
           >
