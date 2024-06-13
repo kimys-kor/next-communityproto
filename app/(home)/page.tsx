@@ -1,9 +1,6 @@
-import Card from "../components/Card";
 import NewPost from "../components/NewPost";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import ReactiveSlider from "../components/ReactiveSlider";
-import Login from "../components/login/Login";
-import IconTabs from "../components/sportRank/IconTabs";
 
 export default function Home() {
   return (
@@ -13,7 +10,7 @@ export default function Home() {
 
         <section className="grid grid-cols-2 gap-3">
           <NewPost></NewPost>
-          {/* <NewPost></NewPost> */}
+          <NewPost></NewPost>
           <main className="w-full h-auto px-12 py-11 bg-white/25 rounded-2xl shadow-md flex flex-col gap-4">
             <header className="w-full h-auto flex justify-center items-center bg-white md:justify-between">
               <img
