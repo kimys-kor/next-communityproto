@@ -1,4 +1,5 @@
 import NewPost from "../components/NewPost";
+import NewPost2 from "../components/NewPost2";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import ReactiveSlider from "../components/ReactiveSlider";
 
@@ -10,7 +11,7 @@ export default function Home() {
 
         <section className="grid grid-cols-2 gap-3">
           <NewPost></NewPost>
-          <NewPost></NewPost>
+          <NewPost2></NewPost2>
           <main className="w-full h-auto px-12 py-11 bg-white/25 rounded-2xl shadow-md flex flex-col gap-4">
             <header className="w-full h-auto flex justify-center items-center bg-white md:justify-between">
               <img

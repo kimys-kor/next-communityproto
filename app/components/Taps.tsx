@@ -13,15 +13,16 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="w-full container mx-auto p-3">
-      <div className="flex justify-center">
+    <div className="w-full container flex flex-col gap-4">
+      {/* button */}
+      <div className="flex justify-start">
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`outline outline-slate-300 outline-1 cursor-pointer text-base py-2 px-4 font-medium transition-all duration-300
+            className={`cursor-pointer text-sm px-4 transition-all duration-300 hover:text-pink-500
               ${
                 activeTab === index
-                  ? "text-white bg-indigo-300 border-b-4 border-indigo-500 transform scale-105"
+                  ? "text-pink-500  border-b-4 "
                   : "text-gray-700 "
               }
               ${index === 0 ? "rounded-l-md" : ""}
@@ -34,17 +35,19 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
           </div>
         ))}
       </div>
-      <div className="text-sm w-full mt-4 p-4">
+      {/* content */}
+      <div className="text-sm w-full ">
         {tabs[activeTab].content.map((title, index) => (
           <div
             key={index}
-            className={` flex gap-2 items-center p-2 rounded-md shadow-md ${
-              index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"
-            }`}
+            className="px-3 flex justify-between hover:bg-slate-200 hover:cursor-pointer border-b border-solid border-slate-200"
           >
-            <NewIcon />
-            <HotIcon />
-            <div className="text-xs">{title}</div>
+            <div className={`flex gap-2 items-center p-2`}>
+              <NewIcon />
+              <HotIcon />
+              <div className="text-xs">{title}</div>
+            </div>
+            <div className="flex justify-center items-center">06-13</div>
           </div>
         ))}
       </div>
