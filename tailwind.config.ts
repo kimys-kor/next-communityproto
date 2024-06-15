@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    variants: {
+      display: ["group-hover"],
+    },
     screens: {
       sm: "480px",
       md: "768px",

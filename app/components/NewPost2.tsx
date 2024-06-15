@@ -85,7 +85,7 @@ const NewPost2: React.FC = () => {
         {/* content */}
         <div className="text-sm w-full">
           {activeTab === 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 delay-500">
               {(tabs[0].content as TabContent).map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <img

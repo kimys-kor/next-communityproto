@@ -17,13 +17,62 @@ const Navbar = () => {
 
   const links = [
     { href: "/", label: "홈" },
-    { href: "/warranty", label: "보증업체" },
-    { href: "/verify", label: "먹튀검증" },
-    { href: "/sport", label: "스포츠분석" },
-    { href: "/pickster", label: "분석존" },
-    { href: "/community", label: "커뮤니티" },
-    { href: "/promotion", label: "홍보센터" },
-    { href: "/customer", label: "고객센터" },
+    {
+      href: "/warranty",
+      label: "보증업체",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/verify",
+      label: "먹튀검증",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/sport",
+      label: "스포츠분석",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/pickster",
+      label: "분석존",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/community",
+      label: "커뮤니티",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/promotion",
+      label: "홍보센터",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
+    {
+      href: "/customer",
+      label: "고객센터",
+      dropdown: [
+        { href: "/pickster/tip1", label: "Tip 1" },
+        { href: "/pickster/tip2", label: "Tip 2" },
+      ],
+    },
   ];
 
   const handleLinkClick = (path: string) => {
@@ -32,22 +81,48 @@ const Navbar = () => {
 
   return (
     <Container>
-      <div className="w-full h-14 flex items-center gap-10 truncate p-6 bg-indigo-500/75 bg-[length:200%_200%] font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+      <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
         {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`w-20 text-base cursor-pointer transition-all duration-300 ease-in-out ${
-              activeLink === link.href
-                ? "text-white"
-                : "text-white/55 hover:text-white"
-            }`}
-            onClick={() => handleLinkClick(link.href)}
-          >
-            {link.label}
-          </Link>
+          <div key={link.href} className="relative group">
+            <Link
+              href={link.href}
+              className={`w-20 text-base cursor-pointer transition-all duration-300 ease-in-out ${
+                activeLink === link.href
+                  ? "text-white"
+                  : "text-white/55 hover:text-white"
+              }`}
+              onClick={() => handleLinkClick(link.href)}
+            >
+              {link.label}
+              {/* <ul className="absolute left-0 mt-1 bg-gray-100 shadow-md px-2 py-1 rounded-md hidden group-hover:block">
+                <li className="text-sm text-gray-800 hover:text-blue-300">
+                  드롭메뉴1
+                </li>
+                <li className="text-sm text-gray-800 hover:text-blue-300">
+                  드롭메뉴2
+                </li>
+                <li className="text-sm text-gray-800 hover:text-blue-300">
+                  드롭메뉴3
+                </li>
+              </ul> */}
+            </Link>
+            {link.dropdown && (
+              <div className="truncate top-[11px] right-[-25px] w-24 absolute z-10 mt-3 hidden bg-gray-100 shadow-md rounded-md group-hover:block">
+                {link.dropdown.map((sublink) => (
+                  <Link
+                    key={sublink.href}
+                    href={sublink.href}
+                    className="w-full block p-4 text-gray-800 hover:bg-indigo-500 hover:text-white"
+                    onClick={() => handleLinkClick(sublink.href)}
+                  >
+                    {sublink.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
-      </div>
+      </nav>
     </Container>
   );
 };
