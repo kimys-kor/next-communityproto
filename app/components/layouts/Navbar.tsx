@@ -83,10 +83,10 @@ const Navbar = () => {
     <Container>
       <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
         {links.map((link) => (
-          <div key={link.href} className="relative group">
+          <div key={link.href} className="relative group cursor-pointer">
             <Link
               href={link.href}
-              className={`w-20 text-base cursor-pointer transition-all duration-300 ease-in-out ${
+              className={`w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover ${
                 activeLink === link.href
                   ? "text-white"
                   : "text-white/55 hover:text-white"
@@ -107,12 +107,12 @@ const Navbar = () => {
               </ul> */}
             </Link>
             {link.dropdown && (
-              <div className="truncate top-[11px] right-[-25px] w-24 absolute z-10 mt-3 hidden bg-gray-100 shadow-md rounded-md group-hover:block">
+              <div className="w-24 top-6 left-[-10px] invisible absolute z-50 flex  flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
                     href={sublink.href}
-                    className="w-full block p-4 text-gray-800 hover:bg-indigo-500 hover:text-white"
+                    className="w-full block p-4 text-gray-800 hover:bg-gray-200 hover:text-white"
                     onClick={() => handleLinkClick(sublink.href)}
                   >
                     {sublink.label}
