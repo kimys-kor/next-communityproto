@@ -38,7 +38,7 @@ export default function RootLayout({
             <Navbar></Navbar>
 
             <Container>
-              <aside className="max-w-[300px] h-full flex flex-col gap-4">
+              <aside className="max-w-[330px] h-full flex flex-col gap-4">
                 <Login></Login>
                 <Card title={"주간베스트"}></Card>
                 <Card title={"실시간베스트"}></Card>

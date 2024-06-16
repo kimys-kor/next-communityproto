@@ -22,9 +22,9 @@ const VolleyballTab: React.FC<VolleyballTabProps> = ({
           <button
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`p-2 text-sm hover:bg-indigo-500 ${
-              selectedLeague === league ? "bg-indigo-500" : "bg-indigo-200"
-            } text-white rounded-lg m-2`}
+            className={`text-sm cursor-pointer rounded-lg m-2 hover:text-indigo-500 ${
+              selectedLeague === league ? "text-indigo-500" : ""
+            }  `}
           >
             {league}
           </button>

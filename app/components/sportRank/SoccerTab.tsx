@@ -24,15 +24,15 @@ const SoccerTab: React.FC<SoccerTabProps> = ({
     <div>
       <div className="flex flex-wrap justify-around mb-4">
         {soccerLeagues.map((league) => (
-          <button
+          <span
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`p-2 text-sm hover:bg-indigo-500 ${
-              selectedLeague === league ? "bg-indigo-500" : "bg-indigo-200"
-            } text-white rounded-lg m-2`}
+            className={`text-sm cursor-pointer rounded-lg m-2 hover:text-indigo-500 ${
+              selectedLeague === league ? "text-indigo-500" : ""
+            }  `}
           >
             {league}
-          </button>
+          </span>
         ))}
       </div>
     </div>
