@@ -20,41 +20,49 @@ const Navbar = () => {
     {
       href: "/warranty",
       label: "보증업체",
-      dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
-      ],
     },
     {
       href: "/verify",
       label: "먹튀검증",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/verify", label: "검증" },
+        { href: "/verify/case", label: "피해사례" },
       ],
     },
     {
-      href: "/sport",
+      href: "/sport/soccer",
       label: "스포츠분석",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/sport/soccer", label: "축구분석" },
+        { href: "/sport/base", label: "야구분석" },
+        { href: "/sport/basket", label: "농구분석" },
+        { href: "/sport/volley", label: "배구분석" },
+        { href: "/sport/hockey", label: "하키분석" },
       ],
     },
     {
       href: "/pickster",
       label: "분석존",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/pickster/", label: "나는분석왕" },
+        { href: "/pickster/guide", label: "가이드" },
       ],
     },
     {
       href: "/community",
       label: "커뮤니티",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/pickster/tip1", label: "안구정화" },
+        { href: "/pickster/tip1", label: "유머 & 이슈" },
+        { href: "/pickster/tip2", label: "자유게시판" },
+      ],
+    },
+    {
+      href: "/event",
+      label: "이벤트",
+      dropdown: [
+        { href: "/event", label: "이벤트공지" },
+        { href: "/event/attd", label: "출석체크" },
       ],
     },
     {
@@ -94,25 +102,14 @@ const Navbar = () => {
               onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
-              {/* <ul className="absolute left-0 mt-1 bg-gray-100 shadow-md px-2 py-1 rounded-md hidden group-hover:block">
-                <li className="text-sm text-gray-800 hover:text-blue-300">
-                  드롭메뉴1
-                </li>
-                <li className="text-sm text-gray-800 hover:text-blue-300">
-                  드롭메뉴2
-                </li>
-                <li className="text-sm text-gray-800 hover:text-blue-300">
-                  드롭메뉴3
-                </li>
-              </ul> */}
             </Link>
             {link.dropdown && (
-              <div className="w-24 top-6 left-[-10px] invisible absolute z-50 flex  flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
+              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex  flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
                     href={sublink.href}
-                    className="w-full block p-4 text-gray-800 hover:bg-gray-200 hover:text-white"
+                    className="w-full block p-4 text-white hover:scale-110  text-[1rem] "
                     onClick={() => handleLinkClick(sublink.href)}
                   >
                     {sublink.label}
