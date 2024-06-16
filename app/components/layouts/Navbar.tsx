@@ -44,17 +44,17 @@ const Navbar = () => {
       href: "/pickster",
       label: "분석존",
       dropdown: [
-        { href: "/pickster/", label: "나는분석왕" },
+        { href: "/pickster/", label: "나는 분석왕" },
         { href: "/pickster/guide", label: "가이드" },
       ],
     },
     {
-      href: "/community",
+      href: "/community/photo",
       label: "커뮤니티",
       dropdown: [
-        { href: "/pickster/tip1", label: "안구정화" },
-        { href: "/pickster/tip1", label: "유머 & 이슈" },
-        { href: "/pickster/tip2", label: "자유게시판" },
+        { href: "/community/photo", label: "안구정화" },
+        { href: "/community/humor", label: "유머 & 이슈" },
+        { href: "/community/free", label: "자유게시판" },
       ],
     },
     {
@@ -69,16 +69,17 @@ const Navbar = () => {
       href: "/promotion",
       label: "홍보센터",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/promotion", label: "일반홍보" },
+        { href: "/promotion/ggong", label: "꽁머니홍보" },
+        { href: "/promotion/hunting", label: "구인구직" },
       ],
     },
     {
       href: "/customer",
       label: "고객센터",
       dropdown: [
-        { href: "/pickster/tip1", label: "Tip 1" },
-        { href: "/pickster/tip2", label: "Tip 2" },
+        { href: "/customer", label: "공지사항" },
+        { href: "/customer/qalist", label: "1:1 문의" },
       ],
     },
   ];
