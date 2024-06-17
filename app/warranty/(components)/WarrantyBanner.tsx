@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProgressSliderPage from "../ProgressSliderPage";
+import ProgressSliderPage from "../../components/ProgressSliderPage";
 
 function WarrantyBanner() {
   return (

@@ -90,9 +90,12 @@ const Navbar = () => {
 
   return (
     <Container>
-      <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
+      <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative overflow-x-auto overflow-y-clip">
         {links.map((link) => (
-          <div key={link.href} className="relative group cursor-pointer ">
+          <div
+            key={link.href}
+            className="relative group cursor-pointer md:grid-rows-2"
+          >
             <Link
               href={link.href}
               className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover ${
@@ -105,7 +108,7 @@ const Navbar = () => {
               {link.label}
             </Link>
             {link.dropdown && (
-              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex  flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
+              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex  flex-col bg-indigo-500 text-white shadow-xl group-hover:visible md:hidden">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
