@@ -1,3 +1,5 @@
+import React from "react";
+
 interface ImgContent {
   img: string;
   title: string;

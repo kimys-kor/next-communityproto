@@ -16,9 +16,12 @@ function HomeBanner() {
   ];
 
   return (
-    <main className="w-full h-auto px-12 py-11 bg-white/25 rounded-2xl shadow-md flex flex-col gap-4 items-center ">
-      <h1 className="text-3xl">먹튀타파 공식 보증업체</h1>
-      <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3">
+    <main className="w-full h-auto bg-white/25 rounded-2xl shadow-md flex flex-col items-center ">
+      <div className="w-full flex justify-center items-center gap-5 py-3">
+        <span className="text-3xl  text-indigo-500 ">먹튀타파</span>
+        <span className="text-3xl  text-black ">공식 보증업체</span>
+      </div>
+      <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 p-3">
         {imgContent.map((item, index) => (
           <li>
             <img

@@ -1,10 +1,7 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import WarrantyBanner from "./(components)/WarrantyBanner";
 import BreadCrumbs from "../components/BreadCrumb";
-const PartnerCard = dynamic(() => import("./(components)/PartnerCard"), {
-  ssr: false,
-});
+import PartnerCard from "./(components)/PartnerCard";
 
 interface ImgContent {
   img: string;
@@ -22,17 +19,17 @@ function Page() {
     { img: "/images/homebanner/6.jpg", title: "정글", code: "mttp" },
   ];
 
-  const breadcrumbItems = [
-    { href: "/", label: "Home" },
-    { href: "/warranty", label: "보증업체" },
-  ];
+  const breadcrumbItems = {
+    title: "보증업체",
+    subMenu: ["Sub1", "Sub2"],
+  };
 
   return (
     <div className="flex flex-col max-w-[1200px] gap-3">
       <WarrantyBanner />
-      <BreadCrumbs breadcrumbItems={breadcrumbItems}></BreadCrumbs>
+      <BreadCrumbs breadcrumbData={breadcrumbItems}></BreadCrumbs>
 
-      <div className="m grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {imgContent.map((item, index) => (
           <article
             key={index}

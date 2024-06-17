@@ -1,40 +1,29 @@
 import React from "react";
-import Link from "next/link";
 
 interface BreadcrumbItem {
-  href: string;
-  label: string;
+  title: string;
+  subMenu: string[];
 }
 
 interface BreadcrumbProps {
-  breadcrumbItems: BreadcrumbItem[];
+  breadcrumbData: BreadcrumbItem;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbItems }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
   return (
-    <nav aria-label="Breadcrumb">
-      <ol className="flex flex-wrap items-center space-x-1">
-        {breadcrumbItems.map((item, index) => (
-          <li key={index} className="flex items-center">
-            <Link href={item.href} passHref>
-              <span
-                className={`px-3 py-2 flex items-center justify-center bg-indigo-500 text-white rounded-l-md transition-colors duration-300 cursor-pointer ${
-                  index === breadcrumbItems.length - 1
-                    ? "bg-indigo-600 cursor-default"
-                    : "hover:bg-indigo-700"
-                }`}
-              >
-                {item.label}
-              </span>
-            </Link>
-            {index < breadcrumbItems.length - 1 && (
-              <div className="relative">
-                <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-indigo-500"></div>
-              </div>
-            )}
-          </li>
+    <nav className="w-full bg-white/25 rounded-2xl shadow-md flex items-center">
+      <div className="h-12 font-bold bg-indigo-400 w-1/5 rounded-l-2xl flex justify-center items-center text-white">
+        <p className="tracking-wider text-[1.25rem] font-light">
+          {breadcrumbData.title}
+        </p>
+      </div>
+      <div className="border-solid border-indigo-400 border-4 w-4/5 h-12 flex items-center rounded-r-2xl gap-3 pl-4">
+        {breadcrumbData.subMenu.map((item, index) => (
+          <span key={index} className="text-gray-700">
+            {item}
+          </span>
         ))}
-      </ol>
+      </div>
     </nav>
   );
 };
