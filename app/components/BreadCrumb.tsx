@@ -17,9 +17,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
           {breadcrumbData.title}
         </p>
       </div>
-      <div className="border-solid border-indigo-400 border-4 w-4/5 h-12 flex items-center rounded-r-2xl gap-3 pl-4">
+      <div className="border-solid border-indigo-400 border-4 w-4/5 h-12 flex items-center rounded-r-2xl gap-10 pl-10">
         {breadcrumbData.subMenu.map((item, index) => (
-          <span key={index} className="text-gray-700">
+          <span
+            key={index}
+            className="text-gray-700 cursor-pointer border-b-2 border-solid border-transparent hover:text-fuchsia-500 hover:border-fuchsia-400"
+          >
             {item}
           </span>
         ))}
