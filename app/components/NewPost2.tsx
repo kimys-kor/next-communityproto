@@ -69,7 +69,7 @@ const NewPost2: React.FC = () => {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`cursor-pointer text-sm px-4 transition-all border-b-2 border-solid hover:text-blue-500
+              className={`truncate cursor-pointer text-sm px-4 transition-all border-b-2 border-solid hover:text-blue-500
               ${
                 activeTab === index
                   ? "text-blue-500 border-b-2 border-blue-500 border-solid"

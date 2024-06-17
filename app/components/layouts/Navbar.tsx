@@ -92,10 +92,10 @@ const Navbar = () => {
     <Container>
       <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
         {links.map((link) => (
-          <div key={link.href} className="relative group cursor-pointer">
+          <div key={link.href} className="relative group cursor-pointer ">
             <Link
               href={link.href}
-              className={`w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover ${
+              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover ${
                 activeLink === link.href
                   ? "text-white"
                   : "text-white/55 hover:text-white"

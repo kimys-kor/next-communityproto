@@ -2,6 +2,7 @@ import NewPost from "../components/NewPost";
 import NewPost2 from "../components/NewPost2";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import ReactiveSlider from "../components/ReactiveSlider";
+import HomeBanner from "./(components)/HomeBanner";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
           <NewPost></NewPost>
           <NewPost2></NewPost2>
         </section>
-        <main className="w-full h-auto px-12 py-11 bg-white/25 rounded-2xl shadow-md flex flex-col gap-4"></main>
+
+        <HomeBanner></HomeBanner>
 
         {/* <ReactiveSlider></ReactiveSlider> */}
       </article>
