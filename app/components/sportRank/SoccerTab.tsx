@@ -27,7 +27,7 @@ const SoccerTab: React.FC<SoccerTabProps> = ({
           <span
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`text-sm cursor-pointer rounded-lg m-2 hover:text-indigo-500 ${
+            className={`text-xs cursor-pointer rounded-lg m-2 hover:text-indigo-500 ${
               selectedLeague === league ? "text-indigo-500" : ""
             }  `}
           >

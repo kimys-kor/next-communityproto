@@ -9,7 +9,7 @@ type Tab = {
   content: string[];
 };
 
-const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
+const NewTaps: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -52,4 +52,4 @@ const Tabs: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   );
 };
 
-export default Tabs;
+export default NewTaps;

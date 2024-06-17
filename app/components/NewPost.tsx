@@ -1,4 +1,4 @@
-import Tabs from "./Taps";
+import Tabs from "./NewTaps";
 
 const NewPost = () => {
   const tabs = [
