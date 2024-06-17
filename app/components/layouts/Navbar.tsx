@@ -90,10 +90,11 @@ const Navbar = () => {
 
   return (
     <Container>
-      <nav className="w-full h-14 flex items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative overflow-x-auto overflow-y-clip">
-        {links.map((link) => (
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex w-full h-14 items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
+        {links.map((link, index) => (
           <div
-            key={link.href}
+            key={index}
             className="relative group cursor-pointer md:grid-rows-2"
           >
             <Link
@@ -108,12 +109,12 @@ const Navbar = () => {
               {link.label}
             </Link>
             {link.dropdown && (
-              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex  flex-col bg-indigo-500 text-white shadow-xl group-hover:visible md:hidden">
+              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
                     href={sublink.href}
-                    className="w-full block p-4 text-white hover:scale-110  text-[1rem] "
+                    className="w-full block p-4 text-white hover:scale-110 text-[1rem]"
                     onClick={() => handleLinkClick(sublink.href)}
                   >
                     {sublink.label}
@@ -123,6 +124,24 @@ const Navbar = () => {
             )}
           </div>
         ))}
+      </nav>
+
+      {/* Mobile Navigation (Scrollable) */}
+      <nav className="md:hidden w-full bg-indigo-500/75 font-medium rounded-lg text-sm text-white overflow-hidden">
+        <div className="flex overflow-x-auto scrollbar-w-2 scrollbar-track-gray-200 scrollbar-thumb-indigo-600 scrollbar-thumb-rounded-full">
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              className={`px-4 py-2 flex-shrink-0 transition-colors duration-200 hover:bg-indigo-600 hover:text-white ${
+                activeLink === link.href ? "bg-indigo-600" : ""
+              }`}
+              onClick={() => handleLinkClick(link.href)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </nav>
     </Container>
   );

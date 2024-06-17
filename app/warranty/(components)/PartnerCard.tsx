@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ImgContent {
   img: string;
   title: string;
@@ -14,7 +12,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({ imgContent }) => {
   return (
     <article className="w-full h-auto p-2 bg-white/25 rounded-2xl shadow-md flex flex-col gap-4 items-center">
       <img
-        className="w-full rounded-2xl"
+        className="w-full rounded-2xl transform transition-transform duration-300 hover:scale-105 cursor-pointer"
         src={imgContent.img}
         alt={imgContent.title}
       />

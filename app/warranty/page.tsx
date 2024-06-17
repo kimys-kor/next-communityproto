@@ -14,11 +14,11 @@ interface ImgContent {
 function Page() {
   const imgContent: ImgContent[] = [
     { img: "/images/homebanner/1.jpg", title: "땅콩", code: "mttp" },
-    { img: "/images/homebanner/2.png", title: "땅콩", code: "mttp" },
-    { img: "/images/homebanner/3.jpg", title: "땅콩", code: "mttp" },
-    { img: "/images/homebanner/4.jpg", title: "땅콩", code: "mttp" },
-    { img: "/images/homebanner/5.jpg", title: "땅콩", code: "mttp" },
-    { img: "/images/homebanner/6.jpg", title: "땅콩", code: "mttp" },
+    { img: "/images/homebanner/2.png", title: "물음표", code: "mttp" },
+    { img: "/images/homebanner/3.jpg", title: "bet38", code: "mttp" },
+    { img: "/images/homebanner/4.jpg", title: "onetup", code: "mttp" },
+    { img: "/images/homebanner/5.jpg", title: "식스", code: "mttp" },
+    { img: "/images/homebanner/6.jpg", title: "정글", code: "mttp" },
   ];
 
   return (
