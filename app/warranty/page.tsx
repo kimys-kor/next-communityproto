@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import WarrantyBanner from "./(components)/WarrantyBanner";
+import BreadCrumbs from "../components/BreadCrumb";
 const PartnerCard = dynamic(() => import("./(components)/PartnerCard"), {
   ssr: false,
 });
@@ -21,10 +22,17 @@ function Page() {
     { img: "/images/homebanner/6.jpg", title: "정글", code: "mttp" },
   ];
 
+  const breadcrumbItems = [
+    { href: "/", label: "Home" },
+    { href: "/warranty", label: "보증업체" },
+  ];
+
   return (
-    <div className="flex flex-col max-w-[1200px]">
+    <div className="flex flex-col max-w-[1200px] gap-3">
       <WarrantyBanner />
-      <div className="p-3 grid grid-cols-2 md:grid-cols-3 gap-3">
+      <BreadCrumbs breadcrumbItems={breadcrumbItems}></BreadCrumbs>
+
+      <div className="m grid grid-cols-2 md:grid-cols-3 gap-3">
         {imgContent.map((item, index) => (
           <article
             key={index}
