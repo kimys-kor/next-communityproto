@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 interface BreadcrumbItem {
   title: string;
@@ -7,9 +8,13 @@ interface BreadcrumbItem {
 
 interface BreadcrumbProps {
   breadcrumbData: BreadcrumbItem;
+  active?: number;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({
+  breadcrumbData,
+  active = 0,
+}) => {
   return (
     <nav className="w-full bg-white/25 rounded-2xl shadow-md flex items-center">
       <div className="h-12 font-bold bg-indigo-400 w-1/5 rounded-l-2xl flex justify-center items-center text-white">
@@ -21,7 +26,14 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
         {breadcrumbData.subMenu.map((item, index) => (
           <span
             key={index}
-            className="text-gray-700 cursor-pointer border-b-2 border-solid border-transparent hover:text-fuchsia-500 hover:border-fuchsia-400"
+            className={classNames(
+              "text-gray-700 cursor-pointer border-b-2 border-solid border-transparent",
+              {
+                "hover:text-fuchsia-500 hover:border-fuchsia-400":
+                  index !== active,
+                "text-fuchsia-500 border-fuchsia-400": index === active,
+              }
+            )}
           >
             {item}
           </span>
@@ -29,6 +41,10 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
       </div>
     </nav>
   );
+};
+
+Breadcrumb.defaultProps = {
+  active: 0,
 };
 
 export default Breadcrumb;

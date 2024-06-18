@@ -21,7 +21,7 @@ function Page() {
 
   const breadcrumbItems = {
     title: "보증업체",
-    subMenu: ["Sub1", "Sub2"],
+    subMenu: [],
   };
 
   return (
