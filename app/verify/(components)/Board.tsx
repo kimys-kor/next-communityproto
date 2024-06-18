@@ -1,48 +1,84 @@
 import React from "react";
 
-interface Post {
-  no: number;
-  title: string;
-  name: string;
-  date: string;
-  views: number;
-  likes: number;
-  dislikes: number;
-}
+const Board = () => {
+  // 가상의 데이터
+  const items = [
+    {
+      id: 1,
+      title: "게시물 제목",
+      name: "사용자 이름",
+      date: "2024-06-19",
+      views: 100,
+      likes: 20,
+      dislikes: 5,
+    },
+    {
+      id: 2,
+      title: "다른 게시물 제목",
+      name: "다른 사용자",
+      date: "2024-06-18",
+      views: 150,
+      likes: 30,
+      dislikes: 10,
+    },
+    // 추가적인 데이터 항목들
+  ];
 
-interface BoardProps {
-  headers: string[];
-  posts: Post[];
-}
-
-const Board: React.FC<BoardProps> = ({ headers, posts }) => {
   return (
-    <div className="w-full overflow-x-auto">
-      {/* 제목 */}
-      <div className="flex bg-indigo-500 text-white font-bold uppercase tracking-wider">
-        {headers.map((header, index) => (
-          <div key={index} className="flex-1 p-2 text-center whitespace-nowrap">
-            {header}
+    <div className="overflow-x-auto">
+      <div className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+        {/* 헤더 */}
+        <div className="grid grid-cols-12 bg-gray-200 text-gray-600">
+          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
+            번호
+          </div>
+          <div className="truncate col-span-5 py-3 px-6 text-center font-bold">
+            제목
+          </div>
+          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
+            이름
+          </div>
+          <div className="truncate col-span-2 py-3 px-6 text-center font-bold">
+            날짜
+          </div>
+          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
+            조회
+          </div>
+          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
+            추천
+          </div>
+          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
+            비추
+          </div>
+        </div>
+
+        {/* 항목들 */}
+        {items.map((item) => (
+          <div key={item.id} className="grid grid-cols-12 border-t">
+            <div className="truncate col-span-1 py-4 px-6 text-left">
+              {item.id}
+            </div>
+            <div className="truncate col-span-5 py-4 px-6 text-left">
+              {item.title}
+            </div>
+            <div className="truncate col-span-1 py-4 px-6 text-left">
+              {item.name}
+            </div>
+            <div className="truncate col-span-2 py-4 px-6 text-left">
+              {item.date}
+            </div>
+            <div className="truncate col-span-1 py-4 px-6 text-left">
+              {item.views}
+            </div>
+            <div className="truncate col-span-1 py-4 px-6 text-left">
+              {item.likes}
+            </div>
+            <div className="truncate col-span-1 py-4 px-6 text-left">
+              {item.dislikes}
+            </div>
           </div>
         ))}
       </div>
-      {/* 게시글 */}
-      {posts.map((post, index) => (
-        <div
-          key={index}
-          className={`flex items-center border-b border-gray-200 p-2 ${
-            index % 2 === 0 ? "bg-gray-100" : "bg-white"
-          }`}
-        >
-          <div className="flex-1 p-2 text-center truncate">{post.no}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.title}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.name}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.date}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.views}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.likes}</div>
-          <div className="flex-1 p-2 text-center truncate">{post.dislikes}</div>
-        </div>
-      ))}
     </div>
   );
 };
