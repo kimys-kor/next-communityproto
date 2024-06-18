@@ -26,14 +26,11 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         {breadcrumbData.subMenu.map((item, index) => (
           <span
             key={index}
-            className={classNames(
-              "text-gray-700 cursor-pointer border-b-2 border-solid border-transparent",
-              {
-                "hover:text-fuchsia-500 hover:border-fuchsia-400":
-                  index !== active,
-                "text-fuchsia-500 border-fuchsia-400": index === active,
-              }
-            )}
+            className={`cursor-pointer border-b-2 border-solid  hover:text-fuchsia-500 hover:border-fuchsia-400 ${
+              active === index
+                ? "text-fuchsia-500 border-fuchsia-400"
+                : "text-gray-700 border-transparent"
+            }`}
           >
             {item}
           </span>
@@ -41,10 +38,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
       </div>
     </nav>
   );
-};
-
-Breadcrumb.defaultProps = {
-  active: 0,
 };
 
 export default Breadcrumb;
