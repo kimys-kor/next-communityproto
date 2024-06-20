@@ -38,13 +38,13 @@ export default function RootLayout({
             <Navbar></Navbar>
 
             <Container>
-              <aside className="hidden md:block max-w-[300px] h-full flex-col gap-4">
+              <aside className="md:w-1/4 hidden md:block max-w-[300px] h-full flex-col gap-4">
                 <Login></Login>
                 <Card title={"주간베스트"}></Card>
                 <Card title={"실시간베스트"}></Card>
                 <IconTabs></IconTabs>
               </aside>
-              {children}
+              <div className="w-full md:w-3/4">{children}</div>
             </Container>
           </div>
           <Footer></Footer>
