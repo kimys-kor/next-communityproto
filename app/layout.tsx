@@ -34,7 +34,7 @@ export default function RootLayout({
           <RegisterModal />
           <Headers></Headers>
 
-          <div className="pt-24">
+          <div className="pt-24 min-h-[100vh]">
             <Navbar></Navbar>
 
             <Container>
