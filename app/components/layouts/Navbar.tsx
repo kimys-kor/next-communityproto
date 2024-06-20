@@ -7,7 +7,6 @@ import Container from "../Container";
 
 const Navbar = () => {
   const pathname = usePathname();
-  let modifiedPathName = pathname.replace(/\/([^\/]+)$/, "");
   const [activeLink, setActiveLink] = useState("");
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "홈" },
     {
-      href: "/warranty",
+      href: "/warranty/",
       label: "보증업체",
     },
     {
@@ -100,17 +99,13 @@ const Navbar = () => {
           >
             <Link
               href={link.href}
-              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover ${
-                modifiedPathName === link.href
-                  ? "text-white"
-                  : "text-white/55 hover:text-white"
-              }`}
+              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover text-white`}
               onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
             </Link>
             {link.dropdown && (
-              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
+              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible ">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
@@ -134,9 +129,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={link.href}
-              className={`px-4 py-2 flex-shrink-0 transition-colors duration-200 hover:bg-indigo-600 hover:text-white ${
-                modifiedPathName === link.href ? "bg-indigo-600" : ""
-              }`}
+              className={`px-4 py-2 flex-shrink-0 transition-colors duration-200 hover:bg-indigo-600 hover:text-white`}
               onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
