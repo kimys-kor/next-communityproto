@@ -84,11 +84,11 @@ const Navbar = () => {
     },
   ];
 
-  const handleLinkClick = (path) => {
+  const handleLinkClick = (path: string) => {
     setActiveLink(path);
   };
 
-  const isActiveLink = (link) => {
+  const isActiveLink = (link: string) => {
     if (activeLink === link) return true;
     if (link === "/verify" && activeLink.startsWith("/verify")) return true;
     if (link === "/sport" && activeLink.startsWith("/sport")) return true;
