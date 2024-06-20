@@ -91,9 +91,9 @@ const IconTabs: React.FC = () => {
 
   return (
     <div className="w-full mx-auto p-4 bg-[#f7f8fa]/35 shadow-lg rounded-lg">
-      <div className="flex justify-around mb-4">
+      <div className="flex justify-around ">
         {sports.map((sport) => (
-          <button
+          <div
             key={sport.id}
             onClick={() => {
               setSelectedSport(sport.id);
@@ -115,12 +115,12 @@ const IconTabs: React.FC = () => {
                 setSelectedLeague(null);
               }
             }}
-            className={`p-2 ${
+            className={` ${
               selectedSport === sport.id ? "text-blue-500" : "text-gray-500"
             }`}
           >
             {sport.icon}
-          </button>
+          </div>
         ))}
       </div>
       <div className="flex flex-col items-center">
