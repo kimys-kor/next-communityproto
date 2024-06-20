@@ -98,6 +98,7 @@ const Navbar = () => {
             className="relative group cursor-pointer md:grid-rows-2"
           >
             <Link
+              key={link.href}
               href={link.href}
               className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover text-white`}
               onClick={() => handleLinkClick(link.href)}

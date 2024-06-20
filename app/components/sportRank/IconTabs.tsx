@@ -91,7 +91,7 @@ const IconTabs: React.FC = () => {
 
   return (
     <div className="w-full mx-auto p-4 bg-[#f7f8fa]/35 shadow-lg rounded-lg">
-      <div className="flex justify-around ">
+      <div className="flex justify-around cursor-pointer ">
         {sports.map((sport) => (
           <div
             key={sport.id}
@@ -116,7 +116,7 @@ const IconTabs: React.FC = () => {
               }
             }}
             className={` ${
-              selectedSport === sport.id ? "text-blue-500" : "text-gray-500"
+              selectedSport === sport.id ? "text-indigo-500" : "text-gray-500"
             }`}
           >
             {sport.icon}

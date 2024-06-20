@@ -23,7 +23,9 @@ const Card: React.FC<CardProps> = ({ title }) => {
         </div>
       </div>
       <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
-        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="w-12 xl:w-16 truncate text-purple-600 text-[11px]">
+          한국증시
+        </p>
         <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
         <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
           <svg
@@ -40,7 +42,9 @@ const Card: React.FC<CardProps> = ({ title }) => {
         </span>
       </div>
       <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
-        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="w-12 xl:w-16 truncate text-purple-600 text-[11px]">
+          한국증시
+        </p>
         <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
         <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
           <svg
@@ -57,7 +61,9 @@ const Card: React.FC<CardProps> = ({ title }) => {
         </span>
       </div>
       <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
-        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="w-12 xl:w-16 truncate text-purple-600 text-[11px]">
+          한국증시
+        </p>
         <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
         <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
           <svg
