@@ -22,30 +22,56 @@ const Card: React.FC<CardProps> = ({ title }) => {
           </svg>
         </div>
       </div>
-      <div className="truncate w-full h-10 flex gap-2 justify-start items-center border-solid border-b border-gray-light">
-        <p className="text-purple-600 text-sm">한국증시</p>
-        <p className="text-sm">주가는 언제나 실적에 수렴한다</p>
-        <p className="text-red-500 text-sm">(23)</p>
+      <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
+        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
+        <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="fill-current text-red-500 cursor-pointer"
+          >
+            <rect x="45" y="10" width="10" height="80" />
+            <rect x="10" y="45" width="80" height="10" />
+          </svg>
+          23
+        </span>
       </div>
-      <div className="truncate w-full h-10 flex gap-2 justify-start items-center border-solid border-b border-gray-light">
-        <p className="text-purple-500 text-sm">한국증시</p>
-        <p className="text-sm">주가는 언제나 실적에 수렴한다</p>
-        <p className="text-red-500 text-sm">(23)</p>
+      <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
+        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
+        <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="fill-current text-red-500 cursor-pointer"
+          >
+            <rect x="45" y="10" width="10" height="80" />
+            <rect x="10" y="45" width="80" height="10" />
+          </svg>
+          23
+        </span>
       </div>
-      <div className="truncate w-full h-10 flex gap-2 justify-start items-center border-solid border-b border-gray-light">
-        <p className="text-purple-600 text-sm">한국증시</p>
-        <p className="text-sm">주가는 언제나 실적에 수렴한다</p>
-        <p className="text-red-500 text-sm">(23)</p>
-      </div>
-      <div className="truncate w-full h-10 flex gap-2 justify-start items-center border-solid border-b border-gray-light">
-        <p className="text-purple-600 text-sm">한국증시</p>
-        <p className="text-sm">주가는 언제나 실적에 수렴한다</p>
-        <p className="text-red-500 text-sm">(23)</p>
-      </div>
-      <div className="truncate w-full h-10 flex gap-2 justify-start items-center border-solid border-b border-gray-light">
-        <p className="text-purple-600 text-sm">한국증시</p>
-        <p className="text-sm">주가는 언제나 실적에 수렴한다</p>
-        <p className="text-red-500 text-sm">(23)</p>
+      <div className="w-full h-10 flex justify-start items-center border-solid border-b border-gray-light">
+        <p className="w-16 truncate text-purple-600 text-[11px]">한국증시</p>
+        <p className="truncate text-[12px]">주가는 언제나 실적에 수렴한다</p>
+        <span className="w-12 truncate text-red-500 text-[10px] flex justify-center items-center">
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="fill-current text-red-500 cursor-pointer"
+          >
+            <rect x="45" y="10" width="10" height="80" />
+            <rect x="10" y="45" width="80" height="10" />
+          </svg>
+          12
+        </span>
       </div>
     </div>
   );
