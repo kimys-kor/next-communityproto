@@ -21,7 +21,24 @@ const Board = () => {
       likes: 30,
       dislikes: 10,
     },
-    // 추가적인 데이터 항목들
+    {
+      id: 3,
+      title: "다른 게시물 제목",
+      name: "다른 사용자",
+      date: "2024.06.18",
+      views: 150,
+      likes: 30,
+      dislikes: 10,
+    },
+    {
+      id: 4,
+      title: "다른 게시물 제목",
+      name: "사용자",
+      date: "2024.06.18",
+      views: 150,
+      likes: 30,
+      dislikes: 10,
+    },
   ];
 
   return (
@@ -40,8 +57,13 @@ const Board = () => {
 
       {/* Items */}
       <tbody>
-        {items.map((item) => (
-          <tr key={item.id} className="flex border-t">
+        {items.map((item, index) => (
+          <tr
+            key={item.id}
+            className={`flex border-solid border-b border-gray-200 ${
+              index % 2 == 0 ? "bg-slate-50" : ""
+            }`}
+          >
             <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
             <td className="grow truncate py-4 px-2 text-left">{item.title}</td>
             <td className="w-20 py-4 px-2 text-center">{item.name}</td>
