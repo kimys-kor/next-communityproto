@@ -7,7 +7,7 @@ const Board = () => {
       id: 1,
       title: "게시물 제목",
       name: "사용자 이름",
-      date: "2024-06-19",
+      date: "2024.06.19",
       views: 100,
       likes: 20,
       dislikes: 5,
@@ -16,7 +16,7 @@ const Board = () => {
       id: 2,
       title: "다른 게시물 제목",
       name: "다른 사용자",
-      date: "2024-06-18",
+      date: "2024.06.18",
       views: 150,
       likes: 30,
       dislikes: 10,
@@ -25,61 +25,41 @@ const Board = () => {
   ];
 
   return (
-    <div className="overflow-x-auto">
-      <div className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-        {/* 헤더 */}
-        <div className="grid grid-cols-12 bg-gray-200 text-gray-600">
-          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
-            번호
-          </div>
-          <div className="truncate col-span-5 py-3 px-6 text-center font-bold">
-            제목
-          </div>
-          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
-            이름
-          </div>
-          <div className="truncate col-span-2 py-3 px-6 text-center font-bold">
-            날짜
-          </div>
-          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
-            조회
-          </div>
-          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
-            추천
-          </div>
-          <div className="truncate col-span-1 py-3 px-6 text-center font-bold">
-            비추
-          </div>
-        </div>
+    <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto mt-10 text-[14px]">
+      {/* Header */}
+      <thead>
+        <tr className="flex border-solid border-t-[3px] border-indigo-400 border-b">
+          <th className="w-12 truncate py-3 px-2 text-center">번호</th>
+          <th className="grow truncate py-3 px-2 text-center">제목</th>
+          <th className="w-28 truncate py-3 px-2 text-center">이름</th>
+          <th className="w-32 truncate py-3 px-2 text-center">날짜</th>
+          <th className="w-20 truncate py-3 px-2 text-center">조회</th>
+          <th className="w-20 truncate py-3 px-2 text-center">추천</th>
+          <th className="w-20 truncate py-3 px-2 text-center">비추</th>
+        </tr>
+      </thead>
 
-        {/* 항목들 */}
+      {/* Items */}
+      <tbody>
         {items.map((item) => (
-          <div key={item.id} className="grid grid-cols-12 border-t">
-            <div className="truncate col-span-1 py-4 px-6 text-left">
-              {item.id}
-            </div>
-            <div className="truncate col-span-5 py-4 px-6 text-left">
-              {item.title}
-            </div>
-            <div className="truncate col-span-1 py-4 px-6 text-left">
-              {item.name}
-            </div>
-            <div className="truncate col-span-2 py-4 px-6 text-left">
-              {item.date}
-            </div>
-            <div className="truncate col-span-1 py-4 px-6 text-left">
+          <tr key={item.id} className="flex border-t">
+            <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
+            <td className="grow truncate py-4 px-2 text-left">{item.title}</td>
+            <td className="w-20 py-4 px-2 text-center">{item.name}</td>
+            <td className="w-32 truncate py-4 px-2 text-center">{item.date}</td>
+            <td className="w-20 truncate py-4 px-2 text-center">
               {item.views}
-            </div>
-            <div className="truncate col-span-1 py-4 px-6 text-left">
+            </td>
+            <td className="w-20 truncate py-4 px-2 text-center">
               {item.likes}
-            </div>
-            <div className="truncate col-span-1 py-4 px-6 text-left">
+            </td>
+            <td className="w-20 truncate py-4 px-2 text-center">
               {item.dislikes}
-            </div>
-          </div>
+            </td>
+          </tr>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 };
 
