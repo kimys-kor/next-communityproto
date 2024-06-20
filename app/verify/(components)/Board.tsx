@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Paging from "@/app/components/Paging";
 
 const Board = () => {
   // 가상의 데이터
@@ -41,43 +43,54 @@ const Board = () => {
     },
   ];
 
-  return (
-    <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto mt-10 text-[14px]">
-      {/* Header */}
-      <thead>
-        <tr className="flex border-solid border-t-[3px] border-indigo-400 border-b">
-          <th className="w-12 truncate py-3 px-2 text-center">번호</th>
-          <th className="grow truncate py-3 px-2 text-center">제목</th>
-          <th className="w-28 truncate py-3 px-2 text-center">이름</th>
-          <th className="w-32 truncate py-3 px-2 text-center">날짜</th>
-          <th className="w-20 truncate py-3 px-2 text-center">조회</th>
-          <th className="w-20 truncate py-3 px-2 text-center">추천</th>
-        </tr>
-      </thead>
+  const setPage = function () {
+    console.log("온체인지");
+  };
 
-      {/* Items */}
-      <tbody>
-        {items.map((item, index) => (
-          <tr
-            key={item.id}
-            className={`flex border-solid border-b border-gray-200 ${
-              index % 2 == 0 ? "bg-slate-50" : ""
-            }`}
-          >
-            <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
-            <td className="grow truncate py-4 px-2 text-left">{item.title}</td>
-            <td className="w-20 py-4 px-2 text-center">{item.name}</td>
-            <td className="w-32 truncate py-4 px-2 text-center">{item.date}</td>
-            <td className="w-20 truncate py-4 px-2 text-center">
-              {item.views}
-            </td>
-            <td className="w-20 truncate py-4 px-2 text-center">
-              {item.likes}
-            </td>
+  return (
+    <section>
+      <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto mt-10 text-[14px]">
+        {/* Header */}
+        <thead>
+          <tr className="flex border-solid border-t-[3px] border-indigo-400 border-b">
+            <th className="w-12 truncate py-3 px-2 text-center">번호</th>
+            <th className="grow truncate py-3 px-2 text-center">제목</th>
+            <th className="w-28 truncate py-3 px-2 text-center">이름</th>
+            <th className="w-32 truncate py-3 px-2 text-center">날짜</th>
+            <th className="w-20 truncate py-3 px-2 text-center">조회</th>
+            <th className="w-20 truncate py-3 px-2 text-center">추천</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        {/* Items */}
+        <tbody>
+          {items.map((item, index) => (
+            <tr
+              key={item.id}
+              className={`flex border-solid border-b border-gray-200 ${
+                index % 2 == 0 ? "bg-slate-50" : ""
+              }`}
+            >
+              <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
+              <td className="grow truncate py-4 px-2 text-left">
+                {item.title}
+              </td>
+              <td className="w-20 py-4 px-2 text-center">{item.name}</td>
+              <td className="w-32 truncate py-4 px-2 text-center">
+                {item.date}
+              </td>
+              <td className="w-20 truncate py-4 px-2 text-center">
+                {item.views}
+              </td>
+              <td className="w-20 truncate py-4 px-2 text-center">
+                {item.likes}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <Paging page={1} count={15} setPage={setPage}></Paging>
+    </section>
   );
 };
 
