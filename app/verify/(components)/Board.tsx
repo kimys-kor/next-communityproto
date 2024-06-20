@@ -35,7 +35,6 @@ const Board = () => {
           <th className="w-32 truncate py-3 px-2 text-center">날짜</th>
           <th className="w-20 truncate py-3 px-2 text-center">조회</th>
           <th className="w-20 truncate py-3 px-2 text-center">추천</th>
-          <th className="w-20 truncate py-3 px-2 text-center">비추</th>
         </tr>
       </thead>
 
@@ -52,9 +51,6 @@ const Board = () => {
             </td>
             <td className="w-20 truncate py-4 px-2 text-center">
               {item.likes}
-            </td>
-            <td className="w-20 truncate py-4 px-2 text-center">
-              {item.dislikes}
             </td>
           </tr>
         ))}
