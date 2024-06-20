@@ -18,7 +18,7 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "홈" },
     {
-      href: "/warranty/",
+      href: "/warranty",
       label: "보증업체",
     },
     {
@@ -44,7 +44,7 @@ const Navbar = () => {
       href: "/pickster",
       label: "분석존",
       dropdown: [
-        { href: "/pickster/", label: "나는 분석왕" },
+        { href: "/pickster", label: "나는 분석왕" },
         { href: "/pickster/guide", label: "가이드" },
       ],
     },
@@ -84,8 +84,22 @@ const Navbar = () => {
     },
   ];
 
-  const handleLinkClick = (path: string) => {
+  const handleLinkClick = (path) => {
     setActiveLink(path);
+  };
+
+  const isActiveLink = (link) => {
+    if (activeLink === link) return true;
+    if (link === "/verify" && activeLink.startsWith("/verify")) return true;
+    if (link === "/sport" && activeLink.startsWith("/sport")) return true;
+    if (link === "/pickster" && activeLink.startsWith("/pickster")) return true;
+    if (link === "/community" && activeLink.startsWith("/community"))
+      return true;
+    if (link === "/event" && activeLink.startsWith("/event")) return true;
+    if (link === "/promotion" && activeLink.startsWith("/promotion"))
+      return true;
+    if (link === "/customer" && activeLink.startsWith("/customer")) return true;
+    return false;
   };
 
   return (
@@ -100,18 +114,20 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover text-white`}
+              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover  ${
+                isActiveLink(link.href) ? "text-white" : "text-white/55"
+              }`}
               onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
             </Link>
             {link.dropdown && (
-              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible ">
+              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
                 {link.dropdown.map((sublink) => (
                   <Link
                     key={sublink.href}
                     href={sublink.href}
-                    className="w-full block p-4 text-white hover:scale-110 text-[1rem]"
+                    className={`w-full block p-4 text-white hover:scale-110 text-[1rem] `}
                     onClick={() => handleLinkClick(sublink.href)}
                   >
                     {sublink.label}
