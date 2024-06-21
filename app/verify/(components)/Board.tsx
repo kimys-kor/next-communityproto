@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Paging from "@/app/components/Paging";
+import SelectBox from "@/app/components/SelectBox";
 
 const Board = () => {
   // 가상의 데이터
@@ -47,9 +48,23 @@ const Board = () => {
     console.log("온체인지");
   };
 
+  const options = [
+    { value: "1", label: "전체" },
+    { value: "2", label: "제목" },
+    { value: "3", label: "제목+내용" },
+    { value: "4", label: "작성자" },
+  ];
+  const handleChange = (value: string) => {
+    console.log("Selected value:", value);
+    // 여기에 선택된 값 처리 로직 추가
+  };
+
   return (
-    <section>
-      <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto mt-10 text-[14px]">
+    <section className="flex flex-col gap-4 mt-10">
+      <article className="w-full border-solid border border-gray-200 p-3">
+        <SelectBox options={options} onChange={handleChange} defaultValue="1" />
+      </article>
+      <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto text-[14px]">
         {/* Header */}
         <thead>
           <tr className="flex border-solid border-t-[3px] border-indigo-400 border-b">
