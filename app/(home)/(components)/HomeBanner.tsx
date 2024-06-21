@@ -23,7 +23,7 @@ function HomeBanner() {
       </div>
       <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 p-3">
         {imgContent.map((item, index) => (
-          <li>
+          <li key={index}>
             <img
               className="w-full h-auto"
               src={item.img}
@@ -32,7 +32,7 @@ function HomeBanner() {
           </li>
         ))}
         {imgContent.map((item, index) => (
-          <li>
+          <li key={index}>
             <img
               className="w-full h-auto"
               src={item.img}
@@ -41,7 +41,7 @@ function HomeBanner() {
           </li>
         ))}
         {imgContent.map((item, index) => (
-          <li>
+          <li key={index}>
             <img
               className="w-full h-auto"
               src={item.img}
