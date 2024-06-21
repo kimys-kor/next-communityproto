@@ -33,7 +33,7 @@ const Navbar = () => {
       href: "/sport",
       label: "스포츠분석",
       dropdown: [
-        { href: "/sport", label: "축구분석" },
+        { href: "/sport/soccer", label: "축구분석" },
         { href: "/sport/base", label: "야구분석" },
         { href: "/sport/basket", label: "농구분석" },
         { href: "/sport/volley", label: "배구분석" },
@@ -52,7 +52,7 @@ const Navbar = () => {
       href: "/community",
       label: "커뮤니티",
       dropdown: [
-        { href: "/community", label: "자유게시판" },
+        { href: "/community/free", label: "자유게시판" },
         { href: "/community/photo", label: "안구정화" },
         { href: "/community/humor", label: "유머 & 이슈" },
       ],
