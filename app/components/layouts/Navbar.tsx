@@ -114,7 +114,7 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover  ${
+              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover hover:text-white ${
                 isActiveLink(link.href) ? "text-white" : "text-white/55"
               }`}
               onClick={() => handleLinkClick(link.href)}
