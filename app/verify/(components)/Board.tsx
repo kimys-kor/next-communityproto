@@ -87,7 +87,7 @@ const Board = () => {
         </thead>
 
         {/* Items */}
-        <tbody>
+        <tbody className="font-light">
           {items.map((item, index) => (
             <tr
               key={item.id}
@@ -113,6 +113,11 @@ const Board = () => {
           ))}
         </tbody>
       </table>
+      <span className="w-full flex justify-end">
+        <button className="bg-indigo-400 hover:bg-indigo-500 rounded-sm text-sm  text-white px-2 py-2">
+          글작성하기
+        </button>
+      </span>
       <Paging page={1} count={15} setPage={setPage}></Paging>
     </section>
   );
