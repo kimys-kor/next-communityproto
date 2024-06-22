@@ -1,11 +1,15 @@
 import React from "react";
 
-import Container from "../Container";
 import Logo from "../Logo";
 import Link from "next/link";
 import SearchBox from "../search/SearchBox";
 
 function Headers() {
+  async function handleSearch() {
+    "use server";
+    console.log("전체검색");
+  }
+
   return (
     <header className="fixed w-full h-20 bg-white z-10 ">
       <div className="py-4">
@@ -15,8 +19,11 @@ function Headers() {
               <Logo></Logo>
             </Link>
 
-            <div className="flex gap-2 justify-between">
-              <SearchBox></SearchBox>
+            <div className="flex gap-2 justify-between h-7">
+              <SearchBox
+                handleSearch={handleSearch}
+                placeholderText="검색어를 입력하세요."
+              ></SearchBox>
               <div className="flex gap-2 justify-center items-center">
                 <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                   <svg

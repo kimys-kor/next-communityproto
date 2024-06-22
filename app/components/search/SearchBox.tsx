@@ -1,32 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
-const SearchBox: React.FC = () => {
+interface SearchBoxProps {
+  handleSearch: () => void;
+  placeholderText: string;
+}
+
+const SearchBox: React.FC<SearchBoxProps> = ({
+  handleSearch,
+  placeholderText,
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = () => {
-    console.log("Search term:", searchTerm);
-    // 추가적인 검색 로직을 여기에 구현할 수 있습니다.
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleClick = () => {
+    handleSearch();
   };
 
   return (
-    <div className="w-full relative w-92 flex items-center py-2 rounded-md">
+    <div className="relative w-68 h-[1.75rem] flex items-center justify-center">
       <input
         type="text"
         id="searchKeyword"
-        className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mr-3 px-10 leading-tight "
-        placeholder="검색어를 입력하세요..."
+        className="w-full pl-2 h-full box-border bg-white border border-gray-300 focus:outline-none text-xs text-black font-light block leading-tight"
+        placeholder={placeholderText}
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={handleChange}
+        onFocus={(e) =>
+          e.currentTarget.classList.add("ring-2", "ring-indigo-500")
+        }
+        onBlur={(e) =>
+          e.currentTarget.classList.remove("ring-2", "ring-indigo-500")
+        }
       />
       <button
-        className="hover:text-md absolute right-4 flex-shrink-0 \py-1 px-2 rounded"
+        className="hover:text-md absolute right-1 flex-shrink-0 py-1 px-2 rounded"
         type="button"
-        onClick={handleSearch}
+        onClick={handleClick}
       >
         <svg
-          className="fill-gray w-8 h-5"
+          className="fill-slate-400 w-5 h-4 hover:fill-slate-600"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

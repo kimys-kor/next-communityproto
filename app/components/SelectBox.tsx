@@ -1,6 +1,4 @@
-"use client";
-import { Fragment, useState } from "react";
-import { Select, Option } from "@material-tailwind/react";
+import { useState } from "react";
 
 type Option = {
   value: string;
@@ -27,12 +25,11 @@ const SelectBox: React.FC<SelectProps> = ({
   };
 
   return (
-    <div className="w-full flex">
+    <div className="relative w-32 h-[1.75rem]">
       <select
         value={selectedValue}
         onChange={handleChange}
-        className="block w-32 h-7  text-[13px] border-solid rounded-sm border-slate-300 border focus:outline-none   "
-        // 포커스 되었을 때 스타일 추가
+        className="w-full h-full box-border block text-xs border text-slate-500 border-gray-300 rounded-sm focus:outline-none focus:border-indigo-500 text-red"
         onFocus={(e) =>
           e.currentTarget.classList.add("ring-2", "ring-indigo-500")
         }
@@ -46,20 +43,6 @@ const SelectBox: React.FC<SelectProps> = ({
           </option>
         ))}
       </select>
-      <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none z-0">
-        <svg
-          className="w-5 h-5 text-gray-400"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </div>
     </div>
   );
 };

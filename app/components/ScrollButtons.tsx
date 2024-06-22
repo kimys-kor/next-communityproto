@@ -15,7 +15,7 @@ const ScrollButtons: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 flex flex-col items-center space-y-2">
+    <div className="hidden md:fixed md:flex bottom-4 right-4  flex-col items-center space-y-2">
       <button
         onClick={scrollToTop}
         className="p-2 bg-indigo-500/50 text-white rounded-full shadow-lg hover:bg-indigo-600 transition duration-300"

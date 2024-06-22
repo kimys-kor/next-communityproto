@@ -13,7 +13,7 @@ function ThreeBanner() {
   ];
 
   return (
-    <section className="w-full h-auto shadow-md flex flex-col items-center ">
+    <section className="mt-3 w-full h-auto shadow-md flex flex-col items-center ">
       <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3">
         {imgContent.map((item, index) => (
           <li key={index}>

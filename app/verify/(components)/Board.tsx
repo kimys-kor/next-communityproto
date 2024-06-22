@@ -2,6 +2,7 @@
 import React from "react";
 import Paging from "@/app/components/Paging";
 import SelectBox from "@/app/components/SelectBox";
+import SearchBox from "@/app/components/search/SearchBox";
 
 const Board = () => {
   // 가상의 데이터
@@ -59,10 +60,18 @@ const Board = () => {
     // 여기에 선택된 값 처리 로직 추가
   };
 
+  async function handleSearch() {
+    console.log("전체검색");
+  }
+
   return (
     <section className="flex flex-col gap-4 mt-10">
-      <article className="w-full border-solid border border-gray-200 p-3">
+      <article className="w-full border-solid border border-gray-200 p-3 flex justify-end gap-2 ">
         <SelectBox options={options} onChange={handleChange} defaultValue="1" />
+        <SearchBox
+          handleSearch={handleSearch}
+          placeholderText="검색어를 입력해 주세요."
+        ></SearchBox>
       </article>
       <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto text-[14px]">
         {/* Header */}
