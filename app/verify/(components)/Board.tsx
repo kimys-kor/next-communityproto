@@ -114,7 +114,7 @@ const Board = () => {
         </tbody>
       </table>
       <span className="w-full flex justify-end">
-        <button className="bg-indigo-400 hover:bg-indigo-500 rounded-sm text-sm  text-white px-2 py-2">
+        <button className="bg-white border-solid border-2 border-indigo-400 hover:bg-indigo-500 hover:text-white rounded-sm text-[13px] font-light px-2 py-2">
           글작성하기
         </button>
       </span>
