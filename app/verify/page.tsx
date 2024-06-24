@@ -16,7 +16,7 @@ function page() {
     <div className="flex flex-col max-w-[1200px] gap-1">
       <ThreeBanner></ThreeBanner>
       <WarrantyBanner></WarrantyBanner>
-      <Breadcrumb breadcrumbData={breadcrumbItems} active={0}></Breadcrumb>
+      <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb>
     </div>
   );
 }

@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface sbuMenu {
   name: string;
@@ -13,13 +16,17 @@ interface BreadcrumbItem {
 
 interface BreadcrumbProps {
   breadcrumbData: BreadcrumbItem;
-  active?: number;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({
-  breadcrumbData,
-  active = 0,
-}) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbData }) => {
+  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState("");
+  useEffect(() => {
+    if (typeof window !== "undefined" && pathname) {
+      setActiveLink(pathname);
+    }
+  }, [pathname]);
+
   return (
     <nav className="w-full bg-white/25 rounded-2xl shadow-md flex items-center">
       <div className="h-12 font-bold bg-indigo-400 w-1/5 rounded-l-2xl flex justify-center items-center text-white">
@@ -31,9 +38,8 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         {breadcrumbData.subMenu.map((item, index) => (
           <Link key={index} href={item.href}>
             <span
-              
               className={`cursor-pointer border-b-2 border-solid  hover:text-fuchsia-500 hover:border-fuchsia-400 ${
-                active === index
+                activeLink === item.href
                   ? "text-fuchsia-500 border-fuchsia-400"
                   : "text-gray-700 border-transparent"
               }`}
