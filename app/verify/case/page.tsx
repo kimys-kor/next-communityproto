@@ -15,9 +15,6 @@ function page() {
 
   return (
     <div className="flex flex-col max-w-[1200px] gap-1">
-      <ThreeBanner></ThreeBanner>
-      <WarrantyBanner></WarrantyBanner>
-      <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb>
       <Board />
     </div>
   );
