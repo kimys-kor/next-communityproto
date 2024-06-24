@@ -1,8 +1,14 @@
 import React from "react";
+import Link from "next/link";
+
+interface sbuMenu {
+  name: string;
+  href: string;
+}
 
 interface BreadcrumbItem {
   title: string;
-  subMenu: string[];
+  subMenu: sbuMenu[];
 }
 
 interface BreadcrumbProps {
@@ -23,16 +29,18 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
       </div>
       <div className="border-solid border-indigo-400 border-4 w-4/5 h-12 flex items-center rounded-r-2xl gap-10 pl-10">
         {breadcrumbData.subMenu.map((item, index) => (
-          <span
-            key={index}
-            className={`cursor-pointer border-b-2 border-solid  hover:text-fuchsia-500 hover:border-fuchsia-400 ${
-              active === index
-                ? "text-fuchsia-500 border-fuchsia-400"
-                : "text-gray-700 border-transparent"
-            }`}
-          >
-            {item}
-          </span>
+          <Link key={index} href={item.href}>
+            <span
+              
+              className={`cursor-pointer border-b-2 border-solid  hover:text-fuchsia-500 hover:border-fuchsia-400 ${
+                active === index
+                  ? "text-fuchsia-500 border-fuchsia-400"
+                  : "text-gray-700 border-transparent"
+              }`}
+            >
+              {item.name}
+            </span>
+          </Link>
         ))}
       </div>
     </nav>

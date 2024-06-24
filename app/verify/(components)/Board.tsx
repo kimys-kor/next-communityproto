@@ -3,6 +3,7 @@ import React from "react";
 import Paging from "@/app/components/Paging";
 import SelectBox from "@/app/components/SelectBox";
 import SearchBox from "@/app/components/search/SearchBox";
+import Link from "next/link";
 
 const Board = () => {
   // 가상의 데이터
@@ -114,9 +115,11 @@ const Board = () => {
         </tbody>
       </table>
       <span className="w-full flex justify-end">
-        <button className="bg-indigo-400 text-white  hover:bg-indigo-500 shadow-md rounded-sm text-[13px] font-light px-2 py-2">
-          글작성하기
-        </button>
+        <Link href={"/verify/case/write"}>
+          <button className="bg-indigo-400 text-white  hover:bg-indigo-500 shadow-md rounded-sm text-[13px] font-light px-2 py-2">
+            글작성하기
+          </button>
+        </Link>
       </span>
       <Paging page={1} count={15} setPage={setPage}></Paging>
     </section>

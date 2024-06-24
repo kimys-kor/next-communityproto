@@ -7,7 +7,10 @@ import ThreeBanner from "@/app/components/ThreeBanner";
 function page() {
   const breadcrumbItems = {
     title: "먹튀검증",
-    subMenu: ["검증", "피해사례"],
+    subMenu: [
+      { name: "검증", href: "/verify" },
+      { name: "피해사례", href: "/verify/case" },
+    ],
   };
 
   return (

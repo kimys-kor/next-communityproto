@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import WarrantyBanner from "./(components)/WarrantyBanner";
 import BreadCrumbs from "../components/BreadCrumb";
 import PartnerCard from "./(components)/PartnerCard";
+import Paging from "../components/Paging";
 
 interface ImgContent {
   img: string;
@@ -24,6 +27,10 @@ function Page() {
     subMenu: [],
   };
 
+  const setPage = function () {
+    console.log("온체인지");
+  };
+
   return (
     <div className="flex flex-col max-w-[1200px] gap-3">
       <WarrantyBanner />
@@ -39,6 +46,7 @@ function Page() {
           </article>
         ))}
       </div>
+      <Paging page={1} count={15} setPage={setPage}></Paging>
     </div>
   );
 }
