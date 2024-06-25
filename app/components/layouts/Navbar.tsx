@@ -129,7 +129,7 @@ const Navbar = () => {
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className={`outline outline-1 outline-indigo-500  w-full block p-4  text-[1rem] hover:bg-indigo-600`}
+                        className={`outline outline-1 outline-indigo-600  w-full block p-4  text-[1rem] hover:bg-indigo-600`}
                         onClick={() => handleLinkClick(sublink.href)}
                       >
                         {sublink.label}
