@@ -105,43 +105,47 @@ const Navbar = () => {
   return (
     <Container>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex w-full h-14 items-center gap-10 p-6 bg-indigo-500/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 relative">
-        {links.map((link, index) => (
-          <div
-            key={index}
-            className="relative group cursor-pointer md:grid-rows-2"
-          >
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`truncate w-20 text-base cursor-pointer transition-all duration-300 ease-in-out menu-hover hover:text-white ${
-                isActiveLink(link.href) ? "text-white" : "text-white/55"
-              }`}
-              onClick={() => handleLinkClick(link.href)}
+      <nav className="hidden md:flex w-full h-14">
+        <ul className="flex w-full h-14  bg-indigo-500/75 font-medium rounded-lg text-sm text-center mb-2 relative ">
+          {links.map((link, index) => (
+            <li
+              key={index}
+              className="w-28 h-14 relative group cursor-pointer md:grid-rows-2 flex flex-col justify-center items-center box-border"
             >
-              {link.label}
-            </Link>
-            {link.dropdown && (
-              <div className="w-32 top-6 left-[-20px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
-                {link.dropdown.map((sublink) => (
-                  <Link
-                    key={sublink.href}
-                    href={sublink.href}
-                    className={`w-full block p-4 text-white hover:scale-110 text-[1rem] `}
-                    onClick={() => handleLinkClick(sublink.href)}
-                  >
-                    {sublink.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`bg-w-28 h-14 truncate text-base cursor-pointer transition-all flex justify-center items-center duration-300 ease-in-out menu-hover hover:text-white ${
+                  isActiveLink(link.href) ? "text-white" : "text-white/55"
+                }`}
+                onClick={() => handleLinkClick(link.href)}
+              >
+                {link.label}
+              </Link>
+              <ul>
+                {link.dropdown && (
+                  <li className="w-28 left-[0px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
+                    {link.dropdown.map((sublink) => (
+                      <Link
+                        key={sublink.href}
+                        href={sublink.href}
+                        className={`outline outline-1 outline-indigo-500  w-full block p-4  text-[1rem] hover:bg-indigo-600`}
+                        onClick={() => handleLinkClick(sublink.href)}
+                      >
+                        {sublink.label}
+                      </Link>
+                    ))}
+                  </li>
+                )}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </nav>
 
       {/* Mobile Navigation (Scrollable) */}
       <nav className="md:hidden w-full bg-indigo-500/75 font-medium rounded-lg text-sm text-white overflow-hidden">
-        <div className="flex overflow-x-auto scrollbar-w-2 scrollbar-track-gray-200 scrollbar-thumb-indigo-600 scrollbar-thumb-rounded-full">
+        <div className="flex overflow-x-auto scrollbar-w-2 scrollbar-track-gray-200 scrollbar-thumb-indigo-600 ">
           {links.map((link, index) => (
             <Link
               key={index}
