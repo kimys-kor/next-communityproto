@@ -4,6 +4,7 @@ import PostEditor from "@/app/components/texteditor/PostEditor";
 import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
 import { useForm, Resolver } from "react-hook-form";
+import ImageUploader from "@/app/components/ImageUploader";
 
 type FormData = {
   title: string;
@@ -44,17 +45,15 @@ const Write: React.FC = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
+    saveContent();
   });
 
   return (
-    <div className="p-6 flex flex-col gap-3">
+    <div className="p-4">
       <h1 className="text-xl font-light">피해사례 작성</h1>
-      <form
-        onSubmit={onSubmit}
-        className="border-solid border-gray-300 border-b"
-      >
+      <form onSubmit={onSubmit} className="border-gray-300 flex flex-col gap-3">
         <div className="flex flex-col border-solid border-t">
-          <div className="flex justify-between items-center h-20 border-solid border-b border-gray-300">
+          <div className="flex justify-between items-center h-16 border-solid border-b border-gray-300">
             <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
               제목
             </div>
@@ -68,9 +67,12 @@ const Write: React.FC = () => {
               ></input>
             </div>
           </div>
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16">
             <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
-              피해금액
+              피해금액{" "}
+              <p className="text-[12px] font-light text-blue-400">
+                &ensp;(단위:원)
+              </p>
             </div>
             <div className="w-full flex justify-center items-center h-10 pl-2">
               <input
@@ -83,27 +85,25 @@ const Write: React.FC = () => {
             </div>
           </div>
         </div>
+        <section>
+          <PostEditor
+            forwardedRef={quillRef}
+            value={content}
+            onChange={handleContentChange}
+          />
+        </section>
+        <div className="w-full flex justify-end gap-2">
+          <button className="border-solid border border-indigo-500 text-indigo-500 px-4 py-2 w-24 h-12 hover:bg-indigo-100">
+            취소
+          </button>
+          <button
+            type="submit"
+            className="bg-indigo-500 text-white px-4 py-2 w-24 h-12 hover:bg-indigo-700"
+          >
+            작성완료
+          </button>
+        </div>
       </form>
-      <section>
-        <PostEditor
-          forwardedRef={quillRef}
-          value={content}
-          onChange={handleContentChange}
-        />
-      </section>
-
-      <div className="w-full flex justify-end gap-2">
-        <button className="border-solid border border-indigo-500 text-indigo-500 px-4 py-2 w-24 h-12 hover:bg-indigo-100">
-          취소
-        </button>
-        <button
-          type="submit"
-          className="bg-indigo-500 text-white px-4 py-2 w-24 h-12 hover:bg-indigo-700"
-          onClick={saveContent}
-        >
-          작성완료
-        </button>
-      </div>
     </div>
   );
 };
