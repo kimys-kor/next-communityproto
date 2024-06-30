@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import axios, { AxiosError } from "axios";
 import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
+import styled from "styled-components";
 
 import ReactQuill, { ReactQuillProps } from "react-quill";
 import { BeatLoader } from "react-spinners";
@@ -119,7 +120,7 @@ const Editor = dynamic(
       );
 
       return (
-        <div>
+        <Container>
           <input
             type="file"
             ref={fileInput}
@@ -134,7 +135,7 @@ const Editor = dynamic(
             modules={modules}
             {...props}
           />
-        </div>
+        </Container>
       );
     }
 
@@ -151,3 +152,10 @@ const Editor = dynamic(
 );
 
 export default Editor;
+
+const Container = styled.div`
+  .ql-container {
+    height: 400px !important;
+    background-color: white;
+  }
+`;
