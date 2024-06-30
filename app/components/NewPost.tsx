@@ -21,7 +21,7 @@ const NewPost = () => {
   ];
 
   return (
-    <div className="truncate container w-full bg-[#f7f8fa]/35 rounded-2xl shadow-md p-5 flex flex-col gap-5">
+    <div className="truncate container w-full bg-white rounded-2xl shadow-md p-5 flex flex-col gap-5">
       <Tabs tabs={tabs}></Tabs>
     </div>
   );

@@ -66,14 +66,21 @@ const Board = () => {
   }
 
   return (
-    <section className="flex flex-col gap-4 mt-10">
-      <article className="w-full border-solid border border-gray-200 p-3 flex justify-end gap-2 ">
-        <SelectBox options={options} onChange={handleChange} defaultValue="1" />
-        <SearchBox
-          handleSearch={handleSearch}
-          placeholderText="검색어를 입력해 주세요."
-        ></SearchBox>
-      </article>
+    <section className="flex flex-col gap-3 mt-10">
+      <div className="flex justify-between items-center w-full">
+        <p className="text-[#888888] font-light text-xs">전체 34,006건</p>
+        <article className="flex justify-end gap-2 ">
+          <SelectBox
+            options={options}
+            onChange={handleChange}
+            defaultValue="1"
+          />
+          <SearchBox
+            handleSearch={handleSearch}
+            placeholderText="검색어를 입력해 주세요."
+          ></SearchBox>
+        </article>
+      </div>
       <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto text-[14px]">
         {/* Header */}
         <thead>

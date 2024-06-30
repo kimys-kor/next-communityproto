@@ -62,7 +62,7 @@ const NewPost2: React.FC = () => {
   ];
 
   return (
-    <div className="container w-full bg-[#f7f8fa]/35 rounded-2xl shadow-md p-5 flex flex-col gap-5">
+    <div className="container w-full bg-white rounded-2xl shadow-md p-5 flex flex-col gap-5">
       <div className="w-full container flex flex-col gap-6">
         {/* button */}
         <div className="flex justify-start">

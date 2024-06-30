@@ -16,7 +16,7 @@ function HomeBanner() {
   ];
 
   return (
-    <main className="w-full h-auto bg-white/25 rounded-2xl shadow-md flex flex-col items-center ">
+    <main className="w-full h-auto bg-white rounded-2xl shadow-md flex flex-col items-center ">
       <div className="w-full flex justify-center items-center gap-5 py-3">
         <span className="text-3xl  text-indigo-500 ">먹튀타파</span>
         <span className="text-3xl  text-black ">공식 보증업체</span>

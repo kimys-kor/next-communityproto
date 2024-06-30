@@ -11,7 +11,7 @@ function Headers() {
   }
 
   return (
-    <header className="fixed w-full h-20 bg-white z-10 ">
+    <header className="fixed w-full h-20 bg-white z-10 border-solid border-b border-gray-200">
       <div className="py-4">
         <div className="max-w-[1300px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
           <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0 ">

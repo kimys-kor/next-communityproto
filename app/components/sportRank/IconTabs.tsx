@@ -90,7 +90,7 @@ const IconTabs: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-4 bg-[#f7f8fa]/35 shadow-lg rounded-lg">
+    <div className="w-full mx-auto p-4 bg-white shadow-lg rounded-lg">
       <div className="flex justify-around cursor-pointer ">
         {sports.map((sport) => (
           <div
