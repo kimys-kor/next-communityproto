@@ -9,6 +9,7 @@ import WaIcon from "/public/images/icon/waIcon.svg";
 import MagnifyIcon from "/public/images/icon/magnify.svg";
 import MedalIcon from "/public/images/icon/medalIcon.svg";
 import TvIcon from "/public/images/icon/tvIcon.svg";
+import styled, { css } from "styled-components";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -157,7 +158,7 @@ const Navbar = () => {
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className={`border-b border-solid border-gray-500 outline-white w-full block p-4 text-[1rem] hover:bg-gray-700 hover:text-white`}
+                        className={`border-b border-solid border-slate-200 outline-white w-full block p-4 text-[1rem] hover:bg-gray-700 hover:text-white`}
                         onClick={() => handleLinkClick(sublink.href)}
                       >
                         {sublink.label}
@@ -169,16 +170,17 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex justify-around items-center gap-2">
+        <div className="flex justify-around items-center gap-2 relative">
           <Link
             href={"/login"}
-            className="w-8 text-xs font-semibold text-gray-400"
+            className="w-8 text-xs font-semibold text-gray-400 hover:text-red-400"
           >
             로그인
           </Link>
+          <Bar></Bar>
           <Link
-            href={"/login"}
-            className="w-12 text-xs font-semibold text-gray-400"
+            href={"/signup"}
+            className="w-12 text-xs font-semibold text-gray-400 hover:text-red-400"
           >
             회원가입
           </Link>
@@ -205,3 +207,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const Bar = styled.div`
+  content: "|";
+  position: absolute;
+`;
