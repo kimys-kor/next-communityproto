@@ -4,8 +4,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "../Container";
+import BurgerIcon from "/public/images/icon/burgerIcon.svg"
 import WaIcon from "/public/images/icon/waIcon.svg"
 import MagnifyIcon from "/public/images/icon/magnify.svg"
+import MedalIcon from "/public/images/icon/medalIcon.svg"
+import TvIcon from "/public/images/icon/tvIcon.svg"
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -18,11 +21,10 @@ const Navbar = () => {
   }, [pathname]);
 
   const links = [
-    { href: "/", label: "홈" },
     {
       href: "/warranty",
       label: "보증업체",
-      icon: <WaIcon />
+      icon: <WaIcon className="hidden lg:block" />
     },
     {
       href: "/verify",
@@ -31,7 +33,7 @@ const Navbar = () => {
         { href: "/verify", label: "검증" },
         { href: "/verify/case", label: "피해사례" },
       ],
-      icon: <MagnifyIcon />
+      icon: <MagnifyIcon className="hidden lg:block" />
     },
     {
       href: "/sport",
@@ -43,6 +45,7 @@ const Navbar = () => {
         { href: "/sport/volley", label: "배구분석" },
         { href: "/sport/hockey", label: "하키분석" },
       ],
+      icon: <MedalIcon className="hidden lg:block" />
     },
     {
       href: "/pickster",
@@ -51,6 +54,7 @@ const Navbar = () => {
         { href: "/pickster", label: "나는 분석왕" },
         { href: "/pickster/guide", label: "가이드" },
       ],
+      icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />
     },
     {
       href: "/community",
@@ -110,17 +114,30 @@ const Navbar = () => {
     <Container>
       {/* Desktop Navigation */}
       <nav className="hidden md:flex w-full h-14">
-        <ul className="flex w-full h-14 rounded-lg text-center mb-2 relative ">
+        <ul className="flex w-full h-14 rounded-lg text-center relative ">
+            <li
+              className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border"
+            >
+          <BurgerIcon className="cursor-pointer" />
+          </li>
+          <Link
+            href={"/"}
+              className={`ml-2 w-16 text-base h-14 font-bold truncate lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
+                activeLink === "/" ? "text-red-500" : "text-black"
+              }`}
+            >
+            홈
+           </Link>
           {links.map((link, index) => (
             <li
               key={index}
-              className="w-28 h-14 relative group cursor-pointer md:grid-rows-2 flex flex-col justify-center items-center box-border"
+              className="w-20 lg:w-32 h-14 relative group cursor-pointer flex flex-col justify-center items-center box-border"
             >
               <Link
                 key={link.href}
                 href={link.href}
-                className={`bg-w-28 h-14 truncate text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:underline ${
-                  isActiveLink(link.href) ? "text-black" : "text-black"
+                className={`relative w-20 lg:w-32 text-base h-14 truncate lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
+                  isActiveLink(link.href) ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => handleLinkClick(link.href)}
               >
@@ -128,12 +145,12 @@ const Navbar = () => {
                 {link.label}
                 </div>
                 <div>
-                {link.icon}
+                {link.icon? link.icon : null}
                 </div>
               </Link>
               <ul>
                 {link.dropdown && (
-                  <li className="w-28 left-[0px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
+                  <li className="w-32 left-[0px] invisible absolute z-50 flex flex-col bg-indigo-500 text-white shadow-xl group-hover:visible">
                     {link.dropdown.map((sublink) => (
                       <Link
                         key={sublink.href}
