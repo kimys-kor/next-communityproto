@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "../Container";
+import WaIcon from "/public/images/icon/waIcon.svg"
+import MagnifyIcon from "/public/images/icon/magnify.svg"
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,6 +22,7 @@ const Navbar = () => {
     {
       href: "/warranty",
       label: "보증업체",
+      icon: <WaIcon />
     },
     {
       href: "/verify",
@@ -28,6 +31,7 @@ const Navbar = () => {
         { href: "/verify", label: "검증" },
         { href: "/verify/case", label: "피해사례" },
       ],
+      icon: <MagnifyIcon />
     },
     {
       href: "/sport",
@@ -106,7 +110,7 @@ const Navbar = () => {
     <Container>
       {/* Desktop Navigation */}
       <nav className="hidden md:flex w-full h-14">
-        <ul className="flex w-full h-14  bg-indigo-500/75 font-medium rounded-lg text-sm text-center mb-2 relative ">
+        <ul className="flex w-full h-14 rounded-lg text-center mb-2 relative ">
           {links.map((link, index) => (
             <li
               key={index}
@@ -115,12 +119,17 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`bg-w-28 h-14 truncate text-base cursor-pointer transition-all flex justify-center items-center duration-300 ease-in-out menu-hover hover:text-white ${
-                  isActiveLink(link.href) ? "text-white" : "text-white/55"
+                className={`bg-w-28 h-14 truncate text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:underline ${
+                  isActiveLink(link.href) ? "text-black" : "text-black"
                 }`}
                 onClick={() => handleLinkClick(link.href)}
               >
+                <div className="font-bold">
                 {link.label}
+                </div>
+                <div>
+                {link.icon}
+                </div>
               </Link>
               <ul>
                 {link.dropdown && (
