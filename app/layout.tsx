@@ -12,6 +12,7 @@ import ScrollButtons from "./components/ScrollButtons";
 import Login from "./components/login/Login";
 import Card from "./components/Card";
 import IconTabs from "./components/sportRank/IconTabs";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,13 @@ export const metadata = {
   description: "라이브스코어 라이브스포츠 라이브중계",
 };
 
+const pretendard = localFont({
+  src: "../public/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className={`${pretendard.variable} font-pretendard`}>
         <main>
           <ToasterProvider />
           <LoginModal />

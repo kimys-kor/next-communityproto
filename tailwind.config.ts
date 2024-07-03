@@ -17,6 +17,9 @@ const config: Config = {
       xl: "1440px",
     },
     extend: {
+      fontFamily: {
+        pretendard: ["var(--font-pretendard)"],
+      },
       gridTemplateColumns: {
         "auto-fit-minmax": "repeat(auto-fit, minmax(240px, 1fr))",
       },
