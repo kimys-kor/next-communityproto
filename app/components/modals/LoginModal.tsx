@@ -95,7 +95,7 @@ const LoginModal = () => {
         icon={AiFillGithub}
         onClick={() => signIn("github")}
       />
-      <div className="mt-4 font-light text-center text-neutral-500">
+      <div className="mt-4 text-center text-neutral-500">
         <p>
           First time using Airbnb?
           <span

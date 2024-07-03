@@ -68,7 +68,7 @@ const Board = () => {
   return (
     <section className="flex flex-col gap-3 mt-10">
       <div className="flex justify-between items-center w-full">
-        <p className="text-[#888888] font-light text-xs">전체 34,006건</p>
+        <p className="text-[#888888] text-xs">전체 34,006건</p>
         <article className="flex justify-end gap-2 ">
           <SelectBox
             options={options}
@@ -95,7 +95,7 @@ const Board = () => {
         </thead>
 
         {/* Items */}
-        <tbody className="font-light">
+        <tbody className="">
           {items.map((item, index) => (
             <tr
               key={item.id}
@@ -123,7 +123,7 @@ const Board = () => {
       </table>
       <span className="w-full flex justify-end">
         <Link href={"/verify/case/write"}>
-          <button className="bg-indigo-400 text-white  hover:bg-indigo-500 shadow-md rounded-sm text-[13px] font-light px-2 py-2">
+          <button className="bg-indigo-400 text-white  hover:bg-indigo-500 shadow-md rounded-sm text-[13px]  px-2 py-2">
             글작성하기
           </button>
         </Link>

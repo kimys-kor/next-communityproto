@@ -50,7 +50,7 @@ const Write: React.FC = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-xl font-light">피해사례 작성</h1>
+      <h1 className="text-xl">피해사례 작성</h1>
       <form onSubmit={onSubmit} className="border-gray-300 flex flex-col gap-3">
         <div className="flex flex-col border-solid border-t">
           <div className="flex justify-between items-center h-16 border-solid border-b border-gray-300">
@@ -62,7 +62,7 @@ const Write: React.FC = () => {
                 {...register("title")}
                 type="text"
                 id="title"
-                className="truncate appearance-none border border-solid w-[100%] px-7 py-3 font-light text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="truncate appearance-none border border-solid w-[100%] px-7 py-3 text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               ></input>
             </div>
@@ -70,16 +70,14 @@ const Write: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
               피해금액{" "}
-              <p className="text-[12px] font-light text-blue-400">
-                &ensp;(단위:원)
-              </p>
+              <p className="text-[12px] text-blue-400">&ensp;(단위:원)</p>
             </div>
             <div className="w-full flex justify-center items-center h-10 pl-2">
               <input
                 {...register("amount")}
                 type="number"
                 id="amount"
-                className="truncate appearance-none border border-solid w-[100%] px-7 py-3 font-light text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="truncate appearance-none border border-solid w-[100%] px-7 py-3 text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               ></input>
             </div>

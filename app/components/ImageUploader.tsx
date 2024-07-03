@@ -38,7 +38,7 @@ const ImageUploader: React.FC = () => {
         onDragOver={(event) => event.preventDefault()}
         onDrop={handleDrop}
       >
-        <p className="mb-4 text-lg font-light">사진을 드래그 하세요</p>
+        <p className="mb-4 text-lg ">사진을 드래그 하세요</p>
         {images.length > 0 && (
           <div className="flex flex-wrap">
             {images.map((image, index) => (
