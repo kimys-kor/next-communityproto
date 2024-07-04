@@ -1,6 +1,6 @@
 import ThreeBanner from "../components/ThreeBanner";
-import WarrantyBanner from "../warranty/(components)/WarrantyBanner";
 import Breadcrumb from "../components/BreadCrumb";
+import ProgressSliderPage from "../components/ProgressSliderPage";
 
 function page() {
   const breadcrumbItems = {
@@ -12,9 +12,9 @@ function page() {
   };
 
   return (
-    <div className="flex flex-col max-w-[1200px] gap-1">
+    <div className="flex flex-col max-w-[1200px] gap-6">
+      <ProgressSliderPage></ProgressSliderPage>
       <ThreeBanner></ThreeBanner>
-      <WarrantyBanner></WarrantyBanner>
       <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb>
       검증
     </div>

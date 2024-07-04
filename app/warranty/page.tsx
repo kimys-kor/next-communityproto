@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import WarrantyBanner from "./(components)/WarrantyBanner";
 import BreadCrumbs from "../components/BreadCrumb";
 import PartnerCard from "./(components)/PartnerCard";
 import Paging from "../components/Paging";
+import ProgressSliderPage from "../components/ProgressSliderPage";
 
 interface ImgContent {
   img: string;
@@ -33,7 +33,7 @@ function Page() {
 
   return (
     <div className="flex flex-col max-w-[1200px] gap-3">
-      <WarrantyBanner />
+      <ProgressSliderPage />
       <BreadCrumbs breadcrumbData={breadcrumbItems}></BreadCrumbs>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
