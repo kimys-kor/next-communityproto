@@ -69,7 +69,7 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
               enterFrom="opacity-0 scale-90"
               enterTo="opacity-100 scale-80"
               leave="transition ease-in-out duration-300 absolute"
-              leaveFrom="opacity-100 scale-100"
+              leaveFrom="opacity-100 scale-90"
               leaveTo="opacity-0"
               beforeEnter={() => heightFix()}
             >
