@@ -1,7 +1,7 @@
 import NewPost from "../components/NewPost";
 import NewPost2 from "../components/NewPost2";
 import ProgressSliderPage from "../components/ProgressSliderPage";
-import ReactiveSlider from "../components/ReactiveSlider";
+import ResponsiveSlider from "../components/MultiResponsiveSlider";
 import HomeBanner from "./(components)/HomeBanner";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
 
         <HomeBanner></HomeBanner>
 
-        {/* <ReactiveSlider></ReactiveSlider> */}
+        {/* <ResponsiveSlider></ResponsiveSlider> */}
       </article>
     </div>
   );

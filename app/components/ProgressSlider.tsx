@@ -74,7 +74,7 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
               beforeEnter={() => heightFix()}
             >
               <Image
-                className="rounded-xl"
+                className=""
                 src={item.img}
                 width={1024}
                 height={177}
