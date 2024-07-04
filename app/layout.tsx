@@ -48,8 +48,8 @@ export default function RootLayout({
             <Container>
               <aside className="md:w-1/4 hidden md:flex flex-col gap-8 max-w-[300px] h-full  ">
                 <Login></Login>
-                <Card title={"주간베스트"}></Card>
-                <Card title={"실시간베스트"}></Card>
+                <Card title={"이벤트"}></Card>
+                <Card title={"공지"}></Card>
                 <IconTabs></IconTabs>
               </aside>
               <div className="w-full md:w-3/4">{children}</div>

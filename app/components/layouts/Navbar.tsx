@@ -51,24 +51,16 @@ const Navbar = () => {
       width: "w-20 lg:w-32",
     },
     {
-      href: "/pickster",
-      label: "분석존",
-      dropdown: [
-        { href: "/pickster", label: "나는 분석왕" },
-        { href: "/pickster/guide", label: "가이드" },
-      ],
-      icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />,
-      width: "w-20 lg:w-32",
-    },
-    {
       href: "/community",
       label: "커뮤니티",
       dropdown: [
         { href: "/community/free", label: "자유게시판" },
+        { href: "/community/pickster", label: "나는분석왕" },
         { href: "/community/photo", label: "안구정화" },
         { href: "/community/humor", label: "유머 & 이슈" },
       ],
-      width: "w-20 lg:w-24",
+      icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />,
+      width: "w-20 lg:w-32",
     },
     {
       href: "/event",
