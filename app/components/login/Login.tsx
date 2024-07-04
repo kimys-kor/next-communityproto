@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import IdIcon from "/public/images/icon/idIcon.svg";
+import PassIcon from "/public/images/icon/passIcon.svg";
+import Link from "next/link";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -13,47 +16,62 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="mt-3 bg-sky-100/70 p-8 rounded-lg w-full shadow-md">
+    <div className="mt-3 p-8 rounded-lg w-full border-solid border-slate-200 border">
       <form
         onSubmit={(e) => {
           e.preventDefault();
           handleLogin();
         }}
       >
-        <div className="mb-4">
+        <div className="relative mb-4">
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="truncate shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="아이디를 입력 하세요"
+            className="truncate shadow appearance-none border rounded w-full pl-9 py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="아이디"
             required
           />
+          <IdIcon className="absolute top-2 left-2"></IdIcon>
         </div>
-        <div className="mb-1">
+        <div className="relative mb-4">
           <input
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="truncate shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="비밀번호를 입력 하세요"
+            className="truncate shadow appearance-none border rounded w-full pl-9 py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="비밀번호"
             required
           />
+          <PassIcon className="absolute top-2 left-2"></PassIcon>
+        </div>
+        <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center justify-center">
+            <input
+              id="default-checkbox"
+              type="checkbox"
+              value=""
+              className="w-4 h-4  bg-gray-100 "
+            />
+            <label htmlFor="default-checkbox" className="ms-2 text-sm">
+              로그인 유지
+            </label>
+          </div>
+          <Link
+            href={"/signup"}
+            className="text-[#3461FF] text-sm cursor-pointer"
+          >
+            회원가입
+          </Link>
         </div>
         <div className="flex flex-col gap-2 items-center justify-between">
           <button
             type="submit"
-            className="bg-sky-300 hover:bg-sky-500 text-white font-bold w-full py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#3461FF] hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             로그인
-          </button>
-          <button
-            type="submit"
-            className="bg-cyan-300 w-full hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            회원가입
           </button>
         </div>
       </form>

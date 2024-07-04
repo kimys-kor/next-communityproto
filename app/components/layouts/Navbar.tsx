@@ -9,7 +9,6 @@ import WaIcon from "/public/images/icon/waIcon.svg";
 import MagnifyIcon from "/public/images/icon/magnify.svg";
 import MedalIcon from "/public/images/icon/medalIcon.svg";
 import TvIcon from "/public/images/icon/tvIcon.svg";
-import styled, { css } from "styled-components";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -177,7 +176,6 @@ const Navbar = () => {
           >
             로그인
           </Link>
-          <Bar></Bar>
           <Link
             href={"/signup"}
             className="w-12 text-xs font-semibold text-gray-400 hover:text-red-400"
@@ -207,8 +205,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-const Bar = styled.div`
-  content: "|";
-  position: absolute;
-`;
