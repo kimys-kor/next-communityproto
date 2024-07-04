@@ -57,7 +57,7 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
   }, []);
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto text-center py-2">
+    <div className="w-full max-w-[1200px] mx-auto text-center">
       {/* Item image */}
       <div className="transition-all duration-150 delay-300 ease-in-out">
         <div className="relative flex flex-col" ref={itemsRef}>
@@ -70,7 +70,7 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
               enterTo="opacity-100 scale-100"
               leave="transition ease-in-out duration-300 absolute"
               leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+              leaveTo="opacity-0"
               beforeEnter={() => heightFix()}
             >
               <Image
