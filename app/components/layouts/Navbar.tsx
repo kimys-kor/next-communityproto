@@ -142,7 +142,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative ${link.width} text-base h-14 truncate lg:text-base cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
+                className={`relative ${link.width} h-14 truncate text-base lg:text-base cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
                   isActiveLink(link.href) ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => handleLinkClick(link.href)}
@@ -152,12 +152,14 @@ const Navbar = () => {
               </Link>
               <ul>
                 {link.dropdown && (
-                  <li className="w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible">
+                  <li
+                    className={`${link.width} left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}
+                  >
                     {link.dropdown.map((sublink) => (
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className={`border-b border-solid border-slate-200 outline-white w-full block p-4 text-[1rem] hover:bg-gray-700 hover:text-white`}
+                        className={`border-b border-solid border-slate-200 outline-white w-full block p-2 text-xs lg:text-base hover:bg-gray-700 hover:text-white`}
                         onClick={() => handleLinkClick(sublink.href)}
                       >
                         {sublink.label}
