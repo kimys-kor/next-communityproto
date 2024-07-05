@@ -47,43 +47,33 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
     setProgress(0);
   };
 
-  const heightFix = () => {
-    if (itemsRef.current && itemsRef.current.parentElement)
-      itemsRef.current.parentElement.style.height = `${itemsRef.current.clientHeight}px`;
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, []);
-
   return (
     <div className="w-full max-w-[1200px] mx-auto text-center">
       {/* Item image */}
-      <div className="transition-all duration-150 delay-300 ease-in-out">
-        <div className="relative flex flex-col" ref={itemsRef}>
-          {items.map((item, index) => (
-            <Transition
-              key={index}
-              show={active === index}
-              enter="transition ease-in-out duration-500 delay-200 order-first"
-              enterFrom="opacity-0 scale-80"
-              enterTo="opacity-100 scale-90"
-              leave="transition ease-in-out duration-300 absolute"
-              leaveFrom="opacity-100 scale-90"
-              leaveTo="opacity-0 scale-50"
-              beforeEnter={() => heightFix()}
-            >
-              <Image
-                className=""
-                src={item.img}
-                width={1024}
-                height={177}
-                alt={item.desc}
-              />
-            </Transition>
-          ))}
-        </div>
+
+      <div className="relative flex flex-col" ref={itemsRef}>
+        {items.map((item, index) => (
+          <Transition
+            key={index}
+            show={active === index}
+            enter="transition ease-in-out duration-500 delay-200 order-first"
+            enterFrom="opacity-0 scale-80"
+            enterTo="opacity-100 scale-90"
+            leave="transition ease-in-out duration-300 absolute"
+            leaveFrom="opacity-100 scale-90"
+            leaveTo="opacity-0 scale-50"
+          >
+            <Image
+              className=""
+              src={item.img}
+              width={1024}
+              height={177}
+              alt={item.desc}
+            />
+          </Transition>
+        ))}
       </div>
+
       {/* Buttons */}
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
