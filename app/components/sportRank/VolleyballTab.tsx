@@ -5,11 +5,7 @@ interface VolleyballTabProps {
   setSelectedLeague: (league: string) => void;
 }
 
-const volleyballLeagues = [
-  "FIVB World League",
-  "CEV Champions League",
-  "Superlega",
-];
+const volleyballLeagues = ["Vleague(남)", "Vleague(여)"];
 
 const VolleyballTab: React.FC<VolleyballTabProps> = ({
   selectedLeague,
@@ -17,13 +13,15 @@ const VolleyballTab: React.FC<VolleyballTabProps> = ({
 }) => {
   return (
     <div>
-      <div className="flex flex-wrap justify-around mb-4">
+      <div className="flex flex-wrap justify-start px-2 py-4">
         {volleyballLeagues.map((league) => (
           <button
             key={league}
             onClick={() => setSelectedLeague(league)}
-            className={`text-xs cursor-pointer rounded-lg m-2 hover:text-indigo-500 ${
-              selectedLeague === league ? "text-indigo-500" : ""
+            className={`text-sm font-semibold cursor-pointer rounded-lg m-2 underline-offset-4  hover:text-black hover:underline ${
+              selectedLeague === league
+                ? "text-black underline"
+                : "text-[#AAAAAA]"
             }  `}
           >
             {league}
