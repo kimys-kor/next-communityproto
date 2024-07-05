@@ -29,7 +29,7 @@ const Login: React.FC = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="truncate shadow appearance-none border rounded w-full pl-9 py-2 px-3 font-normal text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="truncate appearance-none border rounded w-full pl-9 py-2 px-3 font-normal text-sm text-gray-700 leading-tight focus:outline-none"
             placeholder="아이디"
             required
           />
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="truncate shadow appearance-none border rounded w-full pl-9 py-2 px-3 font-normal text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="truncate appearance-none border rounded w-full pl-9 py-2 px-3 font-normal text-sm text-gray-700 leading-tight focus:outline-none"
             placeholder="비밀번호"
             required
           />
@@ -57,7 +57,7 @@ const Login: React.FC = () => {
             />
             <label
               htmlFor="default-checkbox"
-              className="ms-2 font-normal text-sm"
+              className="ms-2 font-normal text-xs lg:text-sm truncate"
             >
               로그인 유지
             </label>
@@ -72,7 +72,7 @@ const Login: React.FC = () => {
         <div className="flex flex-col gap-2 items-center justify-between">
           <button
             type="submit"
-            className="bg-[#3461FF] hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#3461FF] hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none"
           >
             로그인
           </button>

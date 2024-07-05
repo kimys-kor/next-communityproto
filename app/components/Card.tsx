@@ -6,9 +6,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title }) => {
   return (
-    <div className="w-full shadow-md p-3 rounded-md bg-white">
+    <div className="w-full shadow-md p-3 rounded-md bg-white font-semibold">
       <div className="h-10 leading-8 flex justify-between border-solid border-b border-gray-light">
-        <h1 className="text-lg">{title}</h1>
+        <h1 className="text-lg font-bold">{title}</h1>
         <div className="group cursor-pointer">
           <svg
             width="15"
