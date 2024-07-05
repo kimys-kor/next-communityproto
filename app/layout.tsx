@@ -48,7 +48,6 @@ export default function RootLayout({
             <Container>
               <aside className="md:w-1/4 hidden md:flex flex-col gap-8 max-w-[300px] h-full  ">
                 <Login></Login>
-                <Card title={"이벤트"}></Card>
                 <Card title={"공지"}></Card>
                 <IconTabs></IconTabs>
               </aside>
