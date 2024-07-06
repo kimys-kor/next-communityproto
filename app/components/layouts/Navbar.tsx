@@ -113,7 +113,7 @@ const Navbar = () => {
   return (
     <Container>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex w-full h-14 border-solid border-b border-slate-200">
+      <nav className="hidden md:flex w-full h-14 border-solid border-b border-slate-200 px-1">
         <ul className="flex w-full h-14 rounded-lg text-center">
           <li className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border">
             <BurgerIcon className="cursor-pointer" />
@@ -145,13 +145,13 @@ const Navbar = () => {
               <ul>
                 {link.dropdown && (
                   <li
-                    className={`w-20 lg:w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}
+                    className={`w-24 lg:w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}
                   >
                     {link.dropdown.map((sublink) => (
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className={`border-b border-solid border-slate-200 outline-white w-full block p-2 text-xs lg:text-base hover:bg-gray-700 hover:text-white`}
+                        className={`border-b border-solid border-slate-200 outline-white w-full block p-2 text-base lg:text-base hover:bg-gray-700 hover:text-white`}
                         onClick={() => handleLinkClick(sublink.href)}
                       >
                         {sublink.label}
