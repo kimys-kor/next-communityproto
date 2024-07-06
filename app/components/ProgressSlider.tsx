@@ -57,11 +57,11 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
             key={index}
             show={active === index}
             enter="transition ease-in-out duration-500 delay-200 order-first"
-            enterFrom="opacity-0 scale-80"
-            enterTo="opacity-100 scale-90"
-            leave="transition ease-in-out duration-300 absolute"
-            leaveFrom="opacity-100 scale-90"
-            leaveTo="opacity-0 scale-50"
+            enterFrom="opacity-0 scale-105"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in-out duration-100 absolute"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
           >
             <Image
               className=""

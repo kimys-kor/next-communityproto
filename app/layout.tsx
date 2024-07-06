@@ -51,7 +51,7 @@ export default function RootLayout({
                 <Card title={"공지"}></Card>
                 <IconTabs></IconTabs>
               </aside>
-              <div className="w-full md:w-3/4">{children}</div>
+              <section className="w-full md:w-3/4">{children}</section>
             </Container>
           </div>
           <Footer></Footer>
