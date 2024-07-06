@@ -6,11 +6,11 @@ import HomeBanner from "./(components)/HomeBanner";
 
 export default function Home() {
   return (
-    <div className="flex max-w-[1200px]">
+    <div className="flex">
       <article className="w-full h-full flex flex-col gap-4">
         <ProgressSliderPage></ProgressSliderPage>
 
-        <section className="grid grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           <NewPost></NewPost>
           <NewPost2></NewPost2>
         </section>

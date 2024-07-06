@@ -25,7 +25,7 @@ const Navbar = () => {
       href: "/warranty",
       label: "보증업체",
       icon: <WaIcon className="hidden lg:block" />,
-      width: "w-20 lg:w-32",
+      width: "w-20 md:w-24 lg:w-32",
     },
     {
       href: "/verify",
@@ -35,7 +35,7 @@ const Navbar = () => {
         { href: "/verify/case", label: "피해사례" },
       ],
       icon: <MagnifyIcon className="hidden lg:block" />,
-      width: "w-20 lg:w-32",
+      width: "w-20 md:w-24 lg:w-32",
     },
     {
       href: "/sport",
@@ -48,7 +48,7 @@ const Navbar = () => {
         { href: "/sport/hockey", label: "하키분석" },
       ],
       icon: <MedalIcon className="hidden lg:block" />,
-      width: "w-20 lg:w-32",
+      width: "w-20 md:w-24 lg:w-32",
     },
     {
       href: "/community",
@@ -60,7 +60,7 @@ const Navbar = () => {
         { href: "/community/humor", label: "유머 & 이슈" },
       ],
       icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />,
-      width: "w-20 lg:w-32",
+      width: "w-20 md:w-24 lg:w-32",
     },
     {
       href: "/event",
@@ -69,7 +69,7 @@ const Navbar = () => {
         { href: "/event", label: "이벤트공지" },
         { href: "/event/attd", label: "출석체크" },
       ],
-      width: "w-20 lg:w-24",
+      width: "w-20 md:w-24 lg:w-24",
     },
     {
       href: "/promotion",
@@ -79,7 +79,7 @@ const Navbar = () => {
         { href: "/promotion/ggong", label: "꽁머니홍보" },
         { href: "/promotion/hunting", label: "구인구직" },
       ],
-      width: "w-20 lg:w-24",
+      width: "w-20 md:w-24 lg:w-24",
     },
     {
       href: "/customer",
@@ -88,7 +88,7 @@ const Navbar = () => {
         { href: "/customer", label: "공지사항" },
         { href: "/customer/qalist", label: "1:1 문의" },
       ],
-      width: "w-20 lg:w-24",
+      width: "w-20 md:w-24 lg:w-24",
     },
   ];
 
@@ -114,13 +114,13 @@ const Navbar = () => {
     <Container>
       {/* Desktop Navigation */}
       <nav className="hidden md:flex w-full h-14 border-solid border-b border-slate-200 px-1">
-        <ul className="flex w-full h-14 rounded-lg text-center">
+        <ul className="flex w-full h-14 rounded-lg text-center pl-1">
           <li className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border">
             <BurgerIcon className="cursor-pointer" />
           </li>
           <Link
             href={"/"}
-            className={`ml-2 w-16 text-base h-14 font-bold truncate lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
+            className={`w-16 text-base h-14 font-bold truncate lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
               activeLink === "/" ? "text-red-500" : "text-black"
             }`}
           >
@@ -134,7 +134,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative ${link.width} h-14 truncate text-base lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
+                className={`relative ${link.width} h-14 truncate text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
                   isActiveLink(link.href) ? "text-red-500" : "text-black"
                 }`}
                 onClick={() => handleLinkClick(link.href)}

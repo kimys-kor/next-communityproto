@@ -57,14 +57,14 @@ const Login: React.FC = () => {
             />
             <label
               htmlFor="default-checkbox"
-              className="ms-2 font-normal text-xs lg:text-sm truncate"
+              className="ms-2 font-normal text-sm truncate leading-tight"
             >
               로그인 유지
             </label>
           </div>
           <Link
             href={"/signup"}
-            className="text-[#3461FF] font-normal text-sm cursor-pointer"
+            className="text-[#3461FF] font-normal text-sm cursor-pointer leading-tight"
           >
             회원가입
           </Link>

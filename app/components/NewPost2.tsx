@@ -62,41 +62,39 @@ const NewPost2: React.FC = () => {
   ];
 
   return (
-    <div className="container w-full bg-white rounded-2xl shadow-md p-5 flex flex-col gap-5">
-      <div className="w-full container flex flex-col gap-6">
+    <div className="truncate w-full bg-white rounded-2xl flex flex-col gap-5 border border-solid border-gray-200">
+      <div className="w-full flex flex-col">
         {/* button */}
-        <div className="flex justify-start">
+        <div className="h-12 px-3 flex justify-start items-center gap-1 rounded-t bg-[#FAFAFA]">
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`truncate cursor-pointer text-sm px-4 transition-all border-b-2 border-solid hover:text-blue-500
-              ${
-                activeTab === index
-                  ? "text-blue-500 border-b-2 border-blue-500 border-solid"
-                  : "text-gray-700 border-transparent"
-              }
+              className={`border-solid border rounded-2xl cursor-pointer font-semibold text-sm px-2 py-1 transition-all hover:text-[#3461FF]
+                ${activeTab === index ? "text-[#3461FF] border-[#3461FF] bg-[#F2F5FF]" : "text-[#999999] border-[#999999]"}
             `}
               onClick={() => setActiveTab(index)}
             >
-              {tab.label}
+              <div className="flex justify-center items-center gap-1">
+                {tab.label}
+              </div>
             </div>
           ))}
         </div>
         {/* content */}
-        <div className="text-sm w-full">
+        <div className="text-sm w-full p-3">
           {activeTab === 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 delay-500">
+            <div className="grid grid-cols-4 gap-4 delay-500">
               {(tabs[0].content as TabContent).map((item, index) => (
-                <div key={index} className="flex flex-col items-center">
+                <div key={index} className="flex flex-col items-center ">
                   <img
                     className="w-full h-auto"
                     src={item.img}
                     alt={`Dog ${index + 1}`}
                   />
                   <div className="mt-2 text-center">
-                    <div className="text-xs font-bold">{item.title}</div>
-                    <div className="text-xs text-gray-500">{item.date}</div>
-                    <div className="text-xs text-gray-500">{item.writer}</div>
+                    <div className="text-sm font-semibold">{item.title}</div>
+                    <div className="text-sm text-gray-500">{item.date}</div>
+                    <div className="text-sm text-gray-500">{item.writer}</div>
                   </div>
                 </div>
               ))}

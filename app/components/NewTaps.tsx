@@ -7,42 +7,42 @@ import HotIcon from "./HotIcon";
 type Tab = {
   label: string;
   content: string[];
+  icon: React.ReactNode;
 };
 
 const NewTaps: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="w-full container flex flex-col gap-6">
+    <div className="w-full flex flex-col">
       {/* button */}
-      <div className="flex justify-start">
+      <div className="h-12 px-3 flex justify-start items-center gap-1 rounded-t bg-[#FAFAFA]">
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`cursor-pointer text-sm px-4 transition-all border-b-2 border-solid  hover:text-pink-500
-              ${
-                activeTab === index
-                  ? "text-pink-500 border-b-2 border-rose-500 border-solid"
-                  : "text-gray-700 border-transparent"
-              }
+            className={`border-solid border rounded-2xl cursor-pointer font-semibold text-sm px-2 py-1 transition-all hover:text-[#3461FF]
+              ${activeTab === index ? "text-[#3461FF] border-[#3461FF] bg-[#F2F5FF]" : "text-[#999999] border-[#999999]"}
             `}
             onClick={() => setActiveTab(index)}
           >
-            {tab.label}
+            <div className="flex justify-center items-center gap-1">
+              {tab.icon}
+              {tab.label}
+            </div>
           </div>
         ))}
       </div>
       {/* content */}
-      <div className="text-sm w-full ">
+      <div className="text-sm w-full">
         {tabs[activeTab].content.map((title, index) => (
           <div
             key={index}
-            className="px-3 flex justify-between hover:bg-slate-200 hover:cursor-pointer border-b border-solid border-slate-200"
+            className={`px-3 flex justify-between hover:bg-slate-200 hover:cursor-pointer ${index !== tabs[activeTab].content.length - 1 ? "border-b border-dashed border-slate-200" : ""}`}
           >
             <div className={`flex gap-2 items-center p-2`}>
               <NewIcon />
               <HotIcon />
-              <div className="text-xs">{title}</div>
+              <div className="text-sm font-medium">{title}</div>
             </div>
             <div className="flex justify-center items-center">06-13</div>
           </div>
