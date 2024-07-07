@@ -29,7 +29,7 @@ const NewPost = () => {
   ];
 
   return (
-    <div className="truncate w-full bg-white rounded-2xl flex flex-col gap-5 border border-solid border-gray-200">
+    <div className="w-full truncate bg-white rounded-2xl flex flex-col gap-5 border border-solid border-gray-200">
       <Tabs tabs={tabs}></Tabs>
     </div>
   );

@@ -24,26 +24,26 @@ const NewPost2: React.FC = () => {
         {
           title: "웰시코기",
           img: "/images/dog1.PNG",
-          date: "06-12",
-          writer: "커뮤관리자",
+          date: "24.06.12",
+          writer: "관리자관리자관리자",
         },
         {
           title: "푸들",
           img: "/images/dog2.PNG",
-          date: "06-12",
-          writer: "커뮤관리자",
+          date: "24.06.12",
+          writer: "관리자",
         },
         {
           title: "말티즈",
           img: "/images/dog3.PNG",
-          date: "06-12",
-          writer: "커뮤관리자",
+          date: "24.06.12",
+          writer: "관리자",
         },
         {
           title: "말티즈",
           img: "/images/dog4.PNG",
-          date: "06-12",
-          writer: "커뮤관리자",
+          date: "24.06.12",
+          writer: "관리자",
         },
       ],
     },
@@ -81,20 +81,29 @@ const NewPost2: React.FC = () => {
           ))}
         </div>
         {/* content */}
-        <div className="text-sm w-full p-3">
+        <div className="text-sm w-full">
           {activeTab === 0 ? (
-            <div className="grid grid-cols-4 gap-4 delay-500">
+            <div className="grid grid-cols-4 py-3">
               {(tabs[0].content as TabContent).map((item, index) => (
-                <div key={index} className="flex flex-col items-center ">
+                <div
+                  key={index}
+                  className="flex flex-col justify-evenly items-center gap-2 px-2"
+                >
                   <img
-                    className="w-full h-auto"
+                    className="h-24 rounded-md"
                     src={item.img}
                     alt={`Dog ${index + 1}`}
                   />
-                  <div className="mt-2 text-center">
-                    <div className="text-sm font-semibold">{item.title}</div>
-                    <div className="text-sm text-gray-500">{item.date}</div>
-                    <div className="text-sm text-gray-500">{item.writer}</div>
+                  <div className="text-center w-full">
+                    <div className="text-base font-semibold">{item.title}</div>
+                    <div className="flex justify-center">
+                      <span className="w-1/2 truncate text-xs text-gray-500">
+                        {item.date}
+                      </span>
+                      <span className="w-1/2 truncate text-xs text-gray-500">
+                        {item.writer}
+                      </span>
+                    </div>{" "}
                   </div>
                 </div>
               ))}
@@ -103,10 +112,10 @@ const NewPost2: React.FC = () => {
             (tabs[activeTab].content as string[]).map((title, index) => (
               <div
                 key={index}
-                className="px-3 flex justify-between hover:bg-slate-200 hover:cursor-pointer border-b border-solid border-slate-200"
+                className={`px-3 flex justify-between hover:bg-slate-200 hover:cursor-pointer ${index !== tabs[activeTab].content.length - 1 ? "border-b border-dashed border-slate-200" : ""}`}
               >
-                <div className="flex gap-2 items-center p-2">
-                  <div className="text-xs">{title}</div>
+                <div className={`flex gap-2 items-center p-2`}>
+                  <div className="text-sm font-medium">{title}</div>
                 </div>
                 <div className="flex justify-center items-center">06-13</div>
               </div>
