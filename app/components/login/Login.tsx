@@ -64,7 +64,7 @@ const Login: React.FC = () => {
           </div>
           <Link
             href={"/signup"}
-            className="text-[#3461FF] font-normal text-sm cursor-pointer leading-tight"
+            className="text-blue font-normal text-sm cursor-pointer leading-tight"
           >
             회원가입
           </Link>
@@ -72,7 +72,7 @@ const Login: React.FC = () => {
         <div className="flex flex-col gap-2 items-center justify-between">
           <button
             type="submit"
-            className="bg-[#3461FF] hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none"
+            className="bg-blue hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none"
           >
             로그인
           </button>

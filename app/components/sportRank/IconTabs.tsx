@@ -79,9 +79,9 @@ const IconTabs: React.FC = () => {
                 setSelectedLeague(null);
               }
             }}
-            className={`flex justify-center items-center w-10 h-7 md:w-12 rounded-2xl text-sm font-bold hover:bg-[#3461FF] hover:text-white ${
+            className={`flex justify-center items-center w-10 h-7 md:w-12 rounded-2xl text-sm font-bold hover:bg-blue hover:text-white ${
               selectedSport === sport.id
-                ? "text-white bg-[#3461FF]"
+                ? "text-white bg-blue"
                 : "text-black bg-[#E8E8ED]"
             }`}
           >

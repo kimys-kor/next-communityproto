@@ -20,8 +20,8 @@ const NewTaps: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`border-solid border rounded-2xl cursor-pointer font-semibold text-sm px-2 py-1 transition-all hover:text-[#3461FF]
-              ${activeTab === index ? "text-[#3461FF] border-[#3461FF] bg-[#F2F5FF]" : "text-[#999999] border-[#999999]"}
+            className={`border-solid border rounded-2xl cursor-pointer font-semibold text-sm px-2 py-1 transition-all hover:text-blue
+              ${activeTab === index ? "text-blue border-blue bg-[#F2F5FF]" : "text-[#999999] border-[#999999]"}
             `}
             onClick={() => setActiveTab(index)}
           >

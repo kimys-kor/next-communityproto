@@ -34,7 +34,8 @@ const config: Config = {
         "4xl": "2rem",
       },
       colors: {
-        // blue: "#1fb6ff",
+        blue: "#3461FF",
+        semiblue: "#E9EEFF",
         // pink: "#ff49db",
         // orange: "#ff7849",
         // green: "#13ce66",
@@ -42,7 +43,6 @@ const config: Config = {
         // "gray-dark": "#273444",
         // gray: "#8492a6",
         // "gray-light": "#d3dce6",
-        footer: "#F7F9FA",
         "gradient-start": "#00daef",
         "gradient-end": "#bc67ff",
       },
