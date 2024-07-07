@@ -10,9 +10,10 @@ import Container from "./components/Container";
 import Navbar from "./components/layouts/Navbar";
 import ScrollButtons from "./components/ScrollButtons";
 import Login from "./components/login/Login";
-import Card from "./components/Card";
+import Card from "./components/cards/Card";
 import IconTabs from "./components/sportRank/IconTabs";
 import localFont from "next/font/local";
+import Notice from "./components/cards/Notice";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,7 +49,7 @@ export default function RootLayout({
             <Container>
               <aside className="md:w-1/4 hidden md:flex flex-col gap-8 max-w-[300px] h-full  ">
                 <Login></Login>
-                <Card title={"공지"}></Card>
+                <Notice></Notice>
                 <IconTabs></IconTabs>
               </aside>
               <section className="w-full md:w-3/4">{children}</section>
