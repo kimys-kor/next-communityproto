@@ -20,7 +20,7 @@ const HomeBoardCard = () => {
             className={`w-full py-[5px] flex justify-between items-center ${index !== dataLength - 1 ? "border-b border-slate-200 border-solid" : ""}`}
           >
             <div className="flex justify-center items-center gap-1">
-              <span className="truncate border-solid border border-blue rounded-2xl cursor-pointer font-semibold text-blue text-[10px] px-[4px] py-[2px] transition-all">
+              <span className="truncate border-solid border border-blue rounded-2xl cursor-pointer font-semibold text-blue text-xs px-[4px] py-[2px] transition-all">
                 {item.category}
               </span>
               <p className="text-sm">{item.title}</p>
