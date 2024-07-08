@@ -32,19 +32,17 @@ const Card: React.FC<CardProps> = ({ title, cardData }) => {
       {cardData.map((item, index) => (
         <div
           key={index}
-          className={`w-full h-10 px-3 flex justify-start items-center gap-2 ${
+          className={`w-full h-10 px-3 flex justify-start items-center gap-1 ${
             index !== cardData.length - 1
               ? "border-b border-dashed border-slate-200"
               : ""
           }`}
         >
-          <p className="w-6 truncate text-purple-600 text-[11px]">
+          <p className="px-1 truncate border-solid text-purple-600 border-purple-600 border rounded-xl text-xs font-semibold">
             {item.category}
           </p>
           <span className="flex justify-start items-center gap-2">
-            <p className="truncate text-[12px]">
-              주가는 언제나 실적에 수렴한다
-            </p>
+            <p className="truncate text-sm">주가는 언제나 실적에 수렴한다</p>
             <span className="truncate text-red-500 text-[10px] flex justify-center items-center">
               <svg
                 width="10"
