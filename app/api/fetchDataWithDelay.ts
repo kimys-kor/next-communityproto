@@ -30,3 +30,45 @@ export async function fetchDataWithDelay() {
 
   return data;
 }
+
+export function fetchMainBoardData() {
+  const item = [
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+    {
+      category: "자유게시판",
+      title: "주가는언제나 실적에 수렴한다.",
+      date: "24.06.23",
+      hit: 5,
+    },
+  ];
+  return item;
+}

@@ -5,7 +5,7 @@ import MultiResponsiveSlider from "../components/MultiResponsiveSlider";
 import HomeBanner from "./(components)/HomeBanner";
 import { Suspense } from "react";
 import HomeBannerSk from "../components/skeleton/HomeBannerSk";
-import TabSk from "../components/skeleton/TabSk";
+import HomeBoard from "./(components)/HomeBoard";
 
 export default function Home() {
   return (
@@ -17,6 +17,8 @@ export default function Home() {
           <TabAnalyzePage></TabAnalyzePage>
           <TabACommunityPage></TabACommunityPage>
         </section>
+
+        <HomeBoard></HomeBoard>
 
         <Suspense fallback={<HomeBannerSk></HomeBannerSk>}>
           <HomeBanner></HomeBanner>

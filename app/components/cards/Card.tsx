@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({ title, cardData }) => {
               : ""
           }`}
         >
-          <p className="w-1/5 xl:w-16 truncate text-purple-600 text-[11px]">
+          <p className="w-6 truncate text-purple-600 text-[11px]">
             {item.category}
           </p>
           <span className="flex justify-start items-center gap-2">
