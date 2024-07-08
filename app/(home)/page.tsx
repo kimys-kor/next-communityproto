@@ -3,6 +3,8 @@ import NewPost2 from "../components/NewPost2";
 import ProgressSliderPage from "../components/ProgressSliderPage";
 import ResponsiveSlider from "../components/MultiResponsiveSlider";
 import HomeBanner from "./(components)/HomeBanner";
+import { Suspense } from "react";
+import HomeBannerSk from "../components/skeleton/HomeBannerSk";
 
 export default function Home() {
   return (
@@ -15,8 +17,9 @@ export default function Home() {
           <NewPost2></NewPost2>
         </section>
 
-        <HomeBanner></HomeBanner>
-
+        <Suspense fallback={<HomeBannerSk></HomeBannerSk>}>
+          <HomeBanner></HomeBanner>
+        </Suspense>
         {/* <ResponsiveSlider></ResponsiveSlider> */}
       </article>
     </div>
