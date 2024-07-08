@@ -1,6 +1,5 @@
 import React from "react";
-import { Skeleton, SVGSkeleton } from "../../components/skeleton/Skeleton";
-import { resolve } from "path";
+import Image from "next/image";
 
 interface imgContent {
   img: string;
@@ -35,16 +34,17 @@ async function HomeBanner() {
   const imgContent = interval();
 
   return (
-    <main className="w-full h-auto bg-white rounded-2xl shadow-md flex flex-col items-center ">
-      <div className="w-full flex justify-center items-center gap-5 py-3">
-        <span className="text-3xl  text-indigo-500 ">먹튀타파</span>
-        <span className="text-3xl  text-black ">공식 보증업체</span>
+    <main className="w-full h-auto bg-white rounded-2xl flex flex-col items-center">
+      <div className="w-full flex justify-center items-center gap-5 py-3 font-bold">
+        <span className="text-3xl text-blue ">먹튀타파</span>
+        <span className="text-3xl text-black ">공식 보증업체</span>
       </div>
       <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-1">
         {(await imgContent).map((item, index) => (
-          <li key={index}>
-            <img
-              className="w-full h-auto"
+          <li key={index} className="grid-element">
+            <Image
+              fill
+              className="w-full h-auto rounded-md"
               src={item.img}
               alt={`homeBanner ${index + 1}`}
             />

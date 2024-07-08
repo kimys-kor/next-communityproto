@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     variants: {
-      display: ["group-hover"],
+      extends: {
+        display: ["group-hover"],
+      },
     },
     screens: {
       sm: "480px",

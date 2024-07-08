@@ -1,6 +1,6 @@
 import { Skeleton, SVGSkeleton } from "./Skeleton";
 
-const HomeBannerSk = () => (
+const TabSk = () => (
   <>
     <main className="w-full h-auto shadow-md flex flex-col items-center">
       <div className="w-full flex justify-center items-center gap-5 py-3">
@@ -71,4 +71,4 @@ const HomeBannerSk = () => (
   </>
 );
 
-export default HomeBannerSk;
+export default TabSk;
