@@ -14,7 +14,7 @@ type Tab = {
   content: TabContent | string[];
 };
 
-const NewPost2: React.FC = () => {
+const TabACommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs: Tab[] = [
@@ -127,4 +127,4 @@ const NewPost2: React.FC = () => {
   );
 };
 
-export default NewPost2;
+export default TabACommunityPage;

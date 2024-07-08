@@ -1,10 +1,10 @@
-import Tabs from "./NewTaps";
+import TabAnalyze from "./TabAnalyze";
 import SocIcon from "/public/images/icon/soc.svg";
 import BaseIcon from "/public/images/icon/base.svg";
 import BaskIcon from "/public/images/icon/bask.svg";
 import VolleyIcon from "/public/images/icon/volley.svg";
 
-const NewPost = () => {
+const TabAnalyzePage = () => {
   const tabs = [
     {
       label: "축구 분석",
@@ -30,9 +30,9 @@ const NewPost = () => {
 
   return (
     <div className="w-full truncate bg-white rounded-2xl flex flex-col gap-5 border border-solid border-gray-200">
-      <Tabs tabs={tabs}></Tabs>
+      <TabAnalyze tabs={tabs}></TabAnalyze>
     </div>
   );
 };
 
-export default NewPost;
+export default TabAnalyzePage;

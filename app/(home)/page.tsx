@@ -1,10 +1,11 @@
-import NewPost from "../components/NewPost";
-import NewPost2 from "../components/NewPost2";
+import TabAnalyzePage from "./(components)/TabAnalyzePage";
+import TabACommunityPage from "./(components)/TabACommunityPage";
 import ProgressSliderPage from "../components/ProgressSliderPage";
-import ResponsiveSlider from "../components/MultiResponsiveSlider";
+import MultiResponsiveSlider from "../components/MultiResponsiveSlider";
 import HomeBanner from "./(components)/HomeBanner";
 import { Suspense } from "react";
 import HomeBannerSk from "../components/skeleton/HomeBannerSk";
+import TabSk from "../components/skeleton/TabSk";
 
 export default function Home() {
   return (
@@ -13,14 +14,14 @@ export default function Home() {
         <ProgressSliderPage></ProgressSliderPage>
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-          <NewPost></NewPost>
-          <NewPost2></NewPost2>
+          <TabAnalyzePage></TabAnalyzePage>
+          <TabACommunityPage></TabACommunityPage>
         </section>
 
         <Suspense fallback={<HomeBannerSk></HomeBannerSk>}>
           <HomeBanner></HomeBanner>
         </Suspense>
-        {/* <ResponsiveSlider></ResponsiveSlider> */}
+        {/* <MultiResponsiveSlider></MultiResponsiveSlider> */}
       </article>
     </div>
   );

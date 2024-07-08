@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import NewIcon from "./NewIcon";
-import HotIcon from "./HotIcon";
+import NewIcon from "../../components/NewIcon";
+import HotIcon from "../../components/HotIcon";
 
 type Tab = {
   label: string;
@@ -10,7 +10,7 @@ type Tab = {
   icon: React.ReactNode;
 };
 
-const NewTaps: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
+const TabAnalyze: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -52,4 +52,4 @@ const NewTaps: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
   );
 };
 
-export default NewTaps;
+export default TabAnalyze;
