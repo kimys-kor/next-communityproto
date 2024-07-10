@@ -113,7 +113,7 @@ const Navbar = () => {
   return (
     <Container>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex w-full h-14 border-solid border-b border-slate-200 px-1">
+      <nav className="hidden md:flex w-full h-14 border-solid border-b border-blue px-1">
         <ul className="flex w-full h-14 rounded-lg text-center pl-1">
           <li className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border">
             <BurgerIcon className="cursor-pointer" />

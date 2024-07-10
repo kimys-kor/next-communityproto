@@ -14,7 +14,7 @@ function Headers() {
   return (
     <header className="fixed w-full h-20 bg-white z-10 border-gray-200">
       <div className="max-w-[1300px] mx-auto px-3 py-4">
-        <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0 ">
+        <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0">
           <Link prefetch href="/">
             <Logo></Logo>
           </Link>
