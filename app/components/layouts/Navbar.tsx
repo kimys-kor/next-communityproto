@@ -22,6 +22,23 @@ const Navbar = () => {
 
   const links = [
     {
+      href: "/",
+      label: "홈",
+      width: "w-16",
+    },
+    {
+      href: "/guide",
+      label: "가이드",
+      dropdown: [
+        { href: "/guide/ggong", label: "꽁머니" },
+        { href: "/guide/major", label: "메이저" },
+        { href: "/guide/safe", label: "안전놀이터" },
+        { href: "/guide/proto", label: "프로토" },
+        { href: "/guide/power", label: "파워볼" },
+      ],
+      width: "w-20",
+    },
+    {
       href: "/warranty",
       label: "보증업체",
       icon: <WaIcon className="hidden lg:block" />,
@@ -41,7 +58,7 @@ const Navbar = () => {
       href: "/sport",
       label: "스포츠분석",
       dropdown: [
-        { href: "/sport/soccer", label: "축구분석" },
+        { href: "/sport", label: "축구분석" },
         { href: "/sport/base", label: "야구분석" },
         { href: "/sport/basket", label: "농구분석" },
         { href: "/sport/volley", label: "배구분석" },
@@ -98,6 +115,7 @@ const Navbar = () => {
 
   const isActiveLink = (link: string) => {
     if (activeLink === link) return true;
+    if (link === "/guide" && activeLink.startsWith("/guide")) return true;
     if (link === "/verify" && activeLink.startsWith("/verify")) return true;
     if (link === "/sport" && activeLink.startsWith("/sport")) return true;
     if (link === "/pickster" && activeLink.startsWith("/pickster")) return true;
@@ -118,14 +136,6 @@ const Navbar = () => {
           <li className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border">
             <BurgerIcon className="cursor-pointer" />
           </li>
-          <Link
-            href={"/"}
-            className={`w-16 text-base h-14 font-bold truncate lg:text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
-              activeLink === "/" ? "text-red-500" : "text-black"
-            }`}
-          >
-            홈
-          </Link>
           {links.map((link, index) => (
             <li
               key={index}
