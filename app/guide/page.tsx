@@ -1,49 +1,116 @@
-import trophy from "/public/images/trophy.png";
 import Image from "next/image";
+import Introduce from "./(components)/introduce";
+import question from "/public/images/question.png";
+import talkball from "/public/images/talkball.png";
 
 function page() {
   return (
     <div className="w-full">
       <main>
-        <section className="flex bg-[#EEF2FF] py-28 px-20">
-          <div className="w-1/2">
-            <h1 className="text-4xl font-semibold">스포츠커뮤니티</h1>
-            <p className="text-4xl font-semibold">
-              <span className="text-blue">No.1</span>먹튀타파 소개
-            </p>
-            <div className="mt-10 text-xl font-medium text-mediumblue ">
-              <p>먹튀타파는 국내 최대 규모의 방대한 정보를</p>
-              <p>보유하고 있는 먹튀 검증 커뮤니티입니다.</p>
+        <Introduce></Introduce>
+        <section className="flex flex-col justify-center items-center py-20">
+          <Image
+            alt="왜먹튀타파인가?"
+            width={248}
+            height={255}
+            src={question}
+          ></Image>
+          <h1 className="text-4xl font-semibold">
+            <span className="text-blue">먹튀타파, </span>왜 믿을 수 있나요?
+          </h1>
+          <div className="flex flex-col items-center">
+            <div className="w-full flex mt-10 gap-5">
+              <article className="w-1/2 bg-[#EEF2FF] rounded-md py-5 px-10 flex justify-start items-center gap-3">
+                <span className="rounded-full bg-white px-3 py-1 text-normalblue text-xl font-bold">
+                  1
+                </span>
+                <div className="text-lg font-medium">
+                  <div>
+                    <span className="text-normalblue">
+                      다년 간의 토토사이트 이용경험 및 먹튀검증
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-normalblue">경험</span>을 가지고
+                    있습니다.
+                  </div>
+                </div>
+              </article>
+              <article className="w-1/2 bg-[#EEF2FF] rounded-md py-5 px-10 flex justify-start items-center gap-3">
+                <span className="rounded-full bg-white px-3 py-1 text-normalblue text-xl font-bold">
+                  2
+                </span>
+                <div className="text-lg font-medium">
+                  <div>
+                    믿을만한 업체로부터
+                    <span className="text-normalblue"> 보증금을 받고 추천</span>
+                  </div>
+                  <div>해 드리므로 이중으로 먹튀 예방이 가능합니다</div>
+                </div>
+              </article>
             </div>
-            <p className="mt-10 text-deepsky text-sm">
-              스포츠 커뮤니티를 운영하는 저희 사이트에 오신 것을 환영합니다.
-              최근 들어 먹튀 사건이 빈번하게 발생하면서 먹튀 검증의 중요성이 그
-              어느 때보다 높아졌습니다. 저희 사이트는 여러 해 동안 먹튀 사이트를
-              검증한 경험을 바탕으로 실제로 여러 사이트를 철저히 조사해왔습니다.
-              저희는 철저한 실사를 통해 검증을 진행하기 때문에, 여러분께 안전한
-              사이트만을 추천해드릴 수 있습니다. 저희가 추천하는 모든 온라인
-              토토 사이트는 안전하다고 판단된 회사들 중에서 엄선된 것들입니다.
-              입금을 요구하는 사이트를 추천할 때는 더욱 신중하게 검토하여
-              여러분께 신뢰할 수 있는 정보를 제공합니다. 반면, 일부 사기 검증
-              사이트는 광고 수익을 위해 사기 검증을 제대로 하지 않고 온라인 토토
-              사이트를 추천하는 경우가 있습니다. 이런 경우에는 사기로 인한
-              피해가 고스란히 사용자에게 돌아갈 수 있으므로 매우 주의해야
-              합니다. 저희 사이트는 검증 없이 추천하는 일이 없으며, 직접 검증한
-              사이트만을 추천합니다. 따라서 저희가 추천하는 사이트는 안심하고
-              이용하셔도 됩니다. 여러분의 안전한 토토 경험을 위해 언제나 최선을
-              다하겠습니다. 감사합니다.
-            </p>
+            <div className="w-full flex mt-5 gap-5">
+              <article className="bg-[#EEF2FF] rounded-md py-5 px-10 flex justify-start items-center gap-3">
+                <span className="rounded-full bg-white px-3 py-1 text-normalblue text-xl font-bold">
+                  3
+                </span>
+                <div className="text-lg font-medium">
+                  <div>
+                    추천인 코드를 제공해 드리기 때문에
+                    <span className="text-normalblue">신규가입 시에</span>
+                  </div>
+                  <div>
+                    <span className="text-normalblue">막대한 혜택</span>을 누릴
+                    수 있습니다.
+                  </div>
+                </div>
+              </article>
+              <article className="bg-[#EEF2FF] rounded-md py-5 px-10 flex justify-start items-center gap-3">
+                <span className="rounded-full bg-white px-3 py-1 text-normalblue text-xl font-bold">
+                  4
+                </span>
+                <div className="text-lg font-medium">
+                  <div>
+                    자유게시판을 통해
+                    <span className="text-normalblue">
+                      누구나 토토사이트 관련 정보를
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-normalblue">공유</span>할 수 있어
+                    플레이에 도움을 받을 수 있습니다.
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div className="mt-5 w-1/2">
+              <article className="bg-[#EEF2FF] rounded-md py-5 px-10 flex justify-start items-center gap-3">
+                <span className="rounded-full bg-white px-3 py-1 text-normalblue text-xl font-bold">
+                  5
+                </span>
+                <div className="text-lg font-medium">
+                  <div>
+                    먹튀타파는
+                    <span className="text-normalblue">
+                      {" "}
+                      게시판 및 검증 사이트를 직접관리
+                    </span>
+                    하고
+                  </div>
+                  <div>있기에 사이트 전부를 신뢰할 수 있습니다.</div>
+                </div>
+              </article>
+            </div>
           </div>
-          <div className="w-1/2">
+          <p className="w-full flex justify-center items-center mt-5">
             <Image
-              alt="먹튀타파소개"
-              width={729}
-              height={628}
-              src={trophy}
+              src={talkball}
+              width={36}
+              height={36}
+              alt="sub description"
             ></Image>
-          </div>
+          </p>
         </section>
-        <section></section>
       </main>
     </div>
   );
