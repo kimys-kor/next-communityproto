@@ -37,7 +37,11 @@ const config: Config = {
       },
       colors: {
         blue: "#3461FF",
+        mediumblue: "#395DDB",
         semiblue: "#E9EEFF",
+        normalblue: "#5171E2",
+        lightblue: "#F7F8FB",
+        deepsky: "#808BAB",
         // pink: "#ff49db",
         // orange: "#ff7849",
         // green: "#13ce66",

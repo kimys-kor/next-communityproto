@@ -24,6 +24,7 @@ const Navbar = () => {
     {
       href: "/",
       label: "홈",
+      dropdown: [{ href: "/introduce", label: "소개" }],
       width: "w-16",
     },
     {
