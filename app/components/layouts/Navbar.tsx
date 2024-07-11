@@ -24,7 +24,6 @@ const Navbar = () => {
     {
       href: "/",
       label: "홈",
-      dropdown: [{ href: "/introduce", label: "소개" }],
       width: "w-16",
     },
     {
@@ -56,10 +55,10 @@ const Navbar = () => {
       width: "w-20 md:w-24 lg:w-32",
     },
     {
-      href: "/sport",
+      href: "/sport/soccer",
       label: "스포츠분석",
       dropdown: [
-        { href: "/sport", label: "축구분석" },
+        { href: "/sport/soccer", label: "축구분석" },
         { href: "/sport/base", label: "야구분석" },
         { href: "/sport/basket", label: "농구분석" },
         { href: "/sport/volley", label: "배구분석" },
@@ -69,13 +68,13 @@ const Navbar = () => {
       width: "w-20 md:w-24 lg:w-32",
     },
     {
-      href: "/community",
+      href: "/community/photo",
       label: "커뮤니티",
       dropdown: [
-        { href: "/community/free", label: "자유게시판" },
-        { href: "/community/pickster", label: "나는분석왕" },
         { href: "/community/photo", label: "안구정화" },
         { href: "/community/humor", label: "유머 & 이슈" },
+        { href: "/community/pickster", label: "나는분석왕" },
+        { href: "/community/free", label: "자유게시판" },
       ],
       icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />,
       width: "w-20 md:w-24 lg:w-32",
@@ -84,7 +83,7 @@ const Navbar = () => {
       href: "/event",
       label: "이벤트",
       dropdown: [
-        { href: "/event", label: "이벤트공지" },
+        { href: "/event", label: "이벤트" },
         { href: "/event/attd", label: "출석체크" },
       ],
       width: "w-20 md:w-24 lg:w-24",
