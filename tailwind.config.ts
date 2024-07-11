@@ -42,6 +42,7 @@ const config: Config = {
         normalblue: "#5171E2",
         lightblue: "#F7F8FB",
         deepsky: "#808BAB",
+        description: "#888888",
         // pink: "#ff49db",
         // orange: "#ff7849",
         // green: "#13ce66",
