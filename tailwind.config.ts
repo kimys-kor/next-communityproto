@@ -10,6 +10,9 @@ const config: Config = {
     variants: {
       extends: {
         display: ["group-hover"],
+        boxShadow: {
+          "custom-shadow": "0 0 20px 1px rgba(200, 200, 200, 0.1)",
+        },
       },
     },
     screens: {
