@@ -4,16 +4,18 @@ import Image from "next/image";
 
 function Introduce() {
   return (
-    <section className="block lg:flex bg-[#EEF2FF] py-28 px-3 gap-5">
+    <section className="block lg:flex bg-[#EEF2FF] py-28 px-10 gap-5">
       <div className="flex flex-col lg:flex-row items-center max-w-[1300px] mx-auto gap-10">
         <div className="w-full lg:w-auto flex flex-col justify-center items-center">
           <h1 className="text-4xl font-semibold">스포츠커뮤니티</h1>
           <div className="text-4xl font-semibold">
             <span className="text-blue">No.1</span>먹튀타파 소개
           </div>
-          <div className="pt-10 text-xl font-medium text-mediumblue ">
-            <p>먹튀타파는 국내 최대 규모의 방대한 정보를</p>
-            <p>보유하고 있는 먹튀 검증 커뮤니티입니다.</p>
+          <div className="w-80 pt-10 text-xl font-medium text-mediumblue break-words">
+            <p>
+              먹튀타파는 국내 최대 규모의 방대한 정보를 보유하고 있는 먹튀 검증
+              커뮤니티입니다.
+            </p>
           </div>
         </div>
         <div className="w-full lg:w-1/3 px-5">
@@ -35,7 +37,7 @@ function Introduce() {
             안전한 토토 경험을 위해 언제나 최선을 다하겠습니다. 감사합니다.
           </p>
         </div>
-        <div className="w-full lg:w-1/3">
+        <div className="w-full lg:w-1/3 flex justify-center">
           <Image
             alt="먹튀타파소개"
             width={527}

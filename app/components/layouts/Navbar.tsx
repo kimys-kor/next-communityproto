@@ -173,7 +173,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex justify-around items-center gap-2 relative">
+        <div className="hidden lg:flex justify-around items-center gap-2 relative">
           <Link
             href={"/login"}
             className="w-8 text-xs font-semibold text-gray-400 hover:text-red-400"

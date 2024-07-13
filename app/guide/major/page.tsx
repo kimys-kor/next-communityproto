@@ -1,8 +1,6 @@
 import Introduce from "../(components)/Introduce";
 import Image from "next/image";
 import major from "/public/images/major.png";
-import search from "/public/images/search.png";
-import talkball from "/public/images/talkball.png";
 
 function page() {
   return (
