@@ -16,9 +16,9 @@ function page() {
             height={255}
             src={question}
           ></Image>
-          <h1 className="text-4xl font-semibold">
+          <div className="text-4xl font-semibold">
             <span className="text-blue">먹튀타파, </span>왜 믿을 수 있나요?
-          </h1>
+          </div>
           <div className="flex flex-col items-center px-3">
             <div className="w-full flex flex-col lg:flex-row pt-10 gap-5">
               <article className="w-full sm:w-[450px] md:w-[480px] bg-[#EEF2FF] rounded-md py-5 px-5 sm:px-10 flex justify-start items-center gap-3">
@@ -127,24 +127,17 @@ function page() {
               src={advantage}
               alt="먹튀타파 장점"
             ></Image>
-            {/* <div className="pt-10 flex flex-col items-center">
+            <div className="pt-10 flex flex-col items-center">
               <h1 className="text-4xl font-semibold">
                 먹튀검증 <span className="text-blue">No.1</span> 먹튀타파
               </h1>
-              <div className="px-5 pt-5 text-description leading-6 flex flex-col items-center break-words">
-                <p>
-                  이미 수많은 토토사이트 먹튀증을 해주는 사이트들이 운영되고
-                  있습니다.
-                </p>
-                <p>
-                  먹튀타파는 토토사이트 먹튀검증을 오랜 기간 진행해 왔습니다.
-                  그래서 먹튀검증업체 순위에서도 높은 순위를 차지하고 있습니다.
-                </p>
-                <p>
-                  먹튀검증 커뮤니티를 선택할 때는 먹튀검증업체가 실력이 있는지,
-                  정확히 검증하고 있는지를 확인해야 합니다.
-                </p>
-              </div>
+              <p className="w-full max-w-[900px] px-5 pt-5 text-description leading-6 flex flex-col items-center break-words">
+                이미 수많은 토토사이트 먹튀증을 해주는 사이트들이 운영되고
+                있습니다.먹튀타파는 토토사이트 먹튀검증을 오랜 기간 진행해
+                왔습니다. 그래서 먹튀검증업체 순위에서도 높은 순위를 차지하고
+                있습니다. 먹튀검증 커뮤니티를 선택할 때는 먹튀검증업체가 실력이
+                있는지, 정확히 검증하고 있는지를 확인해야 합니다.
+              </p>
               <div className="w-full  pt-20 px-5 flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-32">
                 <h1 className="w-72 text-2xl font-bold">
                   먹튀타파 사이트는 믿을 수 있습니다!
@@ -154,7 +147,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       1
                     </div>
-                    <div className="w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀타파는 먹튀검증을 직접 진행합니다.
                     </div>
                   </div>
@@ -162,7 +155,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       2
                     </div>
-                    <div className="w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀타파는 토토사이트로부터 보증금을 받지 않고서는 광고를
                       진행하지 않습니다.
                     </div>
@@ -171,7 +164,7 @@ function page() {
                     <div className="h-4 w-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       3
                     </div>
-                    <div className="w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀타파는 적극적인 커뮤니티 활동으로 고객이 먹튀 피해를
                       입지 않도록 정보를 빠르게 업데이트 합니다. 먹튀타파를
                       이용하는 회원들의 안전한 게임을 가장 우선시 합니다.
@@ -188,7 +181,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       1
                     </div>
-                    <div className="w-full lg:w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀사이트 정보를 신고해 주시면 많은 유저들의 피해를
                       예방할 수 있습니다.
                     </div>
@@ -197,7 +190,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       2
                     </div>
-                    <div className="w-full lg:w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀피해를 입었다면 먹튀타파 고객센터에 직접 문의를
                       주시거나 먹튀신고게시판에 글을 올려주시면 됩니다.
                     </div>
@@ -206,7 +199,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       3
                     </div>
-                    <div className="w-full lg:w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀피해를 입으신 플레이어를 위해 먹튀타파는 구제 방법을
                       함께 찾아나갑니다.
                     </div>
@@ -215,7 +208,7 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       4
                     </div>
-                    <div className="w-full lg:w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       토토사이트 이용 시 먹튀 피해를 막고 싶다면 커뮤니티를 통해
                       정보를 얻어 피해가 의심되는 사이트를 피하는 것이
                       좋겠습니다.
@@ -225,14 +218,14 @@ function page() {
                     <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
                       5
                     </div>
-                    <div className="w-full lg:w-[568px] break-words">
+                    <div className="w-full max-w-[568px] break-words">
                       먹튀검증 메뉴를 통해서 토토사이트 피해 사실을 공유하면
                       먹튀사이트 근절에 많은 도움이 됩니다.
                     </div>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
             <article className="w-full max-w-[900px] flex justify-center items-center pt-5 px-5 gap-3">
               <Image
                 src={talkball}

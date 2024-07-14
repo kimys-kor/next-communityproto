@@ -61,7 +61,7 @@ function page() {
               </div>
             </section>
             <section className="flex flex-col gap-5 ">
-              <div className="flex gap-2 w-full">
+              <div className="flex flex-col md:flex-row gap-2 w-full">
                 <article className="w-80 relative px-5 py-5 text-sm rounded-lg  border border-solid border-[#EEEEEE] flex items-center justify-center">
                   <div className="absolute top-[-0.5rem] rounded-full bg-black w-5 h-5 text-white text-sm  flex items-center justify-center font-light">
                     1
@@ -83,7 +83,7 @@ function page() {
                   </div>
                 </article>
               </div>
-              <div className="flex gap-2 w-full">
+              <div className="flex flex-col md:flex-row gap-2 w-full">
                 <article className="w-80 relative px-5 py-5 text-sm rounded-lg  border border-solid border-[#EEEEEE] flex items-center justify-center">
                   <div className="absolute top-[-0.5rem] rounded-full bg-black w-5 h-5 text-white text-sm  flex items-center justify-center font-light">
                     3
@@ -113,7 +113,7 @@ function page() {
                   </div>
                 </article>
               </div>
-              <div className="flex gap-2 w-full">
+              <div className="flex flex-col md:flex-row gap-2 w-full">
                 <article className="w-80 relative px-5 py-5 text-sm rounded-lg  border border-solid border-[#EEEEEE] flex items-center justify-center">
                   <div className="absolute top-[-0.5rem] rounded-full bg-black w-5 h-5 text-white text-sm  flex items-center justify-center font-light">
                     5
