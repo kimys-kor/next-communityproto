@@ -22,11 +22,6 @@ const Navbar = () => {
 
   const links = [
     {
-      href: "/",
-      label: "홈",
-      width: "w-16",
-    },
-    {
       href: "/warranty",
       label: "보증업체",
       icon: <WaIcon className="hidden lg:block" />,

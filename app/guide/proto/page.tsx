@@ -44,9 +44,9 @@ function page() {
             <article className="block lg:flex justify-center py-20 px-5 gap-20 border-solid border-b border-slate-200">
               <div className=" flex flex-col items-center">
                 <div className="w-full pt-10 px-5 py-10 flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-32 border-b border-solid border-gray-200">
-                  <div className="w-72 text-3xl font-bold flex flex-row lg:flex-col">
-                    <h1 className="">안전한 놀이터의</h1>
-                    <h1 className="text-blue">&nbsp;조건</h1>
+                  <div className="w-72 text-3xl font-bold flex ">
+                    <h1 className="">프로토</h1>
+                    <h1 className="text-blue">&nbsp;기록식</h1>
                   </div>
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-3 font-normal">
@@ -54,9 +54,9 @@ function page() {
                         1
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        안전토토사이트는 오랫동안 운영된 경력이 있습니다. 신생
-                        사이트는 먹튀위험이 있음으로 많은 금액을 입금하지 않는
-                        것이 좋습니다.
+                        프로토 기록식은 경기의 최종적 점수와 점수의 차이, 우승팀
+                        등 해당하는 경기에서 발생하는 특정한 요인들을 예상하는
+                        게임입니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal">
@@ -64,10 +64,7 @@ function page() {
                         2
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        안전토토사이트는 먹튀검증업체로부터 먹튀 위험이 없다고
-                        검증 받은 사이트를 이용해야 합니다. 다만, 검증업체도
-                        제대로 된 정보를 제공하지 않을 수 있으므로
-                        먹튀검증업체를 신중하게 선택하는 것이 중요합니다.
+                        게임은 한 회차당 최대 24개의 게임으로 구성됩니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal break-keep">
@@ -75,10 +72,8 @@ function page() {
                         3
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        안전한 놀이터는 기존 유저들로부터 먹튀 피해 루머가 나지
-                        않습니다. 먹튀타파 커뮤니티를 살펴보면 토토사이트에서
-                        먹튀피해를 당했다는 글을 쉽게 볼 수 있습니다. 이렇게
-                        먹튀피해가 있는 사이트라면 입금을 피해야 합니다.
+                        축구와 야구,농구,배구가 진해오디며 축구만 연장전을
+                        제외하고 나머지 게임은 연장전을 포함합니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal break-keep">
@@ -86,18 +81,19 @@ function page() {
                         4
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        안전토토사이트는 유저를 유인하기 위해서 많은 꽁머니를
-                        지급하지 않습니다. 지나치게 많은 꽁머니를 지급하는
-                        토토사이트가 있다면 이는 안전하지 않은 사이트일 가능성이
-                        높습니다.
+                        축구와 야구,농구,배구가 진행되며 축구만 연장전을
+                        제외하고 나머지 게임은 연장전을 포함합니다.
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="w-full  pt-20 px-5 flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-32">
-                  <div className="w-72 text-3xl font-bold flex flex-row lg:flex-col">
-                    <h1 className="">안전 토토사이트</h1>
-                    <h1 className="text-blue">&nbsp;추천</h1>
+                  <div>
+                    <div className="w-72 text-3xl font-bold flex">
+                      <h1 className="">프로토</h1>
+                      <h1 className="text-blue">&nbsp;승부식</h1>
+                    </div>
+                    <h1 className="text-2xl font-bold">(프로토 승무패)</h1>
                   </div>
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-3 font-normal">
@@ -105,7 +101,8 @@ function page() {
                         1
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        먹튀타파는 안전토토사이트를 검증하여 추천하고 있습니다.
+                        프로토 승부식은 승무패라고도 하며 게임의 승, 무, 패를
+                        예측하는 게임입니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal">
@@ -113,8 +110,9 @@ function page() {
                         2
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        검증은 여러 단계를 거쳐 진행이 되므로 믿을만한 정보들만
-                        추천합니다.
+                        프로토 승부식은 2~10개 경기 또는 하나의 경기로 지정된
+                        경기 중에서 1개 경기만 선택하여 예상결과를 적중시키는
+                        게임입니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal">
@@ -122,9 +120,9 @@ function page() {
                         3
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        다른 커뮤니티와 다르게 많은 유저들이 안전하지 않은
-                        사이트에 대해 정보를 공유하기 때문에 실시간으로, 그리고
-                        최신의 정보를 토토핫에서 찾아보실 수 있습니다.
+                        최대 650개의 경기로 구성되며 2~10개의 경기를 조합하여
+                        구매하거나 한 경기로 지정된 경기 중에서 1개의 경기만
+                        선택하여 구매가 가능합니다.
                       </div>
                     </div>
                     <div className="flex items-center gap-3 font-normal">
@@ -132,9 +130,18 @@ function page() {
                         4
                       </div>
                       <div className="w-full max-w-[568px] break-keep">
-                        먹튀타파는 안전토토사이트에 대하여 보증금을 받고
-                        보증업체들을 선정하고 있습니다. 그렇기에 이중으로
-                        먹튀방지를 할 수 있습니다.
+                        배팅 가능한 스포츠 종목으로는 축구,야구,농구,배구입니다.
+                        축구는 후반 종류 시가 기준이 되어 연장전은 포함되지
+                        않으며 나머지 스포츠는 연장전을 포함합니다.
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 font-normal">
+                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
+                        5
+                      </div>
+                      <div className="w-full max-w-[568px] break-keep">
+                        적중 기준은 경기 결과를 모두 맞힌 경우에만 적중으로 보며
+                        적중금은 적중 배당률과 개별투표금액을 곱해 지급됩니다.
                       </div>
                     </div>
                   </div>
