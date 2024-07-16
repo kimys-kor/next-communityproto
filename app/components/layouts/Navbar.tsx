@@ -27,18 +27,6 @@ const Navbar = () => {
       width: "w-16",
     },
     {
-      href: "/guide",
-      label: "가이드",
-      dropdown: [
-        { href: "/guide/ggong", label: "꽁머니" },
-        { href: "/guide/major", label: "메이저" },
-        { href: "/guide/safe", label: "안전놀이터" },
-        { href: "/guide/proto", label: "프로토" },
-        { href: "/guide/power", label: "파워볼" },
-      ],
-      width: "w-20",
-    },
-    {
       href: "/warranty",
       label: "보증업체",
       icon: <WaIcon className="hidden lg:block" />,
@@ -95,6 +83,18 @@ const Navbar = () => {
         { href: "/promotion", label: "일반홍보" },
         { href: "/promotion/ggong", label: "꽁머니홍보" },
         { href: "/promotion/hunting", label: "구인구직" },
+      ],
+      width: "w-20 md:w-24 lg:w-24",
+    },
+    {
+      href: "/guide",
+      label: "가이드",
+      dropdown: [
+        { href: "/guide/ggong", label: "꽁머니" },
+        { href: "/guide/major", label: "메이저" },
+        { href: "/guide/safe", label: "안전놀이터" },
+        { href: "/guide/proto", label: "프로토" },
+        { href: "/guide/power", label: "파워볼" },
       ],
       width: "w-20 md:w-24 lg:w-24",
     },
