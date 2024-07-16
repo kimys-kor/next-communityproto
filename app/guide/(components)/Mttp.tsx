@@ -11,7 +11,7 @@ function Mttp() {
           <div className="text-4xl font-semibold">
             <span className="text-blue">No.1</span>먹튀타파 소개
           </div>
-          <div className="w-80 pt-10 text-xl font-medium text-mediumblue break-words">
+          <div className="w-80 pt-10 text-xl font-medium text-mediumblue break-keep">
             <p>
               먹튀타파는 국내 최대 규모의 방대한 정보를 보유하고 있는 먹튀 검증
               커뮤니티입니다.
@@ -19,7 +19,7 @@ function Mttp() {
           </div>
         </div>
         <div className="w-full lg:w-1/3 px-5">
-          <p className="break-words pt-10 text-deepsky text-sm">
+          <p className="break-keep pt-10 text-deepsky text-sm">
             스포츠 커뮤니티를 운영하는 저희 사이트에 오신 것을 환영합니다. 최근
             들어 먹튀 사건이 빈번하게 발생하면서 먹튀 검증의 중요성이 그 어느
             때보다 높아졌습니다. 저희 사이트는 여러 해 동안 먹튀 사이트를 검증한
