@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Introduce from "./(components)/Introduce";
+import Mttp from "./(components)/Mttp";
 import question from "/public/images/question.png";
 import talkball from "/public/images/talkball.png";
 import advantage from "/public/images/advantage.png";
@@ -8,7 +8,7 @@ function page() {
   return (
     <div className="w-full">
       <main>
-        <Introduce></Introduce>
+        <Mttp></Mttp>
         <section className="flex flex-col justify-center items-center py-20">
           <Image
             alt="먹튀타파소개"

@@ -2,7 +2,7 @@ import Container from "@/app/components/Container";
 import trophy from "/public/images/trophy.png";
 import Image from "next/image";
 
-function Introduce() {
+function Mttp() {
   return (
     <section className="block lg:flex bg-[#EEF2FF] py-28 px-10 gap-5">
       <div className="flex flex-col lg:flex-row items-center max-w-[1300px] mx-auto gap-10">
@@ -50,4 +50,4 @@ function Introduce() {
   );
 }
 
-export default Introduce;
+export default Mttp;

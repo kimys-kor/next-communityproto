@@ -1,4 +1,4 @@
-import Introduce from "../(components)/Introduce";
+import Mttp from "../(components)/Mttp";
 import Image from "next/image";
 import major from "/public/images/major.png";
 
@@ -6,7 +6,7 @@ function page() {
   return (
     <div className="w-full">
       <main>
-        <Introduce></Introduce>
+        <Mttp></Mttp>
         <section className="flex flex-col justify-center items-center py-20">
           <Image
             alt="먹튀타파소개"
