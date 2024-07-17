@@ -4,6 +4,7 @@ import Logo from "../Logo";
 import Link from "next/link";
 import SearchBox from "../search/SearchBox";
 import Avatar from "/public/images/icon/avatar.svg";
+import Navbar from "./Navbar";
 
 function Headers() {
   async function handleSearch() {
@@ -12,9 +13,9 @@ function Headers() {
   }
 
   return (
-    <header className="fixed w-full h-20 bg-white z-10 border-gray-200">
-      <div className="max-w-[1300px] mx-auto px-3 py-4">
-        <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0">
+    <header className="fixed w-full h-28 md:h-36 bg-white z-10 border-solid md:border-b border-blue ">
+      <div className="max-w-[1300px] mx-auto pt-4 flex flex-col gap-3">
+        <nav className="w-full flex flex-row items-center justify-between gap-3 md:gap-0 px-2">
           <Link prefetch href="/">
             <Logo></Logo>
           </Link>
@@ -29,6 +30,7 @@ function Headers() {
             </div>
           </div>
         </nav>
+        <Navbar></Navbar>
       </div>
     </header>
   );

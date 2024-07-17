@@ -22,7 +22,7 @@ export default function ProgressSliderPage() {
   ];
 
   return (
-    <main className="relative h-48 flex flex-col justify-center bg-transparent overflow-hidden mt-3">
+    <main className="relative h-32 md:h-48 flex flex-col justify-center bg-transparent overflow-hidden">
       <div className="max-w-6xl mx-auto py-3">
         <div className="flex justify-center bg-[#F2F7FF]">
           <ProgressSlider items={items} />

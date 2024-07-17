@@ -16,7 +16,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="mt-3 p-8 rounded-lg w-full border-solid border-slate-200 border">
+    <div className="p-8 rounded-lg w-full border-solid border-slate-200 border">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -72,7 +72,7 @@ const Login: React.FC = () => {
         <div className="flex flex-col gap-2 items-center justify-between">
           <button
             type="submit"
-            className="bg-blue hover:bg-[#2250f5] text-white font-bold w-full py-2 px-4 rounded focus:outline-none"
+            className="py-4 px-4  bg-blue hover:bg-[#2250f5] text-white font-bold w-full rounded focus:outline-none"
           >
             로그인
           </button>

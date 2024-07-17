@@ -6,7 +6,7 @@ import IconTabs from "../components/sportRank/IconTabs";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Container>
-      <aside className="md:w-1/4 hidden md:flex flex-col gap-8 max-w-[300px] h-full  ">
+      <aside className="md:w-1/4 hidden md:flex flex-col gap-10 max-w-[300px] h-full">
         <Login></Login>
         <Notice></Notice>
         <IconTabs></IconTabs>

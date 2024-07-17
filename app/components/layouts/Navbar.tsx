@@ -124,17 +124,17 @@ const Navbar = () => {
   };
 
   return (
-    <Container>
+    <div className="px-2">
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex w-full h-14 border-solid border-b border-blue px-1">
-        <ul className="flex w-full h-14 rounded-lg text-center pl-1">
-          <li className="w-5 h-14 relative group cursor-pointe flex flex-col justify-center items-center box-border">
+      <nav className="hidden md:flex w-full h-20 px-1">
+        <ul className="flex w-full h-20 rounded-lg text-center pl-1">
+          <li className="w-5 h-20 relative group cursor-pointe flex flex-col justify-center items-center box-border">
             <BurgerIcon className="cursor-pointer" />
           </li>
           {links.map((link, index) => (
             <li
               key={index}
-              className="h-14 relative group cursor-pointer flex flex-col justify-center items-center box-border"
+              className="h-20 relative group cursor-pointer flex flex-col justify-center items-center box-border"
             >
               <Link
                 key={link.href}
@@ -171,13 +171,13 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-around items-center gap-2 relative">
           <Link
             href={"/login"}
-            className="w-8 text-xs font-semibold text-gray-400 hover:text-red-400"
+            className="w-12 text-sm font-semibold text-gray-400 hover:text-red-400"
           >
             로그인
           </Link>
           <Link
             href={"/signup"}
-            className="w-12 text-xs font-semibold text-gray-400 hover:text-red-400"
+            className="w-16 text-sm font-semibold text-gray-400 hover:text-red-400"
           >
             회원가입
           </Link>
@@ -185,13 +185,13 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navigation (Scrollable) */}
-      <nav className="md:hidden w-full bg-indigo-500/75 font-medium rounded-lg text-sm text-white overflow-hidden">
+      <nav className="md:hidden w-full bg-indigo-500/75 font-medium text-sm text-white overflow-hidden">
         <div className="flex overflow-x-auto scrollbar-w-2 scrollbar-track-gray-200 scrollbar-thumb-indigo-600 ">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className={`px-4 py-2 flex-shrink-0 transition-colors duration-200 hover:bg-indigo-600 hover:text-white`}
+              className={`px-2 py-2 flex-shrink-0 transition-colors duration-200 hover:bg-indigo-600 hover:text-white`}
               onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
@@ -199,7 +199,7 @@ const Navbar = () => {
           ))}
         </div>
       </nav>
-    </Container>
+    </div>
   );
 };
 

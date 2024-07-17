@@ -5,7 +5,7 @@ const Logo = () => {
     <Image
       alt="logo"
       className="cursor-pointer"
-      height="130"
+      height="250"
       width="130"
       src="/images/logo.png"
     ></Image>

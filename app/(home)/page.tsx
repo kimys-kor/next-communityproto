@@ -10,10 +10,10 @@ import HomeBoard from "./(components)/HomeBoard";
 export default function Home() {
   return (
     <div className="flex">
-      <article className="w-full h-full flex flex-col gap-4">
+      <article className="w-full h-full flex flex-col gap-5 lg:gap-10">
         <ProgressSliderPage></ProgressSliderPage>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <TabAnalyzePage></TabAnalyzePage>
           <TabACommunityPage></TabACommunityPage>
         </section>
