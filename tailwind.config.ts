@@ -69,6 +69,9 @@ const config: Config = {
       backgroundSize: {
         "200%": "200% 200%",
       },
+      backgroundImage: {
+        "guide-intro": "url('/images/intro.png')",
+      },
     },
   },
   plugins: [],

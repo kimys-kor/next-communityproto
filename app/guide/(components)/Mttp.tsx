@@ -1,24 +1,20 @@
-import Container from "@/app/components/Container";
-import trophy from "/public/images/trophy.png";
-import Image from "next/image";
-
 function Mttp() {
   return (
-    <section className="block lg:flex bg-[#EEF2FF] py-28 px-10 gap-5">
+    <section className="block lg:flex bg-guide-intro py-28 px-10 gap-5">
       <div className="flex flex-col lg:flex-row items-center max-w-[1300px] mx-auto gap-10">
         <div className="w-full lg:w-auto flex flex-col justify-center items-center">
           <h1 className="text-4xl font-semibold">스포츠커뮤니티</h1>
           <div className="text-4xl font-semibold">
             <span className="text-blue">No.1</span>먹튀타파 소개
           </div>
-          <div className="w-80 pt-10 text-xl font-medium text-mediumblue break-keep">
+          <div className="w-96 pt-10 text-xl font-medium text-mediumblue break-keep">
             <p>
               먹튀타파는 국내 최대 규모의 방대한 정보를 보유하고 있는 먹튀 검증
               커뮤니티입니다.
             </p>
           </div>
         </div>
-        <div className="w-full lg:w-1/3 px-5">
+        <div className="w-full lg:w-1/2 px-5">
           <p className="break-keep pt-10 text-deepsky text-sm">
             스포츠 커뮤니티를 운영하는 저희 사이트에 오신 것을 환영합니다. 최근
             들어 먹튀 사건이 빈번하게 발생하면서 먹튀 검증의 중요성이 그 어느
@@ -36,14 +32,6 @@ function Mttp() {
             따라서 저희가 추천하는 사이트는 안심하고 이용하셔도 됩니다. 여러분의
             안전한 토토 경험을 위해 언제나 최선을 다하겠습니다. 감사합니다.
           </p>
-        </div>
-        <div className="w-full lg:w-1/3 flex justify-center">
-          <Image
-            alt="먹튀타파소개"
-            width={527}
-            height={447}
-            src={trophy}
-          ></Image>
         </div>
       </div>
     </section>
