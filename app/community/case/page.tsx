@@ -1,6 +1,6 @@
 import Breadcrumb from "@/app/components/BreadCrumb";
 import React from "react";
-import Board from "../(components)/Board";
+import Board from "../../community/(components)/Board";
 import ThreeBanner from "@/app/components/ThreeBanner";
 import ProgressSliderPage from "@/app/components/ProgressSliderPage";
 

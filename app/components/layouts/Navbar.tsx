@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Container from "../Container";
 import BurgerIcon from "/public/images/icon/burgerIcon.svg";
 import WaIcon from "/public/images/icon/waIcon.svg";
 import MagnifyIcon from "/public/images/icon/magnify.svg";
@@ -28,16 +27,6 @@ const Navbar = () => {
       width: "w-20 md:w-24 lg:w-32",
     },
     {
-      href: "/verify",
-      label: "먹튀검증",
-      dropdown: [
-        { href: "/verify", label: "검증" },
-        { href: "/verify/case", label: "피해사례" },
-      ],
-      icon: <MagnifyIcon className="hidden lg:block" />,
-      width: "w-20 md:w-24 lg:w-32",
-    },
-    {
       href: "/sport/soccer",
       label: "스포츠분석",
       dropdown: [
@@ -58,6 +47,7 @@ const Navbar = () => {
         { href: "/community/humor", label: "유머 & 이슈" },
         { href: "/community/pickster", label: "나는분석왕" },
         { href: "/community/free", label: "자유게시판" },
+        { href: "/community/case", label: "피해사례" },
       ],
       icon: <TvIcon className="hidden lg:block absolute top-2 right-0" />,
       width: "w-20 md:w-24 lg:w-32",
