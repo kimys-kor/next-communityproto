@@ -130,7 +130,7 @@ const Board = () => {
         </tbody>
       </table>
       <span className="w-full flex justify-end">
-        <Link href={"/verify/case/write"}>
+        <Link href={"/community/case/write"}>
           <button className="bg-blue text-white  hover:bg-mediumblue rounded-sm text-[13px]  px-3 py-3">
             글작성하기
           </button>
