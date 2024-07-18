@@ -21,10 +21,10 @@ function Headers() {
           </Link>
 
           <div className="flex gap-5 justify-between h-7">
-            <SearchBox
+            {/* <SearchBox
               handleSearch={handleSearch}
               placeholderText="검색어를 입력하세요."
-            ></SearchBox>
+            ></SearchBox> */}
             <div className="flex gap-2 justify-center items-center">
               <Avatar className="relative"></Avatar>
             </div>
