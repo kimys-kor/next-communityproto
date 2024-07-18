@@ -29,13 +29,7 @@ const SelectBox: React.FC<SelectProps> = ({
       <select
         value={selectedValue}
         onChange={handleChange}
-        className="w-full h-full box-border block text-xs border text-slate-500 border-gray-300 rounded-sm focus:outline-none focus:border-indigo-500 text-red"
-        onFocus={(e) =>
-          e.currentTarget.classList.add("ring-2", "ring-indigo-500")
-        }
-        onBlur={(e) =>
-          e.currentTarget.classList.remove("ring-2", "ring-indigo-500")
-        }
+        className="w-full h-full box-border block text-sm border-b border-gray-300 text-slate-500  focus:outline-none text-red"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

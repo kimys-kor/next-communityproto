@@ -27,10 +27,10 @@ const Navbar = () => {
       width: "w-20 md:w-24 lg:w-32",
     },
     {
-      href: "/sport/soccer",
+      href: "/sport",
       label: "스포츠분석",
       dropdown: [
-        { href: "/sport/soccer", label: "축구분석" },
+        { href: "/sport", label: "축구분석" },
         { href: "/sport/base", label: "야구분석" },
         { href: "/sport/basket", label: "농구분석" },
         { href: "/sport/volley", label: "배구분석" },
@@ -40,10 +40,10 @@ const Navbar = () => {
       width: "w-20 md:w-24 lg:w-32",
     },
     {
-      href: "/community/photo",
+      href: "/community",
       label: "커뮤니티",
       dropdown: [
-        { href: "/community/photo", label: "안구정화" },
+        { href: "/community", label: "안구정화" },
         { href: "/community/humor", label: "유머 & 이슈" },
         { href: "/community/pickster", label: "나는분석왕" },
         { href: "/community/free", label: "자유게시판" },
@@ -129,15 +129,15 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative ${link.width} h-14 truncate text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-red-500 ${
-                  isActiveLink(link.href) ? "text-red-500" : "text-black"
+                className={`relative ${link.width} h-14 truncate text-lg cursor-pointer transition-all flex justify-center items-center gap-1 duration-300 ease-in-out menu-hover hover:text-blue ${
+                  isActiveLink(link.href) ? "text-blue" : "text-black"
                 }`}
                 onClick={() => handleLinkClick(link.href)}
               >
                 <div className="font-bold">{link.label}</div>
                 <div>{link.icon ? link.icon : null}</div>
               </Link>
-              <ul>
+              <ul className="border border-t border-blue">
                 {link.dropdown && (
                   <li
                     className={`w-24 lg:w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}

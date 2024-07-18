@@ -11,14 +11,6 @@ export default function ProgressSliderPage() {
       img: main_top,
       desc: "main_banner",
     },
-    // {
-    //   img: main_top,
-    //   desc: "main_banner",
-    // },
-    // {
-    //   img: main_top,
-    //   desc: "main_banner",
-    // },
   ];
 
   return (

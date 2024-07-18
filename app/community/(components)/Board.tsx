@@ -66,25 +66,35 @@ const Board = () => {
   }
 
   return (
-    <section className="flex flex-col gap-3 mt-10">
-      <div className="flex justify-between items-center w-full">
-        <p className="text-[#888888] text-xs">전체 34,006건</p>
-        <article className="flex justify-end gap-2 ">
-          <SelectBox
-            options={options}
-            onChange={handleChange}
-            defaultValue="1"
-          />
-          <SearchBox
-            handleSearch={handleSearch}
-            placeholderText="검색어를 입력해 주세요."
-          ></SearchBox>
-        </article>
+    <section className="flex flex-col gap-8 mt-10">
+      <div className="flex justify-center text-3xl font-semibold">
+        <span className="text-blue">피해</span>
+        사례
       </div>
-      <table className="min-w-full bg-white shadow-md overflow-hidden overflow-x-auto text-[14px]">
+      <article className="flex justify-center gap-2 ">
+        <SelectBox options={options} onChange={handleChange} defaultValue="1" />
+        <SearchBox
+          handleSearch={handleSearch}
+          placeholderText="검색어를 입력"
+        ></SearchBox>
+      </article>
+      <div className="flex justify-between items-center w-full">
+        <div className="flex gap-2">
+          <div className="text-[#555555] text-sm">
+            총<span className="text-[#2C4AB6] font-semibold"> 34,006</span>건
+          </div>
+          <div className="text-[#555555] text-sm">
+            {"("}
+            <span className="text-[#2C4AB6] font-semibold">1</span>/
+            <span> 52</span> 페이지
+            {")"}
+          </div>
+        </div>
+      </div>
+      <table className="min-w-full bg-white overflow-hidden overflow-x-auto text-[14px]">
         {/* Header */}
-        <thead>
-          <tr className="flex border-solid border-t-[3px] border-indigo-400 border-b">
+        <thead className="bg-[#F2F5FF]">
+          <tr className="flex border-solid border-t-[2px] border-[#2C4AB6] text-[#2C4AB6] font-semibold">
             <th className="w-12 truncate py-3 px-2 text-center">번호</th>
             <th className="grow truncate py-3 px-2 text-center">제목</th>
             <th className="w-28 truncate py-3 px-2 text-center">이름</th>
@@ -99,9 +109,7 @@ const Board = () => {
           {items.map((item, index) => (
             <tr
               key={item.id}
-              className={`flex border-solid border-b border-gray-200 ${
-                index % 2 == 0 ? "bg-slate-50" : ""
-              }`}
+              className={`flex border-solid border-b border-gray-200 bg-white`}
             >
               <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
               <td className="grow truncate py-4 px-2 text-left">
@@ -123,7 +131,7 @@ const Board = () => {
       </table>
       <span className="w-full flex justify-end">
         <Link href={"/verify/case/write"}>
-          <button className="bg-indigo-400 text-white  hover:bg-indigo-500 shadow-md rounded-sm text-[13px]  px-2 py-2">
+          <button className="bg-blue text-white  hover:bg-mediumblue rounded-sm text-[13px]  px-3 py-3">
             글작성하기
           </button>
         </Link>

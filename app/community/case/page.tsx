@@ -7,17 +7,15 @@ import ProgressSliderPage from "@/app/components/ProgressSliderPage";
 function page() {
   const breadcrumbItems = {
     title: "먹튀검증",
-    subMenu: [
-      { name: "검증", href: "/verify" },
-      { name: "피해사례", href: "/verify/case" },
-    ],
+    subMenu: [{ name: "피해사례", href: "/community/case" }],
   };
 
   return (
     <div className="flex flex-col max-w-[1200px] gap-6">
       <ProgressSliderPage></ProgressSliderPage>
       <ThreeBanner></ThreeBanner>
-      <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb>
+      {/* <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb> */}
+
       <Board />
     </div>
   );

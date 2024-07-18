@@ -26,7 +26,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({
       <input
         type="text"
         id="searchKeyword"
-        className="w-full pl-5 block  h-full box-border rounded-lg bg-white outline outline-2 outline-blue text-black text-sm "
+        className="w-full pl-5 block h-full box-border border-b border-gray-300 bg-white text-black text-sm focus:outline-none"
         placeholder={placeholderText}
         value={searchTerm}
         onChange={handleChange}
@@ -37,7 +37,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({
         onClick={handleClick}
       >
         <svg
-          className="fill-blue w-5 h-4 hover:fill-blue"
+          className="fill-gray-300 w-5 h-4 hover:fill-black"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
