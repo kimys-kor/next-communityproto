@@ -1,7 +1,8 @@
 import Mttp from "../(components)/Mttp";
 import Image from "next/image";
-import proto from "/public/images/proto.png";
 import powerball from "/public/images/powerball.png";
+import game from "/public/images/game.png";
+import gameBlue from "/public/images/gameBlue.png";
 
 function page() {
   return (
@@ -16,9 +17,9 @@ function page() {
             src={powerball}
           ></Image>
           <div className="text-4xl font-semibold px-3">
-            <span className="text-blue">프로토</span> 스포츠토토
+            <span className="text-blue">파워볼</span>
           </div>
-          <div className="w-full max-w-[900px] px-5 py-5">
+          <div className="w-full max-w-[900px] px-5 pt-5">
             <p className="w-full text-center break-keep leading-6 text-sm font-medium text-description">
               파워볼 게임을 즐기는 분들이 많아지고 있습니다.
             </p>
@@ -33,109 +34,141 @@ function page() {
             </p>
           </div>
 
-          <div className="pt-20 w-full flex flex-col items-center justify-center">
-            <article className="block lg:flex justify-center py-20 px-5 gap-20 border-solid border-b border-slate-200">
+          <div className="pt-5 w-full flex flex-col items-center justify-center">
+            <article className="block lg:flex justify-center py-20 px-5 gap-20">
               <div className=" flex flex-col items-center">
-                <div className="w-full pt-10 px-5 py-10 flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-32 border-b border-solid border-gray-200">
-                  <div className="w-72 text-3xl font-bold flex ">
-                    <h1 className="">프로토</h1>
-                    <h1 className="text-blue">&nbsp;기록식</h1>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        1
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        프로토 기록식은 경기의 최종적 점수와 점수의 차이, 우승팀
-                        등 해당하는 경기에서 발생하는 특정한 요인들을 예상하는
-                        게임입니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        2
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        게임은 한 회차당 최대 24개의 게임으로 구성됩니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal break-keep">
-                      <div className="h-4 w-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        3
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        축구와 야구,농구,배구가 진해오디며 축구만 연장전을
-                        제외하고 나머지 게임은 연장전을 포함합니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal break-keep">
-                      <div className="h-4 w-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        4
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        축구와 야구,농구,배구가 진행되며 축구만 연장전을
-                        제외하고 나머지 게임은 연장전을 포함합니다.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full  pt-20 px-5 flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-32">
+                <div className="w-full pt-10 px-5 py-10 flex flex-col gap-10 lg:gap-32">
                   <div>
-                    <div className="w-72 text-3xl font-bold flex">
-                      <h1 className="">프로토</h1>
-                      <h1 className="text-blue">&nbsp;승부식</h1>
+                    <div className="w-72 text-3xl font-bold flex ">
+                      <h1 className="">파워볼 게임</h1>
+                      <h1 className="text-blue">&nbsp;종류</h1>
                     </div>
-                    <h1 className="text-2xl font-bold">(프로토 승무패)</h1>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        1
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        프로토 승부식은 승무패라고도 하며 게임의 승, 무, 패를
-                        예측하는 게임입니다.
-                      </div>
+                    <div className="py-6 w-full break-keep leading-4 text-sm">
+                      <p className="font-medium text-description">
+                        파워볼 게임은 여러 종류가 있습니다. 다양하게 파워볼
+                        게임을 즐길 수 있는데요.
+                      </p>
+                      <p className="font-semibold text-[#777777]">
+                        일반볼과 파워볼 두 가지 게임으로 구분됩니다.
+                      </p>
                     </div>
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        2
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        프로토 승부식은 2~10개 경기 또는 하나의 경기로 지정된
-                        경기 중에서 1개 경기만 선택하여 예상결과를 적중시키는
-                        게임입니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        3
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        최대 650개의 경기로 구성되며 2~10개의 경기를 조합하여
-                        구매하거나 한 경기로 지정된 경기 중에서 1개의 경기만
-                        선택하여 구매가 가능합니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        4
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        배팅 가능한 스포츠 종목으로는 축구,야구,농구,배구입니다.
-                        축구는 후반 종류 시가 기준이 되어 연장전은 포함되지
-                        않으며 나머지 스포츠는 연장전을 포함합니다.
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#6885EC] text-white flex items-center justify-center text-sm">
-                        5
-                      </div>
-                      <div className="w-full max-w-[568px] break-keep">
-                        적중 기준은 경기 결과를 모두 맞힌 경우에만 적중으로 보며
-                        적중금은 적중 배당률과 개별투표금액을 곱해 지급됩니다.
-                      </div>
+                    <div className="flex flex-col gap-10">
+                      <article className="w-full px-4 py-2 bg-[#F4F4F4] rounded-md">
+                        <section className="py-5 flex gap-5 items-center border-b border-solid border-[#D0D0D0]">
+                          <div className="rounded-full w-36 py-2 text-center text-[#555555] bg-white text-lg font-semibold">
+                            일반볼
+                          </div>
+                          <p className="font-semibold">
+                            일반볼은 홀짝 게임, 언더오버 게임, 대중소 게임으로
+                            구분됩니다.
+                          </p>
+                        </section>
+                        <section className="py-4">
+                          <div className="flex items-center gap-5 px-3">
+                            <div className="flex items-center gap-2">
+                              <Image
+                                alt="game"
+                                width={24}
+                                height={24}
+                                src={game}
+                              ></Image>
+                              <h4 className="w-16 font-bold text-[#555555]">
+                                홀짝 게임
+                              </h4>
+                            </div>
+                            <p className="text-[#555555] font-semibold">
+                              1~28까지 적힌 일반볼 5개를 추첨해 숫자의 합이
+                              홀수인지 짝수인지를 맞춤
+                            </p>
+                          </div>
+                        </section>
+                        <section className="py-4">
+                          <div className="flex items-center gap-5 px-3">
+                            <div className="flex items-center gap-2">
+                              <Image
+                                alt="game"
+                                width={24}
+                                height={24}
+                                src={game}
+                              ></Image>
+                              <h4 className="w-16 font-bold text-[#555555]">
+                                언더오버
+                              </h4>
+                            </div>
+                            <p className="text-[#555555] font-semibold">
+                              일반볼 5개를 추첨하여 숫자의 합이 72.5를 기준으로
+                              높은지 낮은지를 맞춤
+                            </p>
+                          </div>
+                        </section>
+                        <section className="py-4">
+                          <div className="flex items-center gap-5 px-3">
+                            <div className="flex items-center gap-2">
+                              <Image
+                                alt="game"
+                                width={24}
+                                height={24}
+                                src={game}
+                              ></Image>
+                              <h4 className="w-16 font-bold text-[#555555]">
+                                대중소
+                              </h4>
+                            </div>
+                            <p className="text-[#555555] font-semibold">
+                              일반볼 5개의 숫자 합이 15~64일 때 소, 65~80일 대
+                              중, 130 이상이면 대임을 맞춤
+                            </p>
+                          </div>
+                        </section>
+                      </article>
+                      <article className="w-full px-4 py-2 bg-[#EEF2FF] rounded-md">
+                        <section className="py-5 flex gap-5 items-center border-b border-solid border-[#D0D0D0]">
+                          <div className="rounded-full w-36 py-2 text-center text-[#5171E2] bg-white text-lg font-semibold">
+                            파워볼
+                          </div>
+                          <p className="font-semibold text-[#526DCD]">
+                            파워볼은 홀짝과 언더오버 게임으로 구분됩니다.
+                          </p>
+                        </section>
+                        <section className="py-4">
+                          <div className="flex items-center gap-5 px-3">
+                            <div className="flex items-center gap-2">
+                              <Image
+                                alt="game"
+                                width={24}
+                                height={24}
+                                src={gameBlue}
+                              ></Image>
+                              <h4 className="w-16 font-bold text-[#526DCD]">
+                                홀짝 게임
+                              </h4>
+                            </div>
+                            <p className="text-[#526DCD] font-semibold">
+                              0~9까지 적힌 파워볼 1개를 추첨해 홀수인지
+                              짝수인지를 맞춤
+                            </p>
+                          </div>
+                        </section>
+                        <section className="py-4">
+                          <div className="flex items-center gap-5 px-3">
+                            <div className="flex items-center gap-2">
+                              <Image
+                                alt="game"
+                                width={24}
+                                height={24}
+                                src={gameBlue}
+                              ></Image>
+                              <h4 className="w-16 font-bold text-[#526DCD]">
+                                언더오버
+                              </h4>
+                            </div>
+                            <p className="text-[#526DCD] font-semibold">
+                              파워볼 1개 추첨 4.5를 기준으로 높은지 낮은지를
+                              맞춤
+                            </p>
+                          </div>
+                        </section>
+                      </article>
                     </div>
                   </div>
                 </div>
