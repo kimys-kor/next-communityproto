@@ -67,10 +67,6 @@ const Board = () => {
 
   return (
     <section className="flex flex-col gap-8 mt-10">
-      <div className="flex justify-center text-3xl font-semibold">
-        <span className="text-blue">피해</span>
-        사례
-      </div>
       <article className="flex justify-center gap-2 ">
         <SelectBox options={options} onChange={handleChange} defaultValue="1" />
         <SearchBox

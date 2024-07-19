@@ -1,6 +1,6 @@
 import Breadcrumb from "@/app/components/BreadCrumb";
 import React from "react";
-import Board from "../../community/(components)/Board";
+import Board from "../../components/boards/Board";
 import ThreeBanner from "@/app/components/ThreeBanner";
 import ProgressSliderPage from "@/app/components/ProgressSliderPage";
 
@@ -15,7 +15,10 @@ function page() {
       <ProgressSliderPage></ProgressSliderPage>
       <ThreeBanner></ThreeBanner>
       {/* <Breadcrumb breadcrumbData={breadcrumbItems}></Breadcrumb> */}
-
+      <div className="flex justify-center text-3xl font-semibold">
+        <span className="text-blue">피해</span>
+        사례
+      </div>
       <Board />
     </div>
   );

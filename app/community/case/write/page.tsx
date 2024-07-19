@@ -3,7 +3,7 @@
 import PostEditor from "@/app/components/texteditor/PostEditor";
 import React, { useRef, useState } from "react";
 import ReactQuill from "react-quill";
-import Write from "../../../community/(components)/Write";
+import Write from "../../../components/boards/Write";
 
 function Page() {
   return (
