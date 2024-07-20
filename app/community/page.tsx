@@ -2,8 +2,8 @@ import Breadcrumb from "@/app/components/BreadCrumb";
 import React from "react";
 import ThreeBanner from "@/app/components/ThreeBanner";
 import photoMain from "/public/images/photoMain.png";
-import Board from "../components/boards/Board";
 import Image from "next/image";
+import PhotoBoard from "../components/boards/PhotoBoard";
 
 function page() {
   return (
@@ -22,7 +22,7 @@ function page() {
         <span className="text-blue">안구정화 </span>
         &nbsp;갤러리
       </div>
-      <Board />
+      <PhotoBoard />
     </div>
   );
 }

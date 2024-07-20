@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
 import Paging from "@/app/components/Paging";
 import SelectBox from "@/app/components/SelectBox";
 import SearchBox from "@/app/components/search/SearchBox";
 import Link from "next/link";
+import Image from "next/image";
+import timeIcon from "/public/images/timeIcon.png";
+import writerIcon from "/public/images/writerIcon.png";
 
 const PhotoBoard = () => {
   // 가상의 데이터
@@ -16,6 +18,7 @@ const PhotoBoard = () => {
       views: 100,
       likes: 20,
       dislikes: 5,
+      thumbnail: "/images/dog1.PNG",
     },
     {
       id: 2,
@@ -25,6 +28,7 @@ const PhotoBoard = () => {
       views: 150,
       likes: 30,
       dislikes: 10,
+      thumbnail: "/images/dog2.PNG",
     },
     {
       id: 3,
@@ -34,6 +38,7 @@ const PhotoBoard = () => {
       views: 150,
       likes: 30,
       dislikes: 10,
+      thumbnail: "/images/dog3.PNG",
     },
     {
       id: 4,
@@ -43,6 +48,7 @@ const PhotoBoard = () => {
       views: 150,
       likes: 30,
       dislikes: 10,
+      thumbnail: "/images/dog4.PNG",
     },
   ];
 
@@ -74,10 +80,10 @@ const PhotoBoard = () => {
           placeholderText="검색어를 입력"
         ></SearchBox>
       </article>
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full border-b-2 border-blue border-solid py-2">
         <div className="flex gap-2">
           <div className="text-[#555555] text-sm">
-            총<span className="text-[#2C4AB6] font-semibold"> 34,006</span>건
+            총<span className="text-[#2C4AB6] font-semibold"> 34,001</span>건
           </div>
           <div className="text-[#555555] text-sm">
             {"("}
@@ -87,44 +93,49 @@ const PhotoBoard = () => {
           </div>
         </div>
       </div>
-      <table className="min-w-full bg-white overflow-hidden overflow-x-auto text-[14px]">
-        {/* Header */}
-        <thead className="bg-[#F2F5FF]">
-          <tr className="flex border-solid border-t-[2px] border-[#2C4AB6] text-[#2C4AB6] font-semibold">
-            <th className="w-12 truncate py-3 px-2 text-center">번호</th>
-            <th className="grow truncate py-3 px-2 text-center">제목</th>
-            <th className="w-28 truncate py-3 px-2 text-center">이름</th>
-            <th className="w-32 truncate py-3 px-2 text-center">날짜</th>
-            <th className="w-20 truncate py-3 px-2 text-center">조회</th>
-            <th className="w-20 truncate py-3 px-2 text-center">추천</th>
-          </tr>
-        </thead>
-
-        {/* Items */}
-        <tbody className="">
-          {items.map((item, index) => (
-            <tr
-              key={item.id}
-              className={`flex border-solid border-b border-gray-200 bg-white`}
-            >
-              <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
-              <td className="grow truncate py-4 px-2 text-left">
+      <ul className="min-w-full bg-white overflow-hidden overflow-x-auto text-[14px] grid grid-cols-2 md:grid-cols-3 gap-3">
+        {items.map((item, index) => (
+          <li
+            key={item.id}
+            className="bg-white rounded-lg border-solid border border-slate-200 cursor-pointer"
+          >
+            <div>
+              <Image
+                width={326}
+                height={230}
+                className="w-full h-auto rounded-t-lg"
+                src={item.thumbnail}
+                alt={item.title}
+              />
+            </div>
+            <section className="w-full flex flex-col justify-center gap-3 px-2 py-4">
+              <h1 className="w-full text-center font-bold text-lg truncate">
                 {item.title}
-              </td>
-              <td className="w-20 py-4 px-2 text-center">{item.name}</td>
-              <td className="w-32 truncate py-4 px-2 text-center">
-                {item.date}
-              </td>
-              <td className="w-20 truncate py-4 px-2 text-center">
-                {item.views}
-              </td>
-              <td className="w-20 truncate py-4 px-2 text-center">
-                {item.likes}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              </h1>
+              <div className="w-full flex justify-between items-center px-2">
+                <div className="w-24 flex truncate">
+                  <Image
+                    width={14}
+                    height={14}
+                    src={timeIcon}
+                    alt={"content post Date Icon"}
+                  />
+                  <p>{item.date}</p>
+                </div>
+                <div className="w-24 flex gap-1 px-1 truncate">
+                  <Image
+                    width={14}
+                    height={14}
+                    src={writerIcon}
+                    alt={"content post Writer Icon"}
+                  />
+                  <p>{item.name}</p>
+                </div>
+              </div>
+            </section>
+          </li>
+        ))}
+      </ul>
       <span className="w-full flex justify-end">
         <Link href={"/community/case/write"}>
           <button className="bg-blue text-white  hover:bg-mediumblue rounded-sm text-[13px]  px-3 py-3">

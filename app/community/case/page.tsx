@@ -1,8 +1,7 @@
-import Breadcrumb from "@/app/components/BreadCrumb";
 import React from "react";
-import PhotoBoard from "../../components/boards/PhotoBoard";
 import ThreeBanner from "@/app/components/ThreeBanner";
 import ProgressSliderPage from "@/app/components/ProgressSliderPage";
+import Board from "@/app/components/boards/Board";
 
 function page() {
   const breadcrumbItems = {
@@ -19,7 +18,7 @@ function page() {
         <span className="text-blue">피해</span>
         &nbsp;사례
       </div>
-      <PhotoBoard />
+      <Board />
     </div>
   );
 }
