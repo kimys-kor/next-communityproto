@@ -21,8 +21,8 @@ const Navbar = () => {
 
   const links = [
     {
-      href: "/warranty",
-      label: "보증업체",
+      href: "/partner",
+      label: "파트너",
       icon: <WaIcon className="hidden lg:block" />,
       width: "w-20 md:w-24 lg:w-32",
     },
