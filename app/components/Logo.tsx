@@ -1,13 +1,14 @@
 import Image from "next/image";
+import logo from "/public/images/logo.png";
 
 const Logo = () => {
   return (
     <Image
       alt="logo"
       className="cursor-pointer"
-      height="250"
-      width="130"
-      src="/images/logo.png"
+      width={130}
+      height={47}
+      src={logo}
     ></Image>
   );
 };

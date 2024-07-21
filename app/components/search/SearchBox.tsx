@@ -37,7 +37,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({
         onClick={handleClick}
       >
         <svg
-          className="fill-gray-300 w-5 h-4 hover:fill-black"
+          className="fill-gray-300 w-5 h-4 hover:fill-blue"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

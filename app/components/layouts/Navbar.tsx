@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BurgerIcon from "/public/images/icon/burgerIcon.svg";
 import WaIcon from "/public/images/icon/waIcon.svg";
-import MagnifyIcon from "/public/images/icon/magnify.svg";
 import MedalIcon from "/public/images/icon/medalIcon.svg";
 import TvIcon from "/public/images/icon/tvIcon.svg";
 

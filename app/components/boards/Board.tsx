@@ -4,8 +4,12 @@ import Paging from "@/app/components/Paging";
 import SelectBox from "@/app/components/SelectBox";
 import SearchBox from "@/app/components/search/SearchBox";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Board = () => {
+  const pathname = usePathname();
+  console.log(pathname);
+
   // 가상의 데이터
   const items = [
     {
@@ -71,7 +75,7 @@ const Board = () => {
         <SelectBox options={options} onChange={handleChange} defaultValue="1" />
         <SearchBox
           handleSearch={handleSearch}
-          placeholderText="검색어를 입력"
+          placeholderText="검색어 입력"
         ></SearchBox>
       </article>
       <div className="flex justify-between items-center w-full">
@@ -105,11 +109,11 @@ const Board = () => {
           {items.map((item, index) => (
             <tr
               key={item.id}
-              className={`flex border-solid border-b border-gray-200 bg-white`}
+              className={`flex border-solid border-b border-gray-200 bg-white hover:bg-[#f1f3fa] hover:text-blue`}
             >
               <td className="w-12 truncate py-4 px-2 text-center">{item.id}</td>
               <td className="grow truncate py-4 px-2 text-left">
-                {item.title}
+                <Link href={pathname + "/" + item.id}>{item.title}</Link>
               </td>
               <td className="w-20 py-4 px-2 text-center">{item.name}</td>
               <td className="w-32 truncate py-4 px-2 text-center">
