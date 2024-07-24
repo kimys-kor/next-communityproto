@@ -139,13 +139,14 @@ const Navbar = () => {
               <ul className="border border-t border-blue">
                 {link.dropdown && (
                   <li
-                    className={`w-24 lg:w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}
+                    className={`mt-[1px] w-24 lg:w-32 left-[0px] invisible absolute z-50 flex flex-col bg-white text-black shadow-xl group-hover:visible`}
                   >
-                    {link.dropdown.map((sublink) => (
+                    {link.dropdown.map((sublink, index) => (
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className={`border-b border-solid border-slate-200 outline-white w-full block p-2 text-base lg:text-base hover:bg-gray-700 hover:text-white`}
+                        className={`outline-white w-full block p-2 text-base lg:text-base hover:bg-gray-700 hover:text-white 
+                ${index === link.dropdown.length - 1 ? "" : "border-b border-solid border-slate-200"}`}
                         onClick={() => handleLinkClick(sublink.href)}
                       >
                         {sublink.label}
@@ -160,13 +161,13 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-around items-center gap-2 relative">
           <Link
             href={"/login"}
-            className="w-12 text-sm font-semibold text-gray-400 hover:text-red-400"
+            className="w-12 text-sm font-semibold text-gray-400 hover:text-blue"
           >
             로그인
           </Link>
           <Link
             href={"/signup"}
-            className="w-16 text-sm font-semibold text-gray-400 hover:text-red-400"
+            className="w-16 text-sm font-semibold text-gray-400 hover:text-blue"
           >
             회원가입
           </Link>
