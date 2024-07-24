@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 const Board = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   // 가상의 데이터
   const items = [
@@ -130,7 +129,7 @@ const Board = () => {
         </tbody>
       </table>
       <span className="w-full flex justify-end">
-        <Link href={"/community/case/write"}>
+        <Link href={pathname + "/write"}>
           <button className="bg-blue text-white  hover:bg-mediumblue rounded-sm text-[13px]  px-3 py-3">
             글작성하기
           </button>

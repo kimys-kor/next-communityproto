@@ -7,8 +7,10 @@ import Image from "next/image";
 import timeIcon from "/public/images/timeIcon.png";
 import writerIcon from "/public/images/writerIcon.png";
 import viewIcon from "/public/images/viewIcon.png";
+import { usePathname } from "next/navigation";
 
 const PhotoBoard = () => {
+  const pathname = usePathname();
   // 가상의 데이터
   const items = [
     {
@@ -160,7 +162,7 @@ const PhotoBoard = () => {
         ))}
       </ul>
       <span className="w-full flex justify-end">
-        <Link href={"/community/case/write"}>
+        <Link href={pathname + "/write"}>
           <button className="bg-blue text-white  hover:bg-mediumblue rounded-sm text-[13px]  px-3 py-3">
             글작성하기
           </button>

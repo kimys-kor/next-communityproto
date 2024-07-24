@@ -8,14 +8,10 @@ import ImageUploader from "@/app/components/ImageUploader";
 
 type FormData = {
   title: string;
-  notice: boolean;
+  amount: number;
 };
 
-interface WriteProps {
-  title: string;
-}
-
-const Write: React.FC<WriteProps> = ({ title }) => {
+const CaseWrite: React.FC = () => {
   const [content, setContent] = useState("");
   const quillRef = useRef<ReactQuill>(null);
 
@@ -54,26 +50,9 @@ const Write: React.FC<WriteProps> = ({ title }) => {
 
   return (
     <div className="p-4">
-      <h1 className="text-xl py-2">{title} 작성</h1>
+      <h1 className="text-xl py-2">피해사례 작성</h1>
       <form onSubmit={onSubmit} className="border-gray-300 flex flex-col gap-3">
         <div className="flex flex-col border-solid border-t">
-          <div className="flex justify-between items-center h-16 border-b border-solid border-gray-200">
-            <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
-              옵션
-            </div>
-            <div className="w-full flex justify-center items-center h-10 pl-2">
-              <label className="flex items-center gap-1">
-                <input
-                  {...register("notice")}
-                  type="checkbox"
-                  id="notice"
-                  className=""
-                  required
-                />
-                공지
-              </label>
-            </div>
-          </div>
           <div className="flex justify-between items-center h-16 border-solid border-b border-gray-300">
             <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
               제목
@@ -83,6 +62,21 @@ const Write: React.FC<WriteProps> = ({ title }) => {
                 {...register("title")}
                 type="text"
                 id="title"
+                className="truncate appearance-none border border-solid w-[100%] px-7 py-3 text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                required
+              ></input>
+            </div>
+          </div>
+          <div className="flex justify-between items-center h-16">
+            <div className="w-1/3 h-full flex justify-center items-center bg-[#F2F4F9]">
+              피해금액{" "}
+              <p className="text-[12px] text-blue-400">&ensp;(단위:원)</p>
+            </div>
+            <div className="w-full flex justify-center items-center h-10 pl-2">
+              <input
+                {...register("amount")}
+                type="number"
+                id="amount"
                 className="truncate appearance-none border border-solid w-[100%] px-7 py-3 text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               ></input>
@@ -112,4 +106,4 @@ const Write: React.FC<WriteProps> = ({ title }) => {
   );
 };
 
-export default Write;
+export default CaseWrite;
